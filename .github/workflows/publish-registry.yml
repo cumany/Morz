@@ -1,0 +1,40 @@
+name: Publish registry to gh-pages
+
+# 应用从 gh-pages 分支读索引：
+#   https://cumany.github.io/Morz/registry/index.json
+#   https://cdn.jsdelivr.net/gh/cumany/Morz@gh-pages/registry/index.json
+# 所以必须发布到 gh-pages 分支（jsDelivr 只认分支，不认 Actions 产物）。
+on:
+  push:
+    branches: [main]
+    paths:
+      - "registry/**"
+      - ".github/workflows/publish-registry.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-registry
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate registry
+        run: node registry/validate.mjs
+      - uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./registry
+          publish_branch: gh-pages
+          destination_dir: registry
+          user_name: github-actions[bot]
+          user_email: github-actions[bot]@users.noreply.github.com
+          commit_message: "registry: publish ${{ github.sha }}"

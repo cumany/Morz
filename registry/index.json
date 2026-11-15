@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "name": "Morz 官方索引",
+  "updatedAt": 1794759457620,
+  "plugins": [
+    {
+      "id": "morz.reading-progress",
+      "name": "阅读进度",
+      "description": "在状态栏显示当前文档的阅读进度和剩余时间。",
+      "author": "Morz",
+      "repo": "cumany/morz-reading-progress",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "minAppVersion": "0.2.0",
+      "permissions": [
+        "workspace",
+        "settings"
+      ],
+      "icon": "icon.svg",
+      "changelog": "首个版本：状态栏阅读进度、剩余时间与显示方式切换。",
+      "homepage": "https://github.com/cumany/morz-reading-progress",
+      "stars": 0,
+      "pushedAt": "2026-11-14",
+      "sha256": {
+        "manifest": "bb04a25e1aa8f0d5558eee34e3b0c379879bea4d0ec0adfb48138d59c09f90cb",
+        "main": "69d1fe5bfb7335bd0ea9548383f36c08af6190894ca705f3bf7bcd75061ba4a6"
+      }
+    },
+    {
+      "id": "smart-filter",
+      "name": "智能筛选",
+      "description": "按目录/标签/frontmatter 条件筛选全库文件，表格/列表/画廊视图，支持分页、结果内快速筛选、排序、选列与预设；frontmatter 标量可直接就地编辑。",
+      "author": "Morz",
+      "repo": "cumany/morz-smart-filter",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "minAppVersion": "0.2.0",
+      "permissions": [
+        "vault:read",
+        "vault:write",
+        "workspace",
+        "views",
+        "settings"
+      ],
+      "changelog": "首个版本：目录/标签/全文/任意 frontmatter 条件筛选，表格、列表与画廊三种视图，预设与就地编辑。",
+      "stars": 0,
+      "pushedAt": "2026-11-14",
+      "sha256": {
+        "manifest": "168c8cb3735482818f39678ddba4ee0c1dc89bc9ced3bdc68bb1519684dafc00",
+        "main": "fa03990a316fd7cafde74f2aa9db0746855638f8b84ad39cc87e13e20a44591e"
+      }
+    }
+  ],
+  "themes": [
+    {
+      "id": "blue-topaz",
+      "name": "蓝托帕石",
+      "nameEn": "Blue Topaz",
+      "description": "Blue Topaz 的 Morz 适配版：托帕蓝、蓝色标题阶梯、着色引言与圆角代码/表格卡片，明暗成对。",
+      "author": "Cuman (Morz adaptation), whyt-byte & PKMer community (upstream Blue Topaz)",
+      "repo": "cumany/morz-bluetopaz",
+      "version": "1.0.1",
+      "tag": "v1.0.1",
+      "minAppVersion": "0.2.0",
+      "modes": [
+        "light",
+        "dark"
+      ],
+      "preview": "preview.jpg",
+      "changelog": "1.0.1：导出样式随 manifest 声明（export.css），主题市场按清单安装。",
+      "stars": 0,
+      "pushedAt": "2026-11-14",
+      "sha256": {
+        "theme": "ba0e8dc01c183151066634113248e23e832d31ed403c250199f406831d1b1cd8",
+        "manifest": "cf535f21eafed54577975dd356573af026530f957d2d51489f4e2b98630d07d3"
+      }
+    }
+  ]
+}

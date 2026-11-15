@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Morz registry",
+  "type": "object",
+  "required": ["schemaVersion", "name", "plugins", "themes"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "name": { "type": "string" },
+    "updatedAt": { "type": "integer" },
+    "plugins": { "type": "array", "items": { "$ref": "#/definitions/plugin" } },
+    "themes": { "type": "array", "items": { "$ref": "#/definitions/theme" } }
+  },
+  "definitions": {
+    "plugin": {
+      "type": "object",
+      "required": ["id", "name", "repo", "version"],
+      "oneOf": [{ "required": ["tag"] }, { "required": ["commit"] }],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "author": { "type": "string" },
+        "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "version": { "type": "string", "pattern": "^v?[0-9]+\\.[0-9]+\\.[0-9]+" },
+        "tag": { "type": "string" },
+        "commit": { "type": "string", "pattern": "^[0-9a-fA-F]{7,40}$" },
+        "minAppVersion": { "type": "string" },
+        "permissions": { "type": "array", "items": { "type": "string" } },
+        "sha256": { "type": "object", "additionalProperties": { "type": "string" } },
+        "homepage": { "type": "string" },
+        "icon": { "type": "string" },
+        "changelog": { "type": "string" },
+        "trust": { "enum": ["community"] }
+      }
+    },
+    "theme": {
+      "type": "object",
+      "required": ["id", "name", "repo", "version"],
+      "oneOf": [{ "required": ["tag"] }, { "required": ["commit"] }],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$" },
+        "name": { "type": "string" },
+        "nameEn": { "type": "string" },
+        "description": { "type": "string" },
+        "author": { "type": "string" },
+        "repo": { "type": "string", "pattern": "^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$" },
+        "version": { "type": "string", "pattern": "^v?[0-9]+\\.[0-9]+\\.[0-9]+" },
+        "tag": { "type": "string" },
+        "commit": { "type": "string", "pattern": "^[0-9a-fA-F]{7,40}$" },
+        "theme": { "type": "string" },
+        "manifest": { "type": "string" },
+        "preview": { "type": "string" },
+        "changelog": { "type": "string" },
+        "modes": { "type": "array", "items": { "enum": ["light", "dark"] } },
+        "sha256": { "type": "object", "additionalProperties": { "type": "string" } },
+        "minAppVersion": { "type": "string" },
+        "trust": { "enum": ["community"] }
+      }
+    }
+  }
+}
