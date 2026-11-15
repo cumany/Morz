@@ -55,7 +55,7 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 
 ## Downloads and auto-updates
 
-- Public releases will carry the NSIS installer, updater bundle (`.nsis.zip`), signature and `latest.json`.
+- Public releases will carry the NSIS installer, its minisign signature (`.exe.sig`) and `latest.json`.
 - The updater checks a China-friendly mirror first and falls back to GitHub. Installer signatures
   are verified with minisign; a mirror cannot inject code.
 - The portable `.exe` cannot auto-update; use the installer for in-app updates.
