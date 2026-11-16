@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/icon.svg" width="88" height="88" alt=""></p>
+<p align="center"><img src="assets/hero.jpg" width="880" alt="Morz 界面：所见即所得编辑、双向链接与知识管理"></p>
 
 # Morz · 墨与纸
 
