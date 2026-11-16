@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/icon.svg" width="88" height="88" alt=""></p>
+<p align="center"><img src="assets/hero.jpg" width="880" alt="The Morz editor: WYSIWYG editing, wikilinks and knowledge management"></p>
 
 # Morz · 墨与纸
 
