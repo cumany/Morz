@@ -15,5 +15,9 @@
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWg4cjZERktDU2pVazZSSmJtR2JDQ3dPWm1tOXFIcllReVUzSkVMUHF3bXhhS2Rsbkw1WkdVVG5TUWl5bURBVXJNNlIzUkFpVTh5YW5HZlpiaGJkVVE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDE4Mzg2CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4yLjEwCkN0bDUxSXFqTVN6Qy9BUEtEU0lmVlRFYWozZ09WTXpYYlBiSUJwSnY1ZTh6MFRScUNFNGY4eVZYNE9BOHpXVlpsa24vRGRUZDc2dmFkMEVzLy8rZUFBPT0K",
       "url": "https://dl.morz.app/v0.2.10/Morz_0.2.10_universal.app.tar.gz"
     }
+  },
+  "android": {
+    "url": "https://dl.morz.app/v0.2.10/Morz_0.2.10_android.apk",
+    "sha256": "f7d417e47dd078ab2e09e84bed0a691f7e80394e1e0a244683d9c4af6d1886ba"
   }
 }
