@@ -1,19 +1,19 @@
 {
-  "version": "0.2.9",
-  "notes": "0.2.9 已就绪，重点解决 Android 上的高频闪退与返回键体验。\n\n**Android 稳定性（本次重点）**\n\n- 修复反复「闪退」：内存不足时系统回收 WebView 渲染进程，此前应用会被连带关闭；现在接管这一事件，前台被回收时页面自动恢复，后台被回收则回到前台时恢复，应用全程不再退出\n- 打开的文档与草稿都会保留；连续异常退出时自动进入安全启动（跳过会话恢复），避免「进不去」，提示条可点「重新尝试恢复会话」\n- 系统返回键按层级关闭：侧栏 / 文件夹 → 弹窗与命令面板 → 设置详情 → 思维导图等插件视图 → 最后才是「再按一次返回退出」，不再直接最小化到桌面\n\n**修复**\n\n- 思维导图双指缩放不再误触节点拖拽或弹出内容卡\n- 使用指南里「导出备份」「选择文件夹…」按钮文字不再溢出边框\n- 正文字号调大后，动作按钮高度跟随字号\n\n**其他**\n\n- 帮助菜单新增「更新说明」，新标签打开内置更新日志\n- 诊断增强：闪退取证（上次会话是否异常结束、本机 Java 崩溃日志，只存本机）\n\n**自 0.2.6 以来的其他更新**（0.2.6 已包含，一并说明）\n\n- 思维导图：双击编辑、长按菜单、拖到空白展开内容卡、导出 PNG/SVG、每文件记忆缩放；`:+1:` 短名与 `%%` 注释修复\n- 工作区「…」动作菜单；帮助文档与 Dataview 示例更新\n",
-  "pub_date": "2026-11-17T18:20:46Z",
+  "version": "0.2.10",
+  "notes": "0.2.10 已就绪，重点是**大库卡死**与**输入/索引性能**，以及 Android 的分享、划词与启动体验。\n\n**卡死与性能（本次重点）**\n\n- 修复打开/滚动大文档后界面失去响应：块级装饰与编辑器视口互相触发，形成永不收敛的重建循环（实测 3160 次空更新、DOM 节点涨到 36 万）。现在块装饰只由文档状态驱动；2100 篇、600MB 的库连续滚动 120 秒不再挂起\n- 索引解析移入后台 Worker：大库启动索引时不再和滚动抢主线程，打字更跟手\n- 文末反链改为只保留右栏「反向链接 / 出链」（最多 200 条）：文末长列表是先前卡顿与内存上涨的主因之一\n- 图片加载失败不再每 2 秒重试（每次重试都会重建整篇装饰），改为换文档或 60 秒后自然重试\n\n**Android**\n\n- 划词菜单改由独立入口接收：在 Edge 等应用里选中文字 → 划词工具条 → Morz，工具条立即关闭并直接进入 Morz\n- 分享 / 划词 / 打开文件改为落盘后再确认：进程被杀也不会丢，重启后自动补投且不重复\n- 启动页去掉自绘遮罩，只保留系统启动图与页面内 logo，不再出现双 logo 或白屏\n\n**界面**\n\n- 浮动大纲重做：一套卡片 + 自动 / 刻度条 / 悬浮图标三种收起形态，可在 设置 → 内置插件 → 浮动大纲 切换\n- 状态栏右键可在「跟随正文 / 通栏」之间切换\n- 思维导图：`Ctrl+Shift+M` 打开；文件树与标签页右键可直接打开目标文件的导图\n- 手机：长按文件弹出底部操作菜单；搜索占满整屏；设置开关放大到更易点的尺寸\n- 脚注可直接在正文里编辑（含表格中的脚注）\n- 快捷键设置每条绑定都有「清除」按钮\n- 更新说明打开时直接聚焦标签页，底部附官网更新日志地址",
+  "pub_date": "2026-11-18T16:38:29Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWlwWUVEQ0JHZFhQL21lWnQvaW02Qk9ta2V5eEw1Rzk3OEEzSHpLaGppNjA2UVdqbm01SXJJWHhpbzIrM1Zabjc2SkF2dXFwUWpvMU13TlBXenB2RHc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTMzNjk3CWZpbGU6TW9yel8wLjIuOV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4yLjkKdWMzUGRhenRSSVd3TzA1Q3JmOHRYcXNvWnVGMC9mbFFINDZuRDFTRmluVzRjem90SDJHWDUzWUY2elJadGZYQnIzdTg5SzMrR3VQZ01lT1FRbExzQ1E9PQo=",
-      "url": "https://dl.morz.app/v0.2.9/Morz_0.2.9_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWp0S2F4alpXM2o1UG9iQkovdllPeWJKTVpIZ1V5QmFudWY2T0h1N1p2bFpWaDFodUJ3Z1ZhbFpudFJmZnNOWFZVZW55UjQ3MWJXa2J1Wkc0Y296ZUFFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDE4OTUzCWZpbGU6TW9yel8wLjIuMTBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMi4xMAo1UG4vWCtwM2RUUW5Vaitrd2dNaTY3YW54KzliT2NoVWp1b0lORGlqZzIySHFJN0JLQjcwU2MwS2ZDeVhLNC9RK1YyZzZkRUVLRHZzRFMrOUs5QVhDdz09Cg==",
+      "url": "https://dl.morz.app/v0.2.10/Morz_0.2.10_x64-setup.exe"
     },
     "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXY0SlBwM09NRERNOFJWSXBpOFRoblJlaFBHRWlDUWVBNHQvVG9uZEtaYzlNUk9NaGRjbzFjV1RhVkZqa3hQRC9kNzNhSTNvQi9pNVNIUHVpMSs2cUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTM5MTEzCWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4yLjkKeHU3YlhqV21qK0YvSEorQ3RCZkhhTUY5UGRoa3Z6L0tpN3A3bGlFVk1YUmNxSjZrMmJKTXVHM05vWisyMUlwcjltaTBtUjI5cXJxMVA0ZFI2UFRwQ0E9PQo=",
-      "url": "https://dl.morz.app/v0.2.9/Morz_0.2.9_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWg4cjZERktDU2pVazZSSmJtR2JDQ3dPWm1tOXFIcllReVUzSkVMUHF3bXhhS2Rsbkw1WkdVVG5TUWl5bURBVXJNNlIzUkFpVTh5YW5HZlpiaGJkVVE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDE4Mzg2CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4yLjEwCkN0bDUxSXFqTVN6Qy9BUEtEU0lmVlRFYWozZ09WTXpYYlBiSUJwSnY1ZTh6MFRScUNFNGY4eVZYNE9BOHpXVlpsa24vRGRUZDc2dmFkMEVzLy8rZUFBPT0K",
+      "url": "https://dl.morz.app/v0.2.10/Morz_0.2.10_universal.app.tar.gz"
     },
     "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXY0SlBwM09NRERNOFJWSXBpOFRoblJlaFBHRWlDUWVBNHQvVG9uZEtaYzlNUk9NaGRjbzFjV1RhVkZqa3hQRC9kNzNhSTNvQi9pNVNIUHVpMSs2cUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk0OTM5MTEzCWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4yLjkKeHU3YlhqV21qK0YvSEorQ3RCZkhhTUY5UGRoa3Z6L0tpN3A3bGlFVk1YUmNxSjZrMmJKTXVHM05vWisyMUlwcjltaTBtUjI5cXJxMVA0ZFI2UFRwQ0E9PQo=",
-      "url": "https://dl.morz.app/v0.2.9/Morz_0.2.9_universal.app.tar.gz"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWg4cjZERktDU2pVazZSSmJtR2JDQ3dPWm1tOXFIcllReVUzSkVMUHF3bXhhS2Rsbkw1WkdVVG5TUWl5bURBVXJNNlIzUkFpVTh5YW5HZlpiaGJkVVE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MDE4Mzg2CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4yLjEwCkN0bDUxSXFqTVN6Qy9BUEtEU0lmVlRFYWozZ09WTXpYYlBiSUJwSnY1ZTh6MFRScUNFNGY4eVZYNE9BOHpXVlpsa24vRGRUZDc2dmFkMEVzLy8rZUFBPT0K",
+      "url": "https://dl.morz.app/v0.2.10/Morz_0.2.10_universal.app.tar.gz"
     }
   }
 }
