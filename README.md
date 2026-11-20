@@ -4,37 +4,47 @@
 
 **English** · [简体中文](README.zh-CN.md)
 
-**Morz**（墨与纸）— ink and paper, the only two things a writing tool needs.
+> **Ink and paper — the only two things a writing tool needs.**
+> The writing feel of Typora: what you type is already the final layout, and the Markdown source
+> is right under the cursor — no switching between source and preview.
+> The knowledge layer of Obsidian: `[[wikilinks]]`, backlinks, tags, properties, outline and graphs.
+> And your notes stay ordinary `.md` files that Obsidian, Typora or VS Code can open directly.
 
-Morz is a WYSIWYG Markdown editor with a local-first knowledge layer: documents are ordinary
-`.md` files, links and backlinks are first-class, and plugins/themes extend the editor without
-locking your notes in.
+Writing tools keep getting heavier: some feel great but lock your notes into private formats or
+cloud accounts; others connect knowledge but edit like source code. Morz puts both back on the
+same sheet of paper — fluid writing and a real knowledge layer, without taking your files hostage.
 
-Built with CodeMirror 6, markdown-it and MathJax. The desktop app runs on Tauri 2 (Rust) — no Electron:
-roughly a 9 MB installer and a 2.93 s cold start on a 10k-note workspace. No server is required for core
-features. Documents stay on your device: write, edit and export
-offline, in plain `.md` files you can open anywhere. Diagrams are written in Mermaid syntax and
-render as themed SVG.
+## Why Morz exists
 
-Morz is an independent project by Cuman, not affiliated with Typora or Obsidian.
+[After 2.1 million plugin downloads, I decided to build an editor with "nothing" in it](docs/manual/story.md)
+— the story of one 1 a.m. deadline, three plugins, three restarts, and the editor that should
+have made all of it unnecessary.
 
-This repository is the **public home** for Morz:
+## Plain Markdown, never locked in
 
-- **Docs** for users, plugin authors and theme authors.
-- **Registry** (`registry/index.json`) of plugins and themes.
-- **Releases** with the desktop installer and the signed updater manifest.
-- **Landing page** at <https://morz.app/> and the web app (PWA) for the browser.
+Notes are ordinary `.md` files, in a folder of your choice:
 
-Source code is maintained in a private repository. The public repository intentionally contains no
-source tree, tests or build scripts.
+- No account, no sign-in, works offline — nothing is relayed through a server
+- No format lock-in: standard Markdown syntax; file history, trash and backups all stay local
+- The desktop app is Rust + Tauri 2 (**not Electron**): a ~9 MB installer and a measured **2.93 s**
+  cold start on a 10,000-note workspace
 
-## Read the manual
+## Three things, done properly
 
-- **[Help center](docs/manual/README.md)** — setup, writing, tables, export, settings, FAQ, one page per task.
-- **[Compare with Obsidian, Typora and Mubu](docs/manual/compare.md)** — honest capability comparison, trade-offs, and when not to choose Morz.
-- **[The story](docs/manual/story.md)** — why Morz exists, in the author's own words.
-- **[Getting started](docs/manual/index.md)** — from the first launch to a finished document, with real screenshots.
-- **[Feature guide](docs/manual/features.md)** — every menu item, what problem it solves, and when to use it.
+| ✍️ Writing feel | 🕸 Knowledge network | 📱 Write anywhere |
+| --- | --- | --- |
+| What you type is already the layout; syntax appears only where the cursor lands. Tables, math, Mermaid diagrams and code blocks all edit in place — touch screens too. | `[[Wikilinks]]` with block references, backlinks, tags, local/global graphs, Dataview queries and property cards — a full knowledge layer over clean files. | Opens straight in the browser and installs as an offline PWA; a formatting bar sits above the iPad keyboard and Scribble keeps working; native builds for Windows, macOS, Linux and Android. |
+
+## Features
+
+| | |
+|---|---|
+| Writing | WYSIWYG editing; tables (in-place cells, `=SUM` formulas, sorting, fill-handle series), code blocks (100+ languages), math via MathJax 4 offline, Mermaid diagrams, footnotes, GitHub-style alerts |
+| Organising | Wikilinks (incl. block references) and backlinks, tags, property cards, outline, local/global graphs, daily notes & templates, calendar, favorites & recents, pinyin-aware command palette |
+| Export | PDF (page numbers, TOC page references, sidebar bookmarks), Word, HTML; DOCX import with round-trip fidelity (experimental); copy tables as images |
+| Extending | Plugin & theme markets (Dataview, Tasks, AI assistant, Blue Topaz, Style Settings); installs verified per file with sha256 |
+| Platforms | Windows / macOS / Linux / Android; runs in any modern browser and as a PWA; iPadOS touch layout |
+| Data | Plain `.md`, links auto-updated on rename/move, image upload (S3-compatible endpoints), file history, trash, one-click backup |
 
 ## Install
 
@@ -42,37 +52,39 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 <https://morz.app/> (the web app is open to everyone).
 
 - **Desktop**: Windows, macOS (Apple Silicon / Intel) and Linux builds go out to beta testers.
-  Installed builds update from **Help → Check for Updates** (mirror-first, GitHub fallback).
-- **Web / iPad**: the PWA is served from the app subdomain; install it from the browser menu
+- **Web / iPad**: the PWA is served from <https://app.morz.app>; install it from the browser menu
   (iPad: Share → Add to Home Screen) to keep an offline copy.
+- Installed builds update from **Help → Check for Updates** (China-friendly mirror first, GitHub
+  fallback).
+
+## Downloads and auto-updates
+
+- Public releases will carry the NSIS installer, its minisign signature (`.exe.sig`) and `latest.json`.
+- Installer signatures are verified with minisign — a mirror cannot inject code.
+- The portable `.exe` cannot auto-update; use the installer for in-app updates.
+
+## Documentation
+
+- **[Help center](docs/manual/README.md)** — setup, writing, organising, export, settings, FAQ, one page per task.
+- **[Getting started](docs/manual/index.md)** — from the first launch to a finished document, with real screenshots.
+- **[Feature guide](docs/manual/features.md)** — every menu item, what problem it solves, and when to use it.
+- **[Compared with Obsidian, Typora and Mubu](docs/manual/compare.md)** — honest capability comparison, trade-offs, and when not to choose Morz.
+- **[Plugin development](docs/PLUGIN-DEVELOPMENT.md)** · **[Plugin SDK](docs/PLUGIN-SDK.md)** · **[Theme development](docs/THEME-DEVELOPMENT.md)** · **[Blue Topaz](docs/BLUE-TOPAZ.md)** · **[Publishing guide](docs/PUBLISHING.md)**
 
 ## Plugins and themes
 
 - Browse **Settings → Third-party plugins** for the plugin store, and
   **Settings → Appearance → Theme market** for themes.
-- Plugin authors: see [PLUGIN-DEVELOPMENT.md](docs/PLUGIN-DEVELOPMENT.md),
-  [PLUGIN-SDK.md](docs/PLUGIN-SDK.md) and the publishing spec
-  [PUBLISHING.md](docs/PUBLISHING.md) — self-publishing needs no PR.
-- Theme authors: see [THEME-DEVELOPMENT.md](docs/THEME-DEVELOPMENT.md) and
-  [BLUE-TOPAZ.md](docs/BLUE-TOPAZ.md).
+- The index and checksums live in this repository under `registry/`; the client verifies every
+  file's sha256 on install.
 
-## Downloads and auto-updates
+## About this repository
 
-- Public releases will carry the NSIS installer, its minisign signature (`.exe.sig`) and `latest.json`.
-- The updater checks a China-friendly mirror first and falls back to GitHub. Installer signatures
-  are verified with minisign; a mirror cannot inject code.
-- The portable `.exe` cannot auto-update; use the installer for in-app updates.
+Morz is an independent project by Cuman, not affiliated with Typora or Obsidian.
 
-## Links
-
-- [Plugin development](docs/PLUGIN-DEVELOPMENT.md)
-- [Plugin SDK](docs/PLUGIN-SDK.md)
-- [Theme development](docs/THEME-DEVELOPMENT.md)
-- [User manual](docs/manual/index.md)
-- [Feature guide](docs/manual/features.md)
-- [Desktop guide](docs/DESKTOP.md)
-- [Third-party notices](THIRD-PARTY-NOTICES.md)
-- [Registry](registry/README.md)
+This repository is the **public home** of Morz: docs, the plugin/theme registry and (after beta)
+release packages. Source code is maintained in a private repository; this repository intentionally
+contains no source tree, tests or build scripts.
 
 ## License
 
@@ -83,5 +95,3 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 - **The name and logo** are not covered by MIT — they identify the official project.
 - **Provided as is**, without warranty. Keep backups of your notes.
 - **Third-party components** keep their own licenses ([THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)).
-
-Morz is an independent project by Cuman, not affiliated with Typora or Obsidian.
