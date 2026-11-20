@@ -82,9 +82,6 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 
 Morz is an independent project by Cuman, not affiliated with Typora or Obsidian.
 
-This repository is the **public home** of Morz: docs, the plugin/theme registry and (after beta)
-release packages. Source code is maintained in a private repository; this repository intentionally
-contains no source tree, tests or build scripts.
 
 ## License
 
