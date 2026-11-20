@@ -75,8 +75,6 @@ Morz 想把这两件事放回同一张纸上——手感与连接都要，不以
 
 Morz 是 Cuman 的独立项目，与 Typora、Obsidian 没有隶属关系。
 
-这里是 Morz 的**公开主页**：文档、插件 / 主题注册表，以及（出内测后）发行包。源码在私有仓库维护，本仓库不含源码树与构建脚本。
-
 ## 许可
 
 本仓库的文档与注册表采用 MIT 许可；Morz 应用本体为专有软件，详见 [LICENSE](LICENSE) 与 [THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md)。
