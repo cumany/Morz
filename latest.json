@@ -1,15 +1,23 @@
 {
-  "version": "0.2.13",
-  "notes": "0.2.13 已就绪。这一版修复手机上的检查更新。\n\n**更新**\n\n- 手机上检查更新不再报「网络异常」：更新信息改为经应用内网络层获取，不再受网页跨域限制\n- 增加了备用更新地址：主站不通时会自动换镜像，弱网/被拦截时更容易成功\n- 桌面端与网页版的更新检查行为不变\n\n**其他**\n\n- 应用内反馈、图床、插件市场下载在手机上同样改走应用内网络层，之前会被浏览器跨域策略拦掉",
-  "pub_date": "2026-11-20T05:21:25Z",
+  "version": "0.3.0",
+  "notes": "0.3.0 已就绪。新增「分栏写作」视图，重做了全局图谱，并集中处理了一批卡顿。\n\n**性能（本版重点）**\n\n- 右栏日历不再拖慢整机：真机反馈里日历一次运算占用主线程 2.5 秒，现在单次绘制约 0.07 秒（测试环境，CPU 降速 6 倍下 69ms），10 秒内长任务累计 318ms\n- 大文档输入更跟手：50 万字符文档输入延迟 P95 5.3ms\n- 表格里打字不再重建整篇排版；长文滚动只更新可见部分\n- 上万文件的文件夹滚动更顺：卡片按可视区域渲染，切目录不再闪\n- 搜索面板分批出结果，不再一次灌满；启动后不再每秒重扫整个库\n\n**分栏写作（新）**\n\n- 命令面板搜「分栏写作」：列 = 标题层级，卡 = 小节；点一张卡，子级在右侧展开\n- 直接在卡里写正文，自动写回 Markdown，一步撤销；也支持全屏编辑单张卡\n- 卡片可改名、新增子卡/同级卡、上下移动、删除、定位原文\n\n**全局图谱**\n\n- 改成沉浸式视图：全屏画布、悬浮工具条，缩放与拖拽更顺\n\n**导出**\n\n- 新增长图导出与「分享为图片」，自动分页拼接\n- Word 里的图表颜色、表格结构不再错乱；分享卡片的文字与留白重新对齐\n\n**编辑**\n\n- 新建列表项会插到当前父级下面，不会跑回顶层\n- HTML 块里的相对图片能正常显示\n- 裸链接遇到中文标点会正确截断\n\n**数据安全**\n\n- 外部程序改过文件后，自动保存不再覆盖对方的修改\n- 快速捕获里没发出去的草稿，重启后还在\n\n**其他**\n\n- 新增「Plain」阅读主题\n- frontmatter 里的链接也会被索引，重命名时一起改写\n- 每日笔记支持周/序数日期记号与周期预设\n- 工具条图标粗细统一，新增顶部布局菜单",
+  "pub_date": "2026-11-20T18:42:08Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWhMYUxWMXo2a3JFYll2QkYwTUhsMC9tYURGQVhlMlZpTWd6ZmRqMnFEZ0VyamFhbFErZUd5UFJTbG1jUlZ6clhYM3gyQWRQY0NFYTUranRCSWwyRkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTUxOTUxCWZpbGU6TW9yel8wLjIuMTNfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMi4xMwpIMlZRUVA2MUxFRlVaNTNwZkVqQTlpVmtlYSt4ekxwemNNZmI5dkc0TzhKYXphMUljQk80MHAyWFpacUJ2SitiZ0F5eTlISnBzQUpNeW1aTUpXNXJCQT09Cg==",
-      "url": "https://dl.morz.app/v0.2.13/Morz_0.2.13_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXZRQUhZNVNzdENYdlk1MWhma25zbmEyMllGWStBaXFUM285UW5DdmErMUQ5TU1DSEhTaXM4TnJLMWZERWtLOFNpcUhzaDgwSGZWQXhzQXJUTnBwL0FrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTk5ODc1CWZpbGU6TW9yel8wLjMuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjAKTVpVcTNjcDVhRXVjMEQrL2Z2bU5LQ3hRWWRlalJFV1p2MlRTV0RqSDVaSWJOK2htVkxxZTBFRHdWbyt3ajV3T3I5TzRHWGJrVGRrcmQxK1Fmb1FLRHc9PQo=",
+      "url": "https://dl.morz.app/v0.3.0/Morz_0.3.0_x64-setup.exe"
+    },
+    "darwin-aarch64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWc3aE5tajMwQ3d0K3BZRTRyVkFnSmJRZ005ZFhXZVRFMGZ3YUtLeUxSSmlUZ3JSWGZ0OW9LTElONUNCNXJ3MkZ5VURlWmUvazhUTW82MG92Z1dhVEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTk5NjQwCWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4zLjAKWWtyS2RTaW9lcVFOYzlMSHpNOTVVYkowWGJuWnJzeWg3Y05GQmkvYkhQak5FU1ZndHZmTkNKZUQ4eTMwdCtFbjhkaWljVnRHTC95VDVkcmxwcG9PQkE9PQo=",
+      "url": "https://dl.morz.app/v0.3.0/Morz_0.3.0_universal.app.tar.gz"
+    },
+    "darwin-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWc3aE5tajMwQ3d0K3BZRTRyVkFnSmJRZ005ZFhXZVRFMGZ3YUtLeUxSSmlUZ3JSWGZ0OW9LTElONUNCNXJ3MkZ5VURlWmUvazhUTW82MG92Z1dhVEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTk5NjQwCWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4zLjAKWWtyS2RTaW9lcVFOYzlMSHpNOTVVYkowWGJuWnJzeWg3Y05GQmkvYkhQak5FU1ZndHZmTkNKZUQ4eTMwdCtFbjhkaWljVnRHTC95VDVkcmxwcG9PQkE9PQo=",
+      "url": "https://dl.morz.app/v0.3.0/Morz_0.3.0_universal.app.tar.gz"
     }
   },
   "android": {
-    "url": "https://dl.morz.app/v0.2.13/Morz_0.2.13_android.apk",
-    "sha256": "6690a38e49f2e1606b43e8fa2e60d383a82db2fad1dcacf32ecd4c3db5322b3b"
+    "url": "https://dl.morz.app/v0.3.0/Morz_0.3.0_android.apk",
+    "sha256": "1cff820ba5d573147e553c7813bf400ac1177a4e399e5b66a73dabf61b1ee028"
   }
 }
