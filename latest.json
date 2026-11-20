@@ -1,15 +1,15 @@
 {
-  "version": "0.2.12",
-  "notes": "0.2.12 已就绪。这一版以打磨为主：文件历史、文件夹浏览与导图。\n\n**文件历史**\n\n- 新增「保存里程碑」：大改稿前给重要版本起个名字，它不会过期、也不会被自动快照挤掉，历史列表里置顶显示\n- 历史时间显示更完整：「2026年11月20日 周五 10:30」，一天内另标「刚刚 / N 分钟前」\n\n**文件夹浏览**\n\n- 任意目录规模下滚动更稳：切换文件夹不再闪白，滚动不再卡顿\n- 卡片预览更干净：正文里的链接、标记不再混进预览文字\n- 文件夹与文件行更紧凑，图标与名称对齐\n\n**导图**\n\n- 提升为根节点的一级标题不再被框选或删除误伤\n\n**手机**\n\n- 低配机型自动进入轻量模式，启动与滚动更顺\n\n**命令面板**\n\n- 拼音检索覆盖新增命令",
-  "pub_date": "2026-11-20T00:14:53Z",
+  "version": "0.2.13",
+  "notes": "0.2.13 已就绪。这一版修复手机上的检查更新。\n\n**更新**\n\n- 手机上检查更新不再报「网络异常」：更新信息改为经应用内网络层获取，不再受网页跨域限制\n- 增加了备用更新地址：主站不通时会自动换镜像，弱网/被拦截时更容易成功\n- 桌面端与网页版的更新检查行为不变\n\n**其他**\n\n- 应用内反馈、图床、插件市场下载在手机上同样改走应用内网络层，之前会被浏览器跨域策略拦掉",
+  "pub_date": "2026-11-20T05:21:25Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcW4zbGN6UUM2TUJwOFRZelMzdjdsczk2Qk5USnZZYTI2WW9tUGFSUHJ0UlgxZXJnMGd6Y0R0bytya2pyVHdFQXpNVUh4MXJQQ0lVRUt1dERnU2xVUWdVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTMwOTk0CWZpbGU6TW9yel8wLjIuMTJfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMi4xMgpYYU5KdW4wUnQ5V0Nra29lN1F3K25WeWQvRGtubmRnY0RMbTd5WGtZK2JJaWhibHNQbnUzV0VnU2tVMFlyNmlaTi9KcGFGYmVDYVpXYTlNVjZOOWhBUT09Cg==",
-      "url": "https://dl.morz.app/v0.2.12/Morz_0.2.12_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWhMYUxWMXo2a3JFYll2QkYwTUhsMC9tYURGQVhlMlZpTWd6ZmRqMnFEZ0VyamFhbFErZUd5UFJTbG1jUlZ6clhYM3gyQWRQY0NFYTUranRCSWwyRkF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MTUxOTUxCWZpbGU6TW9yel8wLjIuMTNfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMi4xMwpIMlZRUVA2MUxFRlVaNTNwZkVqQTlpVmtlYSt4ekxwemNNZmI5dkc0TzhKYXphMUljQk80MHAyWFpacUJ2SitiZ0F5eTlISnBzQUpNeW1aTUpXNXJCQT09Cg==",
+      "url": "https://dl.morz.app/v0.2.13/Morz_0.2.13_x64-setup.exe"
     }
   },
   "android": {
-    "url": "https://dl.morz.app/v0.2.12/Morz_0.2.12_android.apk",
-    "sha256": "671ad2657ac7d1243c3cb1603f31afe0bcc5e951df0d6a8f563aabf7d61f7647"
+    "url": "https://dl.morz.app/v0.2.13/Morz_0.2.13_android.apk",
+    "sha256": "6690a38e49f2e1606b43e8fa2e60d383a82db2fad1dcacf32ecd4c3db5322b3b"
   }
 }
