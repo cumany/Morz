@@ -1,11 +1,11 @@
 {
-  "version": "0.1.0",
-  "notes": "Morz 0.1.0：免费版首发。编辑与阅读核心、双链与反链、图谱、搜索、主题与插件社区，导出全家桶（PDF / HTML / Word / 长图 / 分享图）全部可用。",
-  "pub_date": "2026-11-21T00:53:02Z",
+  "version": "0.1.1",
+  "notes": "Morz 0.1.1\n\n- 手机端更顺：大库滚动与右栏日历不再卡顿\n- Word 文档可以直接打开预览；导出 Word 更稳\n- 桌面窄窗口下的排版修正",
+  "pub_date": "2026-11-21T04:48:04Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcW83QWR2VkJJNFQ5d3h2blBEeDZ5aVRYN3NMTWNTRmNJbnB2d2lqZHo2MnpCMkl4cFlCU2VLZmtVMFNKRFExVS9tbzFRYVNzM25BNjZ3UjFsSWd3eEE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MjIyMzc1CWZpbGU6TW9yel8wLjEuMF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjAKVzNIQjlhdVFaNzR6ZUZQZDVsdmJOQTdrYVFNRVJSRXNXSXFDWVVJWEd6aFpkRkt0NjNrSktVcis0V2tSVDR3dHY4L0lYSmRCN1FSYkhyOVV5S2lVQ0E9PQo=",
-      "url": "https://dl.morz.app/v0.1.0/Morz_0.1.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXR5R09BbUlWdW1rVmtkMmxpVmVXblRIN1BQeGNEb29yQWx4amdCMCt1aW9rQVJwS05OWkR1ekRBdU1KbStRVVRwYWNiOTRkNkxGc3JjK2Z2R1poRlE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MjM2NDU2CWZpbGU6TW9yel8wLjEuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjEKUnhrb3hiMG40OGRCSUl2d1NVYlVXd1JIS3FtZkdsTWJkZXZIRVJiQzhtaHZ1S2NrTzB0bnBQRFAyR3J5UVY5YTE1Z3lCYVZ5NjJaaW1tRlJPMTdmREE9PQo=",
+      "url": "https://dl.morz.app/v0.1.1/Morz_0.1.1_x64-setup.exe"
     }
   }
 }
