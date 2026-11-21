@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Morz 应用图标">
+  <title>Morz 应用图标</title><rect width="512" height="512" fill="#FBFAF5"/><g transform="translate(92.16 114.35) scale(1.7067)">
+<defs>
+  <clipPath id="lmk"><rect x="0" y="0" width="120" height="240"/></clipPath>
+  <clipPath id="rmk"><rect x="120" y="0" width="120" height="240"/></clipPath>
+</defs>
+<g transform="translate(-24 -9) scale(1.0)">
+  <path d="M 54 27 L 88 27 L 120 90 L 152 27 L 186 27 A 12 12 0 0 1 198 39 L 198 145 A 12 12 0 0 1 186 157 L 152 157 L 152 77 L 134.3 112.4 A 16 16 0 0 1 105.7 112.4 L 88 77 L 88 157 L 54 157 A 12 12 0 0 1 42 145 L 42 39 A 12 12 0 0 1 54 27 Z" fill="#1D1D1F" clip-path="url(#lmk)"/>
+  <path d="M 54 27 L 88 27 L 120 90 L 152 27 L 186 27 A 12 12 0 0 1 198 39 L 198 145 A 12 12 0 0 1 186 157 L 152 157 L 152 77 L 134.3 112.4 A 16 16 0 0 1 105.7 112.4 L 88 77 L 88 157 L 54 157 A 12 12 0 0 1 42 145 L 42 39 A 12 12 0 0 1 54 27 Z" fill="#B7AE9C" clip-path="url(#rmk)"/>
+</g></g>
+</svg>

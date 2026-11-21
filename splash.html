@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <title>Morz</title>
+    <style>
+      /* 原生启动小窗：独立页面，不加载主 bundle，避免抢 IndexedDB / 拖慢冷启动。
+         窗口本身是透明的：页面只画 logo，不铺任何底色/卡片。 */
+      html, body {
+        margin: 0; width: 100%; height: 100%; overflow: hidden;
+        background: transparent; user-select: none; cursor: default;
+      }
+      body { display: flex; align-items: center; justify-content: center; }
+      .splash-logo {
+        width: 88px; height: 88px; display: block;
+        animation:
+          splash-in .45s cubic-bezier(.22,.61,.36,1) both,
+          splash-breathe 2.6s ease-in-out .5s infinite;
+      }
+      @keyframes splash-in {
+        from { opacity: 0; transform: scale(.94); }
+        to { opacity: 1; transform: none; }
+      }
+      @keyframes splash-breathe {
+        0%, 100% { opacity: 1; }
+        50% { opacity: .82; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .splash-logo { animation: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <svg class="splash-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-label="Morz" role="img">
+      <rect width="512" height="512" rx="116" fill="#FBFAF5" />
+      <g transform="translate(60.65 87.11) scale(2.0349)">
+        <defs>
+          <clipPath id="splash-li"><rect x="0" y="0" width="120" height="240" /></clipPath>
+          <clipPath id="splash-ri"><rect x="120" y="0" width="120" height="240" /></clipPath>
+        </defs>
+        <g transform="translate(-24 -9)">
+          <path d="M 54 27 L 88 27 L 120 90 L 152 27 L 186 27 A 12 12 0 0 1 198 39 L 198 145 A 12 12 0 0 1 186 157 L 152 157 L 152 77 L 134.3 112.4 A 16 16 0 0 1 105.7 112.4 L 88 77 L 88 157 L 54 157 A 12 12 0 0 1 42 145 L 42 39 A 12 12 0 0 1 54 27 Z" fill="#1D1D1F" clip-path="url(#splash-li)" />
+          <path d="M 54 27 L 88 27 L 120 90 L 152 27 L 186 27 A 12 12 0 0 1 198 39 L 198 145 A 12 12 0 0 1 186 157 L 152 157 L 152 77 L 134.3 112.4 A 16 16 0 0 1 105.7 112.4 L 88 77 L 88 157 L 54 157 A 12 12 0 0 1 42 145 L 42 39 A 12 12 0 0 1 54 27 Z" fill="#B7AE9C" clip-path="url(#splash-ri)" />
+        </g>
+      </g>
+    </svg>
+  </body>
+</html>
