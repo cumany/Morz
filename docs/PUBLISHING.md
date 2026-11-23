@@ -92,7 +92,10 @@ Morz 插件市场采用 **DSH 自发布**模式：作者给仓库打上 topic �
 | `workspace` | 工作区（文件夹）信息 |
 | `views` | 注册侧栏/全页面板 |
 | `editor:insert` | 向编辑器插入内容 |
+| `editor:highlight` | 受控关键词/正则高亮 |
+| `editor:direct` | CodeMirror 6 直控（view/registerExtension/cm） |
 | `settings` | 读写自身设置 |
+| `http` | 访问网络（还需 `network` 声明 + 用户授权） |
 
 声明与实际调用不符会被自动审核拒绝；超额权限会降低用户信任。
 

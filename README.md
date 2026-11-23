@@ -35,13 +35,39 @@ Notes are ordinary `.md` files, in a folder of your choice:
 | --- | --- | --- |
 | What you type is already the layout; syntax appears only where the cursor lands. Tables, math, Mermaid diagrams and code blocks all edit in place — touch screens too. | `[[Wikilinks]]` with block references, backlinks, tags, local/global graphs, Dataview queries and property cards — a full knowledge layer over clean files. | Opens straight in the browser and installs as an offline PWA; a formatting bar sits above the iPad keyboard and Scribble keeps working; native builds for Windows, macOS, Linux and Android. |
 
+## See it render
+
+<p align="center"><img src="assets/feature-writing.webp" width="880" alt="Morz: a callout, task list, properties and a table with a calculated total, all rendered in place"></p>
+
+Callouts, task lists, properties and tables that calculate render in place — Markdown appears only where the cursor lands.
+
+<p align="center"><img src="assets/feature-rendering.webp" width="880" alt="Morz: inline and display math, a Mermaid diagram and a syntax-highlighted code block"></p>
+
+Inline and display math, Mermaid diagrams and code blocks are edited in place and render offline.
+
+<p align="center"><img src="assets/feature-mobile.webp" width="260" alt="Morz on a phone: the same document with the bottom formatting bar"></p>
+
+The same file on a phone: same layout, with the formatting bar within thumb reach.
+
+## Two editions
+
+**Morz · free edition**
+
+The stable core: editing and reading, wikilinks and backlinks, graph, search, themes and the plugin community. Enough for everyday writing, free for good.
+
+**Morz Insider · supporter seat**
+
+Support the project and take an insider seat: features still in progress appear here first — the AI assistant, card columns, calendar and daily notes, quick capture. Earlier builds, and your reports get looked at first.
+
+Insider builds promise no schedule, and not every experiment survives. Whatever stabilises moves into the free edition — supporters get early access, not exclusivity.
+
 ## Features
 
 | | |
 |---|---|
-| Writing | WYSIWYG editing; tables (in-place cells, `=SUM` formulas, sorting, fill-handle series), code blocks (100+ languages), math via MathJax 4 offline, Mermaid diagrams, footnotes, GitHub-style alerts |
+| Writing | WYSIWYG editing; tables (in-place cells, `=SUM` formulas, sorting, fill-handle series), code blocks (100+ languages), math via MathJax 4 offline, Mermaid diagrams, footnotes, GitHub-style alerts; card columns (headings become columns, write inside a card, full-screen card editing) |
 | Organising | Wikilinks (incl. block references) and backlinks, tags, property cards, outline, local/global graphs, daily notes & templates, calendar, favorites & recents, pinyin-aware command palette |
-| Export | PDF (page numbers, TOC page references, sidebar bookmarks), Word, HTML; DOCX import with round-trip fidelity (experimental); copy tables as images |
+| Export | PDF (page numbers, TOC page references, sidebar bookmarks), Word, HTML, long image (one PNG or a paginated zip); DOCX import with round-trip fidelity (experimental); copy tables or a text selection as images |
 | Extending | Plugin & theme markets (Dataview, Tasks, AI assistant, Blue Topaz, Style Settings); installs verified per file with sha256 |
 | Platforms | Windows / macOS / Linux / Android; runs in any modern browser and as a PWA; iPadOS touch layout |
 | Data | Plain `.md`, links auto-updated on rename/move, image upload (S3-compatible endpoints), file history, trash, one-click backup |
@@ -51,7 +77,7 @@ Notes are ordinary `.md` files, in a folder of your choice:
 Morz is in **closed beta** — installers are not published here yet. Ask for a link at
 <https://morz.app/> (the web app is open to everyone).
 
-- **Desktop**: Windows, macOS (Apple Silicon / Intel) and Linux builds go out to beta testers.
+- **Desktop**: free downloads for Windows, macOS (Apple Silicon / Intel) and Linux at <https://morz.app/#download>. Android is in closed beta.
 - **Web / iPad**: the PWA is served from <https://app.morz.app>; install it from the browser menu
   (iPad: Share → Add to Home Screen) to keep an offline copy.
 - Installed builds update from **Help → Check for Updates** (China-friendly mirror first, GitHub
@@ -59,7 +85,7 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 
 ## Downloads and auto-updates
 
-- Public releases will carry the NSIS installer, its minisign signature (`.exe.sig`) and `latest.json`.
+- Free desktop installers live under <https://dl.morz.app/> (`v0.1.x/`); each platform also ships a minisign signature for the updater.
 - Installer signatures are verified with minisign — a mirror cannot inject code.
 - The portable `.exe` cannot auto-update; use the installer for in-app updates.
 

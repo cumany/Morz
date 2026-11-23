@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "Morz 官方索引",
-  "updatedAt": 1795079473462,
+  "updatedAt": "2026-11-23",
   "plugins": [
     {
       "id": "morz.extract-note",
@@ -100,6 +100,29 @@
       "sha256": {
         "manifest": "168c8cb3735482818f39678ddba4ee0c1dc89bc9ced3bdc68bb1519684dafc00",
         "main": "fa03990a316fd7cafde74f2aa9db0746855638f8b84ad39cc87e13e20a44591e"
+      }
+    },
+    {
+      "id": "image-host",
+      "name": "图床",
+      "description": "S3 兼容的图片上传：插入即上传、批量上传、远程图本地化、图库浏览。",
+      "author": "Morz",
+      "repo": "cumany/morz-image-host",
+      "version": "1.0.0",
+      "tag": "v1.0.0",
+      "minAppVersion": "0.3.0",
+      "permissions": [
+        "vault:read",
+        "vault:write",
+        "workspace",
+        "settings",
+        "editor:insert"
+      ],
+      "changelog": "首个版本：插入即上传、批量上传、远程图本地化、图库浏览。",
+      "homepage": "https://github.com/cumany/morz-image-host",
+      "sha256": {
+        "manifest": "250db14cc2aaba9a1b90e5cec488fdf6a101e4aa2ff065be455b55fb04c9144d",
+        "main": "507bdd09a589db28aa687b995c9b4f9e70ebd1bbe5b28cc4226d8b4484372719"
       }
     }
   ],

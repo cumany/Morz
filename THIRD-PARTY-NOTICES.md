@@ -20,6 +20,7 @@ package itself; the full license text ships with the package in `node_modules/<n
 | @tauri-apps/api, @tauri-apps/plugin-opener | 2.x | MIT OR Apache-2.0 |
 | docx | 9.15.1 | MIT |
 | dompurify | 3.4.17 | MPL-2.0 OR Apache-2.0 (used under Apache-2.0) |
+| html-to-image | 1.11.13 | MIT |
 | jszip | 3.10.2 | MIT OR GPL-3.0-or-later (used under MIT) |
 | lucide | 1.64.0 | ISC |
 | markdown-it, markdown-it-emoji, -footnote, -mark, -sub, -sup | 15.x / 3.x / 4.x / 2.x | MIT |
