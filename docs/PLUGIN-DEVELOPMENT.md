@@ -1,7 +1,17 @@
 # 插件开发
 
-Morz 有两种插件：**原生 SDK 插件**（推荐）和 Obsidian 兼容插件。本文只讲前者；
-兼容层的目标是"能把已有的 Obsidian 插件跑起来"，不是新插件的开发方式。
+Morz 有两种插件：**原生 SDK 插件**（推荐）和通过 Obsidian 兼容层加载的旧插件（仅供迁移对照）。本文只讲前者。
+
+先说清边界：**Obsidian 兼容层不是“免改造运行 Obsidian 插件”的兼容承诺**，也不是
+Morz 的插件方向。它的用途是**迁移**——把已有 Obsidian 插件的功能拆出来，对照 SDK
+重写成 Morz 插件；兼容层只提供一部分 `obsidian` API 的形状，方便旧代码先跑起来、
+对照行为，并且已经冻结。新插件和准备长期维护的移植插件，都应该直接落在 Native SDK 上。
+
+当前状态（如实）：兼容层覆盖命令、Ribbon、状态栏、设置、数据读写、代码块和
+简单面板/视图等一部分常用 API；编辑器装饰、复杂工作区布局、Node/Electron 能力
+不在保证范围内。内部回归基线是真实插件 9/11、移植样例 26/68——这不是兼容率承诺，只是
+“哪些地方还能用来对照”的参考。迁移验收以用户可见功能为准，不以 `onload` 不报错为准。
+
 完整的 API 表在 [`PLUGIN-SDK.md`](./PLUGIN-SDK.md)，这里讲怎么从零做一个能装、能调、
 能发出去的插件。
 
@@ -135,8 +145,9 @@ module.exports = {
   激活失败会抛出带插件名的错误并回滚该插件注册的全部内容，不会拖垮其他插件。
 - **打包**：把 `manifest.json` 和 `main.js` 放在压缩包根目录，或者直接分发文件夹。
 - **发布**：把 `manifest.json` + `main.js` 推到 GitHub 仓库 → 打 `v*` tag 发 Release →
-  给仓库加 topic `morz-plugin`。官方扫描器每天自动收录进社区索引，**无需 PR、无需排队**；
-  完整规范（manifest 字段、自动审核规则、sha256 机制、更新流程）见
+  给仓库加 topic `morz-plugin`。社区索引扫描器每天会扫 topic；但客户端默认市场当前优先读
+  官方索引，**要确保默认市场可见，还要向 `cumany/Morz` 的 `registry/index.json` 提 PR**。
+  完整规范（manifest 字段、扫描规则、sha256 机制、更新流程）见
   **[PUBLISHING.md](PUBLISHING.md)**。
 - **自定义索引源**（进阶）：市场还读取用户添加的 **JSON 索引源**，安装时直接从 GitHub 仓库
   取文件；也可以让用户直接输入 `owner/repo` 安装。索引格式（纯静态 JSON，可托管在任意位置）：
@@ -165,8 +176,8 @@ module.exports = {
   显示“可更新”。没有 `version` 的条目只能安装，不能更新。
 - **固定到一个 release tag**（推荐 `tag`，或 `commit`）：客户端按 `tag` 取文件，不会因为作者
   后来改了默认分支而装到不一致的版本。没有 `tag`/`commit` 时才回退默认分支。
-- 发布新版本：改 `manifest.json` 的 `version` → 打新的 tag。社区索引每天自动扫描收录，
-  无需任何额外操作；官方索引条目需要同步更新 `index.json` 里的 `version`/`tag`。
+- 发布新版本：改 `manifest.json` 的 `version` → 打新的 tag。社区索引每天扫描自动收录；
+  官方索引条目需要同步更新 `index.json` 里的 `version`/`tag`。
   插件数据（`data.json`）和设置不会因为更新被清掉；更新失败会自动回滚旧版本。
 - 索引可选字段：`minAppVersion`、`permissions`、`sha256`（`{ "manifest": "...", "main": "...", "styles": "..." }`）、
   `homepage`、`changelog`、`icon`（一张图，128×128 推荐，市场显示 24px）。PR 里的 `trust`
@@ -175,10 +186,10 @@ module.exports = {
 
 ### 官方索引与社区索引
 
-市场读取两份索引：**官方索引**（本仓库的 `registry/index.json`，随应用分发并后台刷新，
-收录条目显示「官方」可信等级）与**社区索引**（扫描 `morz-plugin` topic 自动生成，
-条目显示「社区」；仓库所有权验证后可标「已验证」）。主题使用同一套 `themes` 数组字段
-（`id/name/author/repo/version/tag/theme/preview/changelog`）。
+市场有两份索引：**官方索引**（本仓库的 `registry/index.json`，随应用分发并后台刷新，
+客户端默认读取；条目为官方策展）与**社区索引**（`cumany/morz-registry` 扫描
+`morz-plugin` topic 自动生成；扫描已运行，客户端默认接入/托管还在完善）。主题使用同一套
+`themes` 数组字段（`id/name/author/repo/version/tag/theme/preview/changelog`）。
 发布流程与审核规则见 **[PUBLISHING.md](PUBLISHING.md)**。
 
 
@@ -267,7 +278,7 @@ view: table                # table | list
 - 选区改写（润色/翻译）先取 `ctx.active.selection()` + `text()`，结果完整后
   `replaceSelection`，避免流式碎片直接进正文。
 
-参考实现：应用内置 AI 助手（源码在私有仓库）；对外行为与上面的片段一致。
+内置的 AI 助手就是按这套方式实现的：端点与 Key 存在插件设置里，流式结果写进当前文档。
 
 ## 编辑器直控（CM6）
 
@@ -369,10 +380,38 @@ ctx.editor.registerExtension(ViewPlugin.fromClass(class {
 - **主题相关样式**：插件可以插入 `<style>`，但请用主题变量（`--text-color`、`--primary-color`、
   `--ui-bg` 等）而不是写死颜色，否则换主题会花。
 
+## 从 Obsidian 插件迁移
+
+**结论：目标是“转换”，不是“直接运行”。** 兼容层只用来对照旧行为；最终产物必须是
+`manifest.json` + `main.js` 的 Native SDK 插件。推荐流程：
+
+1. **列功能**：命令、Ribbon、状态栏、面板/视图、设置、代码块、编辑器行为、数据、网络。
+2. **逐项找 `ctx` 对应**：[`PLUGIN-SDK.md`](./PLUGIN-SDK.md) 里没有对应能力的，先标
+   “不可迁移”，不要用兼容层硬绕。
+3. **重写入口**：`manifest.json` 写 `"sdk": 1` 和最小 `permissions`；`main.js` 用
+   `module.exports = { async activate(ctx) { … }, deactivate() { … } }`。
+4. **编辑器行为**：只读高亮用 `ctx.editor.highlight`；装饰/keymap 用
+   `ctx.editor.registerExtension`（CM6 官方 API）。不要依赖 `.view-content`、
+   `registerCodeMirror`、`registerEditorSuggest`。
+5. **设置/面板**：设置用 `ctx.settings.defineSchema`；面板用 `ctx.ui.panel` 或
+   `ctx.ui.floating`。不要移植 Obsidian 的 `Modal` / `Setting` / `PluginSettingTab` DOM。
+6. **数据与网络**：文件走 `ctx.vault`，元数据走 `ctx.meta`，配置走 `ctx.settings`，
+   运行状态走 `ctx.storage`，请求走 `ctx.http`。不要用 Node/Electron。
+7. **验收**：按用户可见流程验收（命令、面板、设置保存、数据读回、渲染/导出），
+   不是只看插件能加载。
+
+当前明确不迁移：CM5 的 `registerCodeMirror`、复杂 workspace 布局、
+`registerMarkdownPostProcessor` 的全局改写、`registerEditorSuggest`、
+`electron`/Node 模块、二进制/流式上传下载、依赖 `.view-content` 的 DOM 补丁。
+这些需要重写功能，或判断该插件不适合迁移。
+
+给 AI 批量迁移时，把原插件的 `manifest.json`、入口源码和功能清单一起给出，并要求
+输出遵守 [`PLUGIN-SDK.md`](./PLUGIN-SDK.md) 末尾的生成模板。
+
 ## 参考
 
 - API 全表与类型：[`PLUGIN-SDK.md`](./PLUGIN-SDK.md)
-- 示例插件（源码仓库内）：doc-overview（命令 + 状态栏 + 面板 + 设置）、calendar（每日笔记）、
-  image-upload（图床）、keyword-highlight（受控高亮）、editor-direct（CM6 直控：行装饰 +
-  keymap + runCommand）。公开仓库不包含源码，示例以文档片段为准。
-- 宿主架构：内部文档。
+- 给 AI 的速查：[llm.md](https://morz.app/docs/llm)（边界、输出契约、API 映射）
+- 官方插件示例：[morz-reading-progress](https://github.com/cumany/morz-reading-progress)（状态栏刷新 + 滚动进度 + 设置实时生效）
+- 图床上传器实例：[morz-image-host](https://github.com/cumany/morz-image-host)
+- 发布到插件市场：[插件 / 主题发布教程](https://morz.app/docs/publishing)

@@ -95,7 +95,7 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
 - **[Getting started](docs/manual/index.md)** — from the first launch to a finished document, with real screenshots.
 - **[Feature guide](docs/manual/features.md)** — every menu item, what problem it solves, and when to use it.
 - **[Compared with Obsidian, Typora and Mubu](docs/manual/compare.md)** — honest capability comparison, trade-offs, and when not to choose Morz.
-- **[Plugin development](docs/PLUGIN-DEVELOPMENT.md)** · **[Plugin SDK](docs/PLUGIN-SDK.md)** · **[Theme development](docs/THEME-DEVELOPMENT.md)** · **[Blue Topaz](docs/BLUE-TOPAZ.md)** · **[Publishing guide](docs/PUBLISHING.md)**
+- **[Plugin development](docs/PLUGIN-DEVELOPMENT.md)** · **[Plugin SDK](docs/PLUGIN-SDK.md)** · **[Theme development](docs/THEME-DEVELOPMENT.md)** · **[Blue Topaz](docs/BLUE-TOPAZ.md)** · **[Publishing guide](docs/PUBLISHING.md)** · **[AI guide](llm.md)**
 
 ## Plugins and themes
 

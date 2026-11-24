@@ -692,15 +692,18 @@ ctx.ui.command({ id: "open-board", name: "打开看板", run: () => ctx.views.op
 
 ## 与 Obsidian 兼容层的关系
 
-宿主内部有两套通道：
+宿主内部有两套通道，但方向不同：
 
 | | Native SDK（本文档） | Compat 层 |
 |---|---|---|
 | manifest 标记 | `"sdk": 1` | 无（或 `sdk` 缺失） |
 | 拿到的 API | `ctx`（窄接口） | `Plugin` 基类 + `window.app` |
-| 稳定性 | 契约保证 | 尽力兼容，缺 API 会失败 |
-| 适用 | **新插件推荐** | 移植现成 Obsidian 插件 |
+| 定位 | 长期维护的插件 | 迁移期的对照工具 |
+| 稳定性 | 契约保证 | 冻结的 best-effort，不承诺免改造运行 |
+| 适用 | **新插件、准备维护的移植插件** | 临时跑旧代码、对照行为 |
 
-Compat 层只保证 L1（命令/数据/设置）与 L2（面板/视图）能跑；
-**L3（编辑器装饰）不保证**——迁移时用 Native SDK 的 `ctx.editor.registerExtension`
-重写装饰逻辑（语义与 Obsidian 的 `registerEditorExtension` 对齐，但拿 CM6 官方 API）。
+Compat 层只覆盖一部分常用 API（L1/L2 的一部分），**L3/L4 不保证**：编辑器装饰、
+`.view-content` DOM、CM5 的 `registerCodeMirror`、`registerEditorSuggest`、复杂
+workspace 布局都不能依赖。迁移的最终产物必须是用 `ctx` 重写的 Native SDK 插件；
+兼容层只是帮你把旧代码先跑起来、对照行为。具体流程见
+[`PLUGIN-DEVELOPMENT.md`](./PLUGIN-DEVELOPMENT.md#从-obsidian-插件迁移)。
