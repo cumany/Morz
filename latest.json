@@ -6,6 +6,10 @@
     "windows-x86_64": {
       "url": "https://count.morz.app/v0.3.3/Morz_0.3.3_x64-setup.exe?via=updater",
       "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWloMkgyUHVpcmRnV25QNFYrSXRMbkVhVE50WFl4aXJNVFFZMVd3YXNLaWNISWp5NXRHRFF1YmJjUnViLyt2UnZEaTRXZm9TWjhDWnhabkJRc1YvUEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTQwMDgyCWZpbGU6TW9yel8wLjMuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjMKd2ZlbmI2d0JKR29TbTJ1MUtzdjJSNmlIRVJxa1FQWGFDVm1mN3dRZVpEQlFncXhIczRtT1Z3NnlCbGJoR2lKNkh3Nmh3N0l1NmtJOFROVjU1NURDQkE9PQo="
+    },
+    "linux-x86_64": {
+      "url": "https://count.morz.app/v0.3.3/Morz_0.3.3_amd64.AppImage?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWhnOTYxQXZxRFNlNTIvZ0dPc1JMWGtrajJrSWtQcHZnTHdTMVY0M3hvOGNxRmFOdHg5RGJvMGpWbVNvTlZsM1FSdU9xTC9tSEREV1pSODZSS0dNeFFvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTYzMzk0CWZpbGU6TW9yel8wLjMuM19hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMy4zCnlkRER6a2FsN01ZWlV6VDNXWWRjRm5idEQwa1hMeEZuSXIyMTMwN3NwSjlOWk1IM1UvbGdYZGxpdjEzLzZ0ZXc0Tk9peDR6RTlvYXBvdGFISzgzSkN3PT0K"
     }
   }
 }
