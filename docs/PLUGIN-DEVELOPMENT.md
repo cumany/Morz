@@ -145,31 +145,11 @@ module.exports = {
   激活失败会抛出带插件名的错误并回滚该插件注册的全部内容，不会拖垮其他插件。
 - **打包**：把 `manifest.json` 和 `main.js` 放在压缩包根目录，或者直接分发文件夹。
 - **发布**：把 `manifest.json` + `main.js` 推到 GitHub 仓库 → 打 `v*` tag 发 Release →
-  给仓库加 topic `morz-plugin`。社区索引扫描器每天会扫 topic；但客户端默认市场当前优先读
-  官方索引，**要确保默认市场可见，还要向 `cumany/Morz` 的 `registry/index.json` 提 PR**。
-  完整规范（manifest 字段、扫描规则、sha256 机制、更新流程）见
-  **[PUBLISHING.md](PUBLISHING.md)**。
-- **自定义索引源**（进阶）：市场还读取用户添加的 **JSON 索引源**，安装时直接从 GitHub 仓库
-  取文件；也可以让用户直接输入 `owner/repo` 安装。索引格式（纯静态 JSON，可托管在任意位置）：
-
-  ```json
-  {
-    "name": "我的插件索引",
-    "plugins": [
-      {
-        "id": "my-plugin",
-        "name": "我的插件",
-        "description": "一句话说明",
-        "author": "your-name",
-        "repo": "your-name/my-plugin",
-        "version": "1.0.0",
-        "tag": "v1.0.0",
-        "trust": "community"
-      }
-    ]
-  }
-  ```
-
+  给仓库加 topic `morz-plugin`。社区索引扫描器每天会扫 topic，客户端新版本默认读取；市场统一展示，不显示来源徽章；旧版本客户端仍只读官方索引，要进官方精选仍走
+  `cumany/Morz` 的 `registry/index.json` PR。完整规范（manifest 字段、扫描规则、
+  sha256 机制、更新流程）见 **[PUBLISHING.md](PUBLISHING.md)**。
+- **直接安装**（进阶）：用户可以在插件管理里输入 `owner/repo`，直接从 GitHub 仓库安装，
+  不经过索引。
 ### 更新与版本
 
 - **`version` 是更新的唯一依据**：索引里的 `version` 必须大于已装 `manifest.version`，客户端才会
@@ -187,9 +167,10 @@ module.exports = {
 ### 官方索引与社区索引
 
 市场有两份索引：**官方索引**（本仓库的 `registry/index.json`，随应用分发并后台刷新，
-客户端默认读取；条目为官方策展）与**社区索引**（`cumany/morz-registry` 扫描
-`morz-plugin` topic 自动生成；扫描已运行，客户端默认接入/托管还在完善）。主题使用同一套
-`themes` 数组字段（`id/name/author/repo/version/tag/theme/preview/changelog`）。
+条目为官方策展）与**社区索引**（`cumany/morz-registry` 扫描 `morz-plugin` / `morz-theme`
+topic 自动生成，先做确定性校验，配置 LLM key 时再做 AI 审核）。客户端新版本默认读取两份，
+同 id / 同仓库以官方为准；市场统一展示，不显示来源徽章，按 stars / 最近更新时间排序。主题使用同一套 `themes` 数组字段
+（`id/name/author/repo/version/tag/theme/preview/changelog`）。
 发布流程与审核规则见 **[PUBLISHING.md](PUBLISHING.md)**。
 
 
