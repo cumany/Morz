@@ -1,0 +1,36 @@
+# Pages 响应头：编辑器本体（app.morz.app）
+# - 带内容哈希的静态资源永久缓存；
+# - HTML 不缓存，保证更新即时可见；
+# - 编辑器界面不被搜索引擎索引（落地页 morz.app 才是索引入口）。
+
+/*
+  X-Robots-Tag: noindex
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+/index.html
+  Cache-Control: no-cache
+
+/capture.html
+  Cache-Control: no-cache
+
+/splash.html
+  Cache-Control: no-cache
+
+/sw.js
+  Cache-Control: no-cache
+
+/style-recovery.js
+  Cache-Control: no-cache
+
+/workbox-*.js
+  Cache-Control: no-cache
+
+/manifest.webmanifest
+  Cache-Control: no-cache
+
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/icons/*
+  Cache-Control: public, max-age=604800

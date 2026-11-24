@@ -1,0 +1,2 @@
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["./dist-js-C1p1QA3w.js","./core-x6oYNWRS.js","./rolldown-runtime-BCiCTKAo.js"])))=>i.map(i=>d[i]);
+import{Ht as e,qt as t}from"./stats-Iv62oy7L.js";function n(e,t){return!e||t}var r=typeof window<`u`&&`__morzMockInvoke`in window;async function i(i,a){if(n(t,r))return fetch(i,a);let{fetch:o}=await e(async()=>{let{fetch:e}=await import(`./dist-js-C1p1QA3w.js`);return{fetch:e}},__vite__mapDeps([0,1,2]),import.meta.url);return o(i,a)}export{i as t};

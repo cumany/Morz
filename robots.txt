@@ -1,0 +1,3 @@
+# 编辑器界面不需要被搜索引擎收录：索引入口是落地页 https://morz.app/
+User-agent: *
+Disallow: /

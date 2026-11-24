@@ -1,0 +1,1553 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>更新日志 · Morz 文档</title>
+<meta name="description" content="这里记录每个版本的完整更新说明。应用内「帮助 → 检查更新」只显示摘要，详细内容以本页为准。 当前版本 0.3.2（内测） / 0.1.2（免费）。 0.2.3 与 0.2.4 未单独分发包，改动都包含在 0.2.5 中。 0.3.2（内测">
+<link rel="canonical" href="https://morz.app/docs/releases.html">
+<link rel="icon" type="image/svg+xml" href="assets/brand/icon.svg">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Morz 文档">
+<meta property="og:title" content="更新日志">
+<meta property="og:description" content="这里记录每个版本的完整更新说明。应用内「帮助 → 检查更新」只显示摘要，详细内容以本页为准。 当前版本 0.3.2（内测） / 0.1.2（免费）。 0.2.3 与 0.2.4 未单独分发包，改动都包含在 0.2.5 中。 0.3.2（内测">
+<meta property="og:url" content="https://morz.app/docs/releases.html">
+<meta property="og:image" content="https://morz.app/docs/assets/brand/morz-lockup.svg">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="更新日志">
+<meta name="twitter:description" content="这里记录每个版本的完整更新说明。应用内「帮助 → 检查更新」只显示摘要，详细内容以本页为准。 当前版本 0.3.2（内测） / 0.1.2（免费）。 0.2.3 与 0.2.4 未单独分发包，改动都包含在 0.2.5 中。 0.3.2（内测">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"更新日志","description":"这里记录每个版本的完整更新说明。应用内「帮助 → 检查更新」只显示摘要，详细内容以本页为准。 当前版本 0.3.2（内测） / 0.1.2（免费）。 0.2.3 与 0.2.4 未单独分发包，改动都包含在 0.2.5 中。 0.3.2（内测","inLanguage":"zh-CN","url":"https://morz.app/docs/releases.html","mainEntityOfPage":"https://morz.app/docs/releases.html","isPartOf":{"@type":"WebSite","name":"Morz 文档","url":"https://morz.app/docs/"},"publisher":{"@type":"Organization","name":"Morz","url":"https://morz.app/"},"dateModified":"2026-11-24"}</script>
+<style>html{background:#f7f8fa;color-scheme:light}html body{background:#f7f8fa;color:#1f2933}html.site-dark{background:#151a20;color-scheme:dark}html.site-dark body{background:#151a20;color:#c9d3dd}</style>
+<style id="site-theme-light">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
+   exported/printed documents, which use real HTML elements inside #write. */
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+#write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
+#write > :first-child { margin-top: 0; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
+#write h1 { font-size: 2.25em; } #write h2 { font-size: 1.75em; } #write h3 { font-size: 1.5em; }
+#write h4 { font-size: 1.25em; } #write h5 { font-size: 1em; } #write h6 { font-size: 1em; color: #777; }
+/* 列表项里的标题是“标题项”：保留字号，去掉文档标题的上下边距 */
+#write li > :is(h1, h2, h3, h4, h5, h6) { margin-top: 0; margin-bottom: 0; }
+#write p { margin: 0.9em 0; }
+#write a { color: var(--link-color, var(--primary-color, #4183c4)); text-decoration: none; }
+#write blockquote { margin: 0.8em 0; padding: 0 15px; border-left: 4px solid var(--blockquote-border, #dfe2e5); color: var(--blockquote-color, #777); }
+#write ul, #write ol { padding-left: 30px; margin: 0.8em 0; }
+#write li > p { margin: 0.2em 0; }
+#write .task-list-item { list-style-type: none; }
+#write .task-list-item-checkbox { margin: 0 0.4em 0 -1.4em; vertical-align: middle; }
+#write code { font-family: var(--monospace); font-size: 0.9em; background: var(--inline-code-bg, #f3f4f4); color: var(--inline-code-color, var(--primary-color, #d14)); padding: 0.12em 0.35em; border-radius: 4px; }
+#write pre.md-fences { font-family: var(--monospace); font-size: 0.9em; line-height: 1.5; background: var(--code-block-bg, #f8f8f8); border: 1px solid var(--code-block-border, #e7eaed); border-radius: 3px; padding: 8px 1em; overflow-x: auto; white-space: pre-wrap; break-inside: avoid; }
+#write pre.md-fences code { background: transparent; padding: 0; font-size: 1em; color: inherit; }
+/* 代码块配色：导出/发布站与编辑器共用同一组 CodeMirror 5 类名，
+   变量由主题提供，暗色主题自动跟着换。 */
+#write .cm-s-inner .cm-keyword { color: var(--cm-keyword, #a626a4); }
+#write .cm-s-inner .cm-atom, #write .cm-s-inner .cm-number { color: var(--cm-number, #986801); }
+#write .cm-s-inner .cm-def { color: var(--cm-def, #4078f2); }
+#write .cm-s-inner .cm-variable-2, #write .cm-s-inner .cm-variable-3 { color: var(--cm-type, #c18401); }
+#write .cm-s-inner .cm-property { color: var(--cm-property, #4078f2); }
+#write .cm-s-inner .cm-operator { color: var(--cm-operator, #0184bc); }
+#write .cm-s-inner .cm-comment { color: var(--cm-comment, #a0a1a7); font-style: italic; }
+#write .cm-s-inner .cm-string { color: var(--cm-string, #50a14f); }
+#write .cm-s-inner .cm-string-2 { color: var(--cm-string-2, #0184bc); }
+#write .cm-s-inner .cm-meta { color: var(--cm-meta, #c18401); }
+#write .cm-s-inner .cm-builtin { color: var(--cm-builtin, #4078f2); }
+#write .cm-s-inner .cm-tag { color: var(--cm-tag, #e45649); }
+#write .cm-s-inner .cm-attribute { color: var(--cm-attribute, #986801); }
+#write .cm-s-inner .cm-header { color: var(--cm-header, #e45649); font-weight: bold; }
+#write .cm-s-inner .cm-error { color: #f00; }
+#write .cm-s-inner .cm-positive { color: #22863a; } #write .cm-s-inner .cm-negative { color: #b31d28; }
+#write table { border-collapse: collapse; width: 100%; margin: 0.8em 0; break-inside: auto; }
+#write table th, #write table td { border: 1px solid var(--table-border-color, #dfe2e5); padding: 6px 13px; }
+#write table tr:nth-child(2n) { background: var(--table-stripe-bg, #f8f8f8); }
+#write tr { break-inside: avoid; }
+#write hr { height: 2px; padding: 0; margin: 16px 0; background: var(--hr-color, #e7e7e7); border: 0; }
+#write img { max-width: 100%; height: auto; }
+#write .md-image-figure { display: flex; flex-direction: column; width: fit-content; max-width: 100%; }
+#write .md-image-figure.is-center { align-items: center; margin: 4px auto 10px; }
+#write .md-image-figure.is-right { align-items: flex-end; margin: 4px 0 10px auto; }
+#write .md-image-figure.is-left { align-items: flex-start; margin: 4px auto 10px 0; }
+#write .md-image-figure img { max-width: 100%; height: auto; }
+#write .md-image-caption { max-width: 100%; margin-top: 4px; color: var(--text-color, #666); opacity: .82; font-size: .85em; line-height: 1.45; text-align: left; }
+#write .md-image-figure.is-center .md-image-caption { text-align: center; }
+#write .md-image-figure.is-left .md-image-caption,
+#write .md-image-figure.is-right .md-image-caption { width: 100%; text-align: center; }
+/* 显式画廊（<!-- morz-gallery -->）在导出里保持并排布局（render/gallery-markers.ts 生成结构）。 */
+#write .md-image-gallery { display: grid; grid-template-columns: repeat(var(--gallery-columns, 2), minmax(0, 1fr)); align-items: var(--gallery-align, start); gap: var(--gallery-gap, 8px); margin: 0.8em 0; }
+#write .md-image-gallery-cell { display: flex; align-items: center; justify-content: center; overflow: hidden; min-width: 0; min-height: 90px; border-radius: var(--image-radius, 4px); background: color-mix(in srgb, var(--text-color, #333) 5%, transparent); }
+#write .md-image-gallery-cell img { display: block; max-width: 100%; max-height: 240px; width: 100%; height: auto; object-fit: var(--gallery-fit, contain); }
+/* 橱窗裁切：统一格高 + cover 铺满（导出/PDF 与编辑器同一套变量） */
+#write .md-image-gallery.is-cover .md-image-gallery-cell { height: var(--gallery-height, 180px); min-height: 0; }
+#write .md-image-gallery.is-cover .md-image-gallery-cell img { height: 100%; max-height: none; object-fit: cover; }
+#write mark { background: var(--mark-bg-color, #ffef9e); color: inherit; }
+#write kbd { font-family: var(--monospace); font-size: 0.85em; padding: 0.1em 0.4em; border: 1px solid var(--kbd-border, #ccc); border-bottom-width: 2px; border-radius: 4px; background: var(--kbd-bg, #f7f7f7); }
+/* 纵向间距必须用 padding：CM6 只测量 widget 自身盒高，margin 不计入，
+   否则块后面的所有行点击命中都会整体偏移。 */
+#write .md-math-block { text-align: center; padding: 0.8em 0; margin: 0; overflow-x: auto; break-inside: avoid; }
+#write .md-diagram { text-align: center; padding: 0.8em 0; margin: 0; break-inside: avoid; }
+#write .md-diagram svg { max-width: 100%; height: auto; }
+#write .md-toc { margin: 0; }
+#write .md-toc-item { display: block; line-height: 1.7; }
+#write .md-toc-h2 { margin-left: 2em; } #write .md-toc-h3 { margin-left: 4em; } #write .md-toc-h4 { margin-left: 6em; } #write .md-toc-h5 { margin-left: 8em; } #write .md-toc-h6 { margin-left: 10em; }
+#write .footnotes { font-size: 0.9em; color: var(--footnote-color, inherit); }
+#write .footnotes-sep { margin-top: 2em; }
+/* Callout 的样式不在这里：base.css 也参与实时编辑器的主题注入（applyTheme），
+   写在这里的 ID 级选择器会压过 editor.css 的类型色。导出/阅读的卡片视觉由
+   exportCss 生成（同一张类型表 + 只作用于导出产物）。 */
+#write .md-meta-block { font-family: var(--monospace); font-size: 0.85em; background: var(--meta-block-bg, #f5f5f5); padding: 8px 1em; }
+@media print {
+  html, body { background: var(--print-bg, #fff) !important; }
+  #write { max-width: none; padding: 0; }
+  #write h1, #write h2, #write h3 { break-after: avoid-page; }
+  #write pre, #write blockquote, #write table, #write img, #write .md-math-block { break-inside: avoid; }
+  #write .md-image-gallery, #write .md-image-gallery-cell { break-inside: avoid; }
+}
+
+
+/* macOS 12 等不支持 color-mix 的 WebKit：固定值兜底。支持 color-mix 时不会命中。 */
+@supports not (color: color-mix(in srgb, red, blue)) {
+  #write .md-image-gallery-cell {
+    background: rgba(0,0,0,0.05);
+  }
+}
+
+#write .md-alert{--md-alert-color:#8a8f98;color:var(--text-color);background:color-mix(in srgb, var(--md-alert-color) var(--md-alert-tint,7%), transparent);border:0;border-radius:var(--md-alert-radius,8px);padding:2px 15px 2px 12px;margin:1.1em 0}
+#write .md-alert>.md-alert-text-container{margin:0 -15px .5em -12px;padding:6px 15px 4px 12px;border-radius:var(--md-alert-radius,8px) var(--md-alert-radius,8px) 0 0;background:color-mix(in srgb, var(--md-alert-color) calc(var(--md-alert-tint,7%) + 6%), transparent)}
+#write .md-alert-text{font-weight:600;color:var(--md-alert-color)}
+#write .md-alert .md-alert-icon{width:1.05em;height:1.05em;vertical-align:-.16em;margin-right:.4em;color:var(--md-alert-color)}
+#write .md-alert-note{--md-alert-color:#448aff;}
+#write .md-alert-abstract{--md-alert-color:#00b0ff;}
+#write .md-alert-info{--md-alert-color:#00b8d4;}
+#write .md-alert-todo{--md-alert-color:#00b8d4;}
+#write .md-alert-tip{--md-alert-color:#00bfa5;}
+#write .md-alert-success{--md-alert-color:#00c853;}
+#write .md-alert-question{--md-alert-color:#64dd17;}
+#write .md-alert-warning{--md-alert-color:#ff9100;}
+#write .md-alert-failure{--md-alert-color:#ff5252;}
+#write .md-alert-danger{--md-alert-color:#ff1744;}
+#write .md-alert-bug{--md-alert-color:#f50057;}
+#write .md-alert-example{--md-alert-color:#7c4dff;}
+#write .md-alert-quote{--md-alert-color:#9e9e9e;}
+#write .md-alert-important{--md-alert-color:#8957e5;}
+#write .md-alert-caution{--md-alert-color:#da3633;}
+#write{--pele-bg:var(--bg-color,#fff);--pele-fg:var(--text-color,#1f1f1f);--pele-line:var(--text-color,#1f1f1f);--pele-muted:#6e6e6e;--pele-muted:color-mix(in srgb, var(--text-color,#1f1f1f) 62%, var(--bg-color,#fff));--pele-surface:#f3f3f3;--pele-surface:color-mix(in srgb, var(--text-color,#1f1f1f) 5%, var(--bg-color,#fff));--pele-surface-alt:#e6e6e6;--pele-surface-alt:color-mix(in srgb, var(--text-color,#1f1f1f) 11%, var(--bg-color,#fff));--pele-border:#8a8a8a;--pele-border:color-mix(in srgb, var(--text-color,#1f1f1f) 46%, var(--bg-color,#fff));--pele-accent:var(--primary-color,#5b7bd5);--pele-error:#e45756;--pele-critical:#e45756;--pele-font:var(--text-font,var(--write-font,sans-serif));--pele-font-mono:var(--monospace,monospace);--pele-radius:4px;--pele-series-1:#7b6cd9;--pele-series-2:#4d8ff0;--pele-series-3:#33b6a8;--pele-series-4:#67b168;--pele-series-5:#d9a53a;--pele-series-6:#e0705e;--pele-series-7:#c66fbe;--pele-series-8:#8a919f}
+
+:root {
+  --bg-color: var(--background-primary, var(--bt-bg, #ffffff));
+  --text-color: var(--text-normal, var(--bt-text, #333333));
+  --side-bar-bg-color: var(--background-secondary, var(--bt-sidebar, #fafafa));
+  --control-text-color: var(--text-muted, var(--bt-muted, #666666));
+  --item-hover-bg-color: var(--background-modifier-hover, var(--bt-accent-softer, rgba(128, 128, 128, 0.12)));
+  --active-file-bg-color: var(--background-modifier-active-hover, var(--background-secondary-alt, var(--bt-accent-soft, rgba(128, 128, 128, 0.16))));
+  --active-file-border-color: var(--interactive-accent, var(--text-accent, var(--bt-accent, #4183c4)));
+  --primary-color: var(--interactive-accent, var(--text-accent, var(--bt-accent, #4183c4)));
+  --select-text-bg-color: var(--text-selection, var(--bt-selection, rgba(65, 131, 196, 0.22)));
+  --ui-border-color: var(--background-modifier-border, var(--bt-border, rgba(128, 128, 128, 0.22)));
+  --text-font: var(--font-text, var(--font-text-theme, var(--bt-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --write-font: var(--font-text, var(--font-text-theme, var(--bt-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --ui-font: var(--font-interface, var(--font-default, var(--bt-ui-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --monospace: var(--font-monospace, var(--font-monospace-theme, var(--bt-mono, ui-monospace, Consolas, monospace)));
+  --write-line-height: var(--line-height-normal, var(--bt-line-height, 1.6));
+  --write-font-size: var(--font-text-size, 16px);
+  --link-color: var(--text-accent, var(--bt-accent-strong, #2d82cc));
+  --tag-color: var(--text-accent, var(--bt-accent, #468eeb));
+  --inline-code-bg: var(--code-background, var(--bt-inline-bg, #f3f4f4));
+  --inline-code-color: var(--code-normal, var(--text-normal, var(--bt-inline-color, #c05621)));
+  --code-block-bg: var(--code-background, var(--bt-code-bg, #f8f8f8));
+  --code-block-color: var(--code-normal, var(--text-normal, var(--bt-code-text, inherit)));
+  --blockquote-border: var(--interactive-accent, var(--bt-accent, #468eeb));
+  --blockquote-color: var(--text-muted, var(--bt-quote-text, #777777));
+  --hr-color: var(--background-modifier-border, var(--bt-border, #e7e7e7));
+  --table-border-color: var(--background-modifier-border, var(--bt-border, #dfe2e5));
+  --table-header-bg: var(--table-header-background, var(--bt-table-head, transparent));
+  --table-stripe-bg: var(--table-row-background-hover, var(--bt-table-stripe, #f8f8f8));
+  --meta-content-color: var(--text-muted, var(--bt-muted, #777777));
+  --meta-block-bg: var(--background-secondary, var(--bt-bg-soft, #f5f5f5));
+  --mark-bg-color: var(--text-highlight-bg, var(--bt-mark, #ffef9e));
+  --caret-color: var(--text-accent, var(--text-color));
+  --task-done-color: var(--text-faint, var(--text-muted, inherit));
+}
+
+
+#write{background-color:var(--bt-page-bg,transparent);background-image:linear-gradient(var(--bt-page-overlay,transparent),var(--bt-page-overlay,transparent)),var(--bt-page-bg-image,none);background-size:cover;background-position:center;}
+/* Morz "Fjord" — 峡湾。
+   冷调浅色：雾蓝灰的底、克制的蓝做强调，无衬线正文，层级只靠字号和留白。
+   换掉了原来三个近似的浅色主题（Github / Whitey / Pixyll），留一套干净的默认外观。 */
+:root {
+  --bg-color: #f7f8fa;
+  --text-color: #1f2933;
+  --side-bar-bg-color: #eef1f5;
+  --control-text-color: #5c6b7a;
+  --item-hover-bg-color: rgba(31, 41, 51, 0.055);
+  --active-file-bg-color: #e3e9f0;
+  --active-file-border-color: #2f6f9f;
+  --primary-color: #2f6f9f;
+  --select-text-bg-color: #cfe1f0;
+  --ui-border-color: #dbe2ea;
+
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --write-font-size: 16px;
+  --write-line-height: 1.72;
+  --write-max-width: 700px;
+  --write-padding-x: 36px;
+  --monospace: "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas, monospace;
+
+  --link-color: #25638f;
+  --tag-color: #2f6f9f;
+  --inline-code-bg: #eaeef3;
+  --code-block-bg: #f0f3f7;
+  --code-block-border: #dbe2ea;
+  --blockquote-border: #b9c8d6;
+  --blockquote-color: #4a5866;
+  --hr-color: #dbe2ea;
+  --table-border-color: #dbe2ea;
+  --table-stripe-bg: #f2f5f9;
+  --md-char-color: #94a3b1;
+  --meta-content-color: #7b8896;
+  --meta-block-bg: #eef1f5;
+  --mark-bg-color: #f6e7a8;
+  --kbd-bg: #eef1f5;
+  --kbd-border: #dbe2ea;
+}
+
+#write h1 { font-size: 1.9em; font-weight: 650; line-height: 1.25; letter-spacing: -0.012em; margin: 1.3em 0 0.45em; color: #141a20; }
+#write h2 { font-size: 1.32em; font-weight: 650; line-height: 1.4; margin: 1.6em 0 0.4em; color: #141a20; }
+#write h3 { font-size: 1.08em; font-weight: 600; margin: 1.3em 0 0.3em; }
+#write h4, #write h5, #write h6 { font-weight: 600; letter-spacing: 0.01em; }
+
+#write p { margin: 0 0 0.95em; }
+#write a { color: var(--link-color); text-decoration: none; }
+#write a:hover { text-decoration: underline; text-underline-offset: 2px; }
+#write blockquote { border-left: 3px solid var(--blockquote-border); color: var(--blockquote-color); padding-left: 14px; }
+#write code { color: #2a3a48; }
+#write pre.md-fences { border-radius: 6px; }
+#write hr { border-top: 1px solid var(--hr-color); }
+#write table th { background: var(--side-bar-bg-color); font-weight: 600; }
+
+/* 界面：标题栏和正文同底色，状态栏收成一行小字，不抢戏 */
+.titlebar { background: var(--bg-color); }
+.statusbar { letter-spacing: 0.02em; color: var(--control-text-color); }
+
+
+
+
+:root { --site-max: 820px; --site-rail-w: 250px; }
+/* 画布必须显式上色：只靠 color-scheme 的话，某些内嵌浏览器切暗后会留下白底 */
+html { background: var(--bg-color, #fff); color-scheme: light; }
+html.site-dark { color-scheme: dark; }
+body { margin: 0; background: var(--bg-color, #fff); font: 16px/1.7 -apple-system, "Segoe UI", system-ui, sans-serif; }
+.site { display: flex; min-height: 100vh; }
+.site-header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 12px;
+  height: 56px; box-sizing: border-box; padding: 0 20px; background: var(--bg-color, #fff);
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-brand { display: inline-flex; align-items: center; gap: 8px; flex: none;
+  font-size: 1rem; font-weight: 600; color: inherit; text-decoration: none; white-space: nowrap; }
+.site-brand::before { content: ""; width: 9px; height: 9px; border-radius: 3px;
+  background: var(--primary-color, var(--link-color, #4183c4)); }
+.site-brand.has-logo::before { content: none; }
+.site-brand-logo { display: block; height: 22px; width: auto; }
+.site-brand-logo.is-dark { display: none; }
+.site-brand.has-logo .site-brand-logo.has-dark { display: block; }
+html.site-dark .site-brand.has-logo .site-brand-logo.has-dark { display: none; }
+html.site-dark .site-brand-logo.is-dark { display: block; }
+.site-brand-suffix { font-size: 0.78rem; font-weight: 500; opacity: 0.5; }
+.site-toplinks { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; flex: none; }
+.site-toplinks a { font-size: 0.85rem; padding: 4px 8px; border-radius: 6px; color: inherit; text-decoration: none; opacity: 0.72; }
+.site-toplinks a:hover { opacity: 1; background: color-mix(in srgb, currentColor 8%, transparent); }
+.site-theme-toggle { display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 32px; height: 32px; border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 8px;
+  background: transparent; color: inherit; cursor: pointer; }
+.site-theme-toggle:hover { background: rgba(127,127,127,0.1); }
+.site-theme-toggle svg { width: 16px; height: 16px; }
+.site-theme-toggle .icon-moon { display: none; }
+html.site-dark .site-theme-toggle .icon-sun { display: none; }
+html.site-dark .site-theme-toggle .icon-moon { display: block; }
+.site-nav {
+  width: 260px; flex: none; border-right: 1px solid var(--table-border-color, #e5e7eb);
+  padding: 14px 14px; overflow-y: auto; position: sticky; top: 56px; height: calc(100vh - 56px);
+  box-sizing: border-box; background: var(--bg-color, #fff);
+}
+.site-nav h1 { font-size: 1rem; margin: 0 0 12px; }
+.site-nav-toggle { display: none; align-items: center; gap: 6px; border: 1px solid var(--table-border-color, #e5e7eb);
+  background: transparent; color: inherit; border-radius: 7px; padding: 5px 9px; font: inherit; font-size: 0.82rem; cursor: pointer; }
+.site-nav-toggle svg { width: 14px; height: 14px; }
+.site-nav-links { display: block; }
+.site-nav-scrim { display: none; }
+.site-nav a { display: block; padding: 4px 8px; border-radius: 6px; color: var(--text-color, #333);
+  text-decoration: none; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-nav a:hover { background: rgba(127,127,127,0.12); }
+.site-nav a[aria-current="page"] { background: rgba(127,127,127,0.16); font-weight: 600; }
+.site-nav-group { margin: 14px 8px 4px; font-size: 0.72rem; opacity: 0.55; letter-spacing: 0.04em; }
+.site-nav-group:first-child { margin-top: 4px; }
+.site-nav-external { display: none; }
+/* 正文图片点击放大：整数图放在遮罩上，点遮罩或 Esc 关闭 */
+.site-lightbox { position: fixed; inset: 0; z-index: 120; display: none; align-items: center;
+  justify-content: center; padding: 16px; box-sizing: border-box;
+  background: rgba(10, 12, 16, 0.9); cursor: zoom-out; }
+.site-lightbox.is-open { display: flex; }
+.site-lightbox img { max-width: 100%; max-height: 100%; object-fit: contain;
+  border-radius: 4px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5); }
+.site-lightbox-close { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px;
+  border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: #fff;
+  font: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
+body.lightbox-open { overflow: hidden; }
+@media (max-width: 820px) {
+  .site-nav-external { display: block; margin: 0 0 10px; padding: 0 0 10px;
+    border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+}
+.site-main { flex: 1; min-width: 0; padding: 30px 40px 80px; }
+.site-rail-toggle { display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 32px; height: 32px; border: 1px solid var(--table-border-color, #e5e7eb); background: transparent;
+  color: inherit; border-radius: 8px; padding: 0; cursor: pointer; }
+.site-rail-toggle:hover { background: rgba(127,127,127,0.1); }
+.site-rail-toggle svg { width: 16px; height: 16px; }
+.site-main #write { max-width: var(--site-max); margin: 0 auto; }
+.site-content { position: relative; max-width: var(--site-max); margin: 0 auto; }
+.site-content #write { max-width: none; margin: 0; }
+/* 大纲指示条：页面右侧、纵向居中；右栏打开时落在正文与右栏之间 */
+.site-ticks { position: fixed; right: 254px; top: 50%; transform: translateY(-50%);
+  width: 28px; z-index: 6; }
+html.rail-closed .site-ticks { right: 24px; }
+.site-ticks-inner { display: flex; flex-direction: column; align-items: flex-end;
+  max-height: 70vh; overflow-y: auto; scrollbar-width: none; }
+.site-ticks-inner::-webkit-scrollbar { display: none; }
+.site-tick { position: relative; display: block; width: 26px; height: 12px; }
+.site-tick::before { content: ""; position: absolute; right: 0; top: 5px; width: 20px; height: 2px;
+  border-radius: 999px; background: var(--table-border-color, #d0d7de);
+  transition: width 0.12s ease, background 0.12s ease; }
+.site-tick.lv3::before { width: 15px; height: 1.5px; opacity: 0.75; }
+.site-tick:hover::before, .site-tick:focus-visible::before, .site-tick.is-current::before {
+  width: 26px; opacity: 1; background: var(--link-color, #4183c4); }
+.site-tick-tip { position: fixed; z-index: 70; max-width: 280px; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; padding: 4px 9px; border-radius: 6px; font-size: 0.75rem; line-height: 1.4;
+  color: var(--text-color, #333); background: var(--bg-color, #fff);
+  border: 1px solid var(--table-border-color, #e5e7eb); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  pointer-events: none; }
+.site-tick-tip[hidden] { display: none; }
+@media (max-width: 1100px) { .site-ticks { display: none; } }
+.site-main #write :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 76px; }
+.site-main #write img { border-radius: 8px; }
+.site-main #write .md-image-figure img { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
+/* 引用块和表头给一点底色，正文层次不至于全靠字号 */
+.site-main #write blockquote { background: rgba(127, 127, 127, 0.045); border-radius: 0 6px 6px 0;
+  padding: 8px 14px 8px 16px; }
+.site-main #write table th { background: color-mix(in srgb, var(--text-color, #333) 5%, transparent); }
+/* 首列尽量不换行；表格本身放进可横向滚动的容器，窄屏也不撑破正文 */
+.site-main #write table :is(th, td):first-child { white-space: nowrap; }
+/* 表格按内容宽度排版：窄屏横向滚动，而不是把每列压成两三个字。
+   首列 sticky，横向滑动时仍能看清自己在哪一行。 */
+.site-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+/* 用 #write 前缀压过基础样式里的 #write table { width: 100% }（id 权重更高）：
+   表格按内容排，超出容器才横向滚动。首列是否吸附由脚本测量后决定（.pin-first）：
+   窄列（比如分类名）吸附住，宽列跟着整表滚走，不再遮挡正文。 */
+#write .site-table-wrap table { margin-top: 0.8em; margin-bottom: 0.8em;
+  width: max-content; min-width: 100%; }
+#write .site-table-wrap.pin-first :is(th, td):first-child { position: sticky; left: 0; z-index: 1;
+  background: var(--bg-color, #fff);
+  box-shadow: 1px 0 0 var(--table-border-color, #dfe2e5); }
+#write .site-table-wrap.pin-first thead th:first-child { z-index: 2;
+  background: color-mix(in srgb, var(--bg-color, #fff) 93%, var(--text-color, #333) 7%); }
+#write .site-table-wrap.pin-first tbody tr:nth-child(even) td:first-child {
+  background: color-mix(in srgb, var(--bg-color, #fff) 97%, var(--text-color, #333) 3%); }
+.site-main #write a:hover { text-decoration: underline; text-underline-offset: 2px; }
+/* 代码块工具条：语言 + 复制 */
+.site-code { margin: 1em 0; border: 1px solid var(--code-block-border, #e7eaed); border-radius: 8px;
+  overflow: hidden; background: var(--code-block-bg, #f8f8f8); }
+.site-code pre.md-fences { margin: 0; border: 0; border-radius: 0; background: transparent; }
+.site-code-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 5px 12px; font-size: 0.72rem; line-height: 1.4; color: var(--text-color, #333);
+  background: color-mix(in srgb, var(--text-color, #333) 5%, transparent);
+  border-bottom: 1px solid var(--code-block-border, #e7eaed); }
+.site-code-lang { opacity: 0.6; }
+.site-code-copy { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer;
+  padding: 4px 8px; min-height: 24px; border-radius: 5px; opacity: 0.65; }
+.site-code-copy:hover { background: rgba(127, 127, 127, 0.15); opacity: 1; }
+.site-code-copy.is-done { color: var(--link-color, #4183c4); opacity: 1; }
+.site-main .site-pager { max-width: var(--site-max); margin-left: auto; margin-right: auto; }
+#write a.is-unresolved { color: inherit; text-decoration: underline dotted; cursor: default; opacity: .7; }
+/* 搜索：顶栏按钮 + Ctrl/Cmd+K 面板 */
+.site-search-open { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; flex: none;
+  min-width: 190px; height: 32px; padding: 0 10px; border-radius: 7px; cursor: pointer;
+  border: 1px solid var(--table-border-color, #e5e7eb); background: rgba(127,127,127,0.04);
+  color: inherit; font: inherit; font-size: 0.82rem; opacity: 0.75; }
+.site-search-open:hover { opacity: 1; border-color: var(--link-color, #4183c4); }
+.site-search-open svg { width: 14px; height: 14px; flex: none; }
+.site-search-open span { flex: 1; text-align: left; }
+.site-search-open kbd { font-family: inherit; font-size: 0.7rem; padding: 1px 5px; border-radius: 4px;
+  border: 1px solid var(--table-border-color, #e5e7eb); background: transparent; opacity: 0.7; }
+.site-search-modal { position: fixed; inset: 0; z-index: 90; display: flex; justify-content: center;
+  align-items: flex-start; padding: 12vh 12px 24px; background: rgba(15, 18, 24, 0.38);
+  backdrop-filter: blur(2px); }
+.site-search-modal[hidden] { display: none; }
+.site-search-panel { width: min(620px, 100%); max-height: 68vh; display: flex; flex-direction: column;
+  overflow: hidden; border-radius: 12px; border: 1px solid var(--table-border-color, #e5e7eb);
+  background: var(--bg-color, #fff); color: var(--text-color, #333);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22); }
+.site-search-field { display: flex; align-items: center; gap: 9px; padding: 12px 14px;
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-search-field svg { width: 16px; height: 16px; flex: none; opacity: 0.55; }
+.site-search-field input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent;
+  color: inherit; font: inherit; font-size: 0.95rem; }
+.site-search-field kbd { font-family: inherit; font-size: 0.68rem; opacity: 0.55; padding: 1px 5px;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 4px; }
+.site-search-results { overflow-y: auto; padding: 6px; }
+.site-search-hit { display: block; padding: 9px 10px; border-radius: 8px; text-decoration: none;
+  color: inherit; }
+.site-search-hit strong { display: block; font-size: 0.88rem; line-height: 1.45; }
+.site-search-hit span { display: block; margin-top: 2px; font-size: 0.78rem; line-height: 1.5;
+  opacity: 0.62; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.site-search-hit mark { background: color-mix(in srgb, var(--link-color, #4183c4) 22%, transparent);
+  color: inherit; border-radius: 2px; padding: 0 1px; }
+.site-search-hit.is-active { background: color-mix(in srgb, var(--link-color, #4183c4) 9%, transparent); }
+.site-search-empty { padding: 22px 12px; text-align: center; font-size: 0.85rem; opacity: 0.55; }
+.site-search-foot { flex: none; padding: 7px 12px; border-top: 1px solid var(--table-border-color, #e5e7eb);
+  font-size: 0.7rem; opacity: 0.55; text-align: right; }
+body.search-open { overflow: hidden; }
+.site-pager { margin: 40px auto 0; display: flex; justify-content: space-between;
+  gap: 16px; font-size: 0.9rem; }
+.site-pager a { color: var(--link-color, #4183c4); text-decoration: none; }
+.site-footer { max-width: var(--site-max); margin: 56px auto 0; padding: 16px 0 0;
+  border-top: 1px solid var(--table-border-color, #e5e7eb); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; font-size: 0.76rem; opacity: 0.62; }
+.site-footer nav { display: flex; gap: 14px; flex-wrap: wrap; }
+.site-footer a { color: inherit; text-decoration: none; }
+.site-footer a:hover { color: var(--link-color, #4183c4); text-decoration: underline; text-underline-offset: 2px; }
+
+/* 没有首页正文时的文章索引：卡片而不是一条光秃秃的链接列表 */
+.site-home-head { margin: 10px 0 26px; }
+.site-home-meta { margin: 0 0 8px; font-size: 0.82rem; opacity: 0.55; letter-spacing: 0.02em; }
+.site-home-head h1 { margin: 0; font-size: 2.2rem; line-height: 1.2; letter-spacing: -0.01em; }
+.site-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.site-card { display: flex; flex-direction: column; gap: 7px; padding: 15px 16px 16px;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 10px;
+  color: inherit; text-decoration: none; background: rgba(127,127,127,0.035);
+  transition: background 0.15s, border-color 0.15s; }
+.site-card:hover { background: rgba(127,127,127,0.08); border-color: var(--link-color, #4183c4); }
+.site-card strong { font-size: 0.96rem; line-height: 1.45; }
+.site-card span { font-size: 0.8rem; line-height: 1.55; opacity: 0.62;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media (max-width: 700px) {
+  .site-home-head h1 { font-size: 1.7rem; }
+  .site-cards { grid-template-columns: 1fr; }
+}
+
+/* 右侧栏：上方大纲，下方局部图谱 */
+.site-rail { width: var(--site-rail-w); flex: none; box-sizing: border-box;
+  position: sticky; top: 56px; height: calc(100vh - 56px); display: flex; flex-direction: column;
+  border-left: 1px solid var(--table-border-color, #e5e7eb); background: var(--bg-color, #fff); }
+.site-rail h2 { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.05em; opacity: 0.55;
+  margin: 0 0 8px; }
+.site-rail-outline { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 12px 10px; }
+.site-outline a { display: block; padding: 5px 8px; border-radius: 5px; text-decoration: none;
+  color: var(--text-color, #333); font-size: 0.84rem; line-height: 1.45;
+  border-left: 2px solid transparent; overflow: hidden; text-overflow: ellipsis; }
+.site-outline a.lv3 { padding: 4px 8px; font-size: 0.8rem; opacity: 0.82; border-left: none; }
+.site-outline-sub { margin: 1px 0 7px 13px; padding-left: 7px;
+  border-left: 1px solid var(--table-border-color, #e5e7eb); }
+.site-outline a:hover { background: rgba(127,127,127,0.1); }
+.site-outline a.is-current { border-left-color: var(--link-color, #4183c4); font-weight: 600; opacity: 1;
+  background: rgba(127,127,127,0.12); }
+.site-outline a.lv3.is-current { background: rgba(127,127,127,0.14); }
+.site-outline-empty { margin: 0 8px; font-size: 0.8rem; opacity: 0.55; }
+.site-graph { flex: none; height: 240px; box-sizing: border-box; padding: 12px 10px 10px;
+  border-top: 1px solid var(--table-border-color, #e5e7eb); }
+.site-graph-canvas { height: 190px; }
+.site-graph svg { width: 100%; height: 100%; display: block; }
+.site-graph .edge { stroke: rgba(127,127,127,0.35); stroke-width: 1; }
+.site-graph .node circle { fill: var(--bg-color, #fff); stroke: var(--link-color, #4183c4);
+  stroke-width: 1.5; cursor: pointer; }
+.site-graph .node.center circle { fill: var(--link-color, #4183c4); }
+.site-graph .node text { font-size: 9px; fill: var(--text-color, #333); pointer-events: none; }
+.site-graph .node { cursor: pointer; }
+.site-graph .node.dim { opacity: 0.28; }
+.site-graph .node.hot circle { stroke-width: 2.5; }
+.site-graph .empty { font-size: 0.8rem; opacity: 0.55; padding: 6px 8px; }
+html.rail-closed .site-rail { display: none; }
+.site-rail-scrim { display: none; }
+/* 桌面右栏展开时，正文里的 [TOC] 和右栏大纲重复；小屏右栏收起，保留正文目录 */
+@media (min-width: 1200px) {
+  html:not(.rail-closed) .site-main #write > .md-toc { display: none; }
+}
+
+/* Ctrl/Cmd 悬停预览：视觉贴近应用内 .md-link-preview */
+.site-preview { position: fixed; z-index: 100; width: min(420px, calc(100vw - 16px)); max-height: 360px;
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 10px;
+  background: var(--bg-color, #fff); color: var(--text-color, #333);
+  border: 1px solid var(--table-border-color, #e5e7eb); box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
+.site-preview-head { display: flex; align-items: center; gap: 8px; padding: 9px 12px;
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-preview-head strong { font-size: 0.9rem; }
+.site-preview-head small { margin-left: auto; font-size: 0.72rem; opacity: 0.55; }
+.site-preview-open { flex: none; font-size: 0.78rem; color: var(--link-color, #4183c4); text-decoration: none;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 6px; padding: 2px 7px; }
+.site-preview-body { padding: 6px 14px 12px; overflow: auto; font-size: 0.88rem; }
+.site-preview-body #write { max-width: none; }
+.site-preview-body img { max-width: 100% !important; height: auto !important; }
+.site-preview-foot { padding: 7px 12px; border-top: 1px solid var(--table-border-color, #e5e7eb);
+  font-size: 0.72rem; opacity: 0.6; }
+
+@media (max-width: 1199px) {
+  .site-rail { position: fixed; right: 0; top: 0; z-index: 60; width: min(320px, 86vw);
+    transform: translateX(100%); transition: transform 0.18s ease; box-shadow: -8px 0 28px rgba(0,0,0,0.18); }
+  html:not(.rail-closed) .site-rail { transform: none; }
+  html:not(.rail-closed) .site-rail-scrim { display: block; position: fixed; inset: 0; z-index: 50;
+    background: rgba(0,0,0,0.32); }
+}
+@media (max-width: 820px) {
+  /* 小屏顶栏：固定在顶部，但往下滚动时整条滑出，往上滚动再滑回 */
+  .site-header { position: sticky; top: 0; height: 56px; flex-wrap: nowrap; padding: 0 12px; gap: 8px;
+    transition: transform 0.2s ease; will-change: transform; }
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header .site-search-open { width: 32px; min-width: 0; margin-left: auto; padding: 0;
+    justify-content: center; }
+  .site-header .site-search-open span, .site-search-open kbd { display: none; }
+  .site-search-modal { padding-top: 6vh; }
+  .site { display: block; }
+  /* 顶栏在手机上放不下 8 个元素：站外链接收进抽屉，目录按钮与其它图标同尺寸 */
+  .site-toplinks { display: none; }
+  .site-nav-toggle { display: inline-flex; width: 32px; height: 32px; padding: 0;
+    align-items: center; justify-content: center; border-radius: 8px; }
+  .site-nav-toggle svg { width: 16px; height: 16px; }
+  .site-nav-toggle span { display: none; }
+  /* 文档目录从左侧滑出：不再插在顶栏下面把正文推走 */
+  .site-nav { position: fixed; left: 0; top: 0; bottom: 0; z-index: 70;
+    width: min(320px, 86vw); padding: 14px 14px; overflow-y: auto;
+    border-right: 1px solid var(--table-border-color, #e5e7eb); border-bottom: 0;
+    background: var(--bg-color, #fff);
+    transform: translateX(-100%); transition: transform 0.2s ease;
+    box-shadow: 8px 0 28px rgba(0, 0, 0, 0.18); }
+  html.nav-open .site-nav { transform: none; }
+  .site-nav-links { display: block; }
+  .site-nav-scrim { display: none; }
+  html.nav-open .site-nav-scrim { display: block; position: fixed; inset: 0; z-index: 60;
+    background: rgba(0, 0, 0, 0.32); }
+  .site-main { padding: 20px 16px 60px; }
+  .site-footer { margin-top: 36px; flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media print {
+  .site-header, .site-nav, .site-rail, .site-code-bar, .site-footer, .site-pager { display: none !important; }
+  .site-main { padding: 0; }
+  .site-code { border: 0; }
+}
+
+
+.site-main #write { line-height: 1.78; }
+.site-main #write h1 { font-size: 2.2em; letter-spacing: -0.02em; }
+.site-main #write h2 { font-size: 1.42em; margin-top: 2.1em; }
+.site-main #write h3 { font-size: 1.16em; }
+</style>
+<style id="site-theme-dark" media="not all">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
+   exported/printed documents, which use real HTML elements inside #write. */
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+#write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
+#write > :first-child { margin-top: 0; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
+#write h1 { font-size: 2.25em; } #write h2 { font-size: 1.75em; } #write h3 { font-size: 1.5em; }
+#write h4 { font-size: 1.25em; } #write h5 { font-size: 1em; } #write h6 { font-size: 1em; color: #777; }
+/* 列表项里的标题是“标题项”：保留字号，去掉文档标题的上下边距 */
+#write li > :is(h1, h2, h3, h4, h5, h6) { margin-top: 0; margin-bottom: 0; }
+#write p { margin: 0.9em 0; }
+#write a { color: var(--link-color, var(--primary-color, #4183c4)); text-decoration: none; }
+#write blockquote { margin: 0.8em 0; padding: 0 15px; border-left: 4px solid var(--blockquote-border, #dfe2e5); color: var(--blockquote-color, #777); }
+#write ul, #write ol { padding-left: 30px; margin: 0.8em 0; }
+#write li > p { margin: 0.2em 0; }
+#write .task-list-item { list-style-type: none; }
+#write .task-list-item-checkbox { margin: 0 0.4em 0 -1.4em; vertical-align: middle; }
+#write code { font-family: var(--monospace); font-size: 0.9em; background: var(--inline-code-bg, #f3f4f4); color: var(--inline-code-color, var(--primary-color, #d14)); padding: 0.12em 0.35em; border-radius: 4px; }
+#write pre.md-fences { font-family: var(--monospace); font-size: 0.9em; line-height: 1.5; background: var(--code-block-bg, #f8f8f8); border: 1px solid var(--code-block-border, #e7eaed); border-radius: 3px; padding: 8px 1em; overflow-x: auto; white-space: pre-wrap; break-inside: avoid; }
+#write pre.md-fences code { background: transparent; padding: 0; font-size: 1em; color: inherit; }
+/* 代码块配色：导出/发布站与编辑器共用同一组 CodeMirror 5 类名，
+   变量由主题提供，暗色主题自动跟着换。 */
+#write .cm-s-inner .cm-keyword { color: var(--cm-keyword, #a626a4); }
+#write .cm-s-inner .cm-atom, #write .cm-s-inner .cm-number { color: var(--cm-number, #986801); }
+#write .cm-s-inner .cm-def { color: var(--cm-def, #4078f2); }
+#write .cm-s-inner .cm-variable-2, #write .cm-s-inner .cm-variable-3 { color: var(--cm-type, #c18401); }
+#write .cm-s-inner .cm-property { color: var(--cm-property, #4078f2); }
+#write .cm-s-inner .cm-operator { color: var(--cm-operator, #0184bc); }
+#write .cm-s-inner .cm-comment { color: var(--cm-comment, #a0a1a7); font-style: italic; }
+#write .cm-s-inner .cm-string { color: var(--cm-string, #50a14f); }
+#write .cm-s-inner .cm-string-2 { color: var(--cm-string-2, #0184bc); }
+#write .cm-s-inner .cm-meta { color: var(--cm-meta, #c18401); }
+#write .cm-s-inner .cm-builtin { color: var(--cm-builtin, #4078f2); }
+#write .cm-s-inner .cm-tag { color: var(--cm-tag, #e45649); }
+#write .cm-s-inner .cm-attribute { color: var(--cm-attribute, #986801); }
+#write .cm-s-inner .cm-header { color: var(--cm-header, #e45649); font-weight: bold; }
+#write .cm-s-inner .cm-error { color: #f00; }
+#write .cm-s-inner .cm-positive { color: #22863a; } #write .cm-s-inner .cm-negative { color: #b31d28; }
+#write table { border-collapse: collapse; width: 100%; margin: 0.8em 0; break-inside: auto; }
+#write table th, #write table td { border: 1px solid var(--table-border-color, #dfe2e5); padding: 6px 13px; }
+#write table tr:nth-child(2n) { background: var(--table-stripe-bg, #f8f8f8); }
+#write tr { break-inside: avoid; }
+#write hr { height: 2px; padding: 0; margin: 16px 0; background: var(--hr-color, #e7e7e7); border: 0; }
+#write img { max-width: 100%; height: auto; }
+#write .md-image-figure { display: flex; flex-direction: column; width: fit-content; max-width: 100%; }
+#write .md-image-figure.is-center { align-items: center; margin: 4px auto 10px; }
+#write .md-image-figure.is-right { align-items: flex-end; margin: 4px 0 10px auto; }
+#write .md-image-figure.is-left { align-items: flex-start; margin: 4px auto 10px 0; }
+#write .md-image-figure img { max-width: 100%; height: auto; }
+#write .md-image-caption { max-width: 100%; margin-top: 4px; color: var(--text-color, #666); opacity: .82; font-size: .85em; line-height: 1.45; text-align: left; }
+#write .md-image-figure.is-center .md-image-caption { text-align: center; }
+#write .md-image-figure.is-left .md-image-caption,
+#write .md-image-figure.is-right .md-image-caption { width: 100%; text-align: center; }
+/* 显式画廊（<!-- morz-gallery -->）在导出里保持并排布局（render/gallery-markers.ts 生成结构）。 */
+#write .md-image-gallery { display: grid; grid-template-columns: repeat(var(--gallery-columns, 2), minmax(0, 1fr)); align-items: var(--gallery-align, start); gap: var(--gallery-gap, 8px); margin: 0.8em 0; }
+#write .md-image-gallery-cell { display: flex; align-items: center; justify-content: center; overflow: hidden; min-width: 0; min-height: 90px; border-radius: var(--image-radius, 4px); background: color-mix(in srgb, var(--text-color, #333) 5%, transparent); }
+#write .md-image-gallery-cell img { display: block; max-width: 100%; max-height: 240px; width: 100%; height: auto; object-fit: var(--gallery-fit, contain); }
+/* 橱窗裁切：统一格高 + cover 铺满（导出/PDF 与编辑器同一套变量） */
+#write .md-image-gallery.is-cover .md-image-gallery-cell { height: var(--gallery-height, 180px); min-height: 0; }
+#write .md-image-gallery.is-cover .md-image-gallery-cell img { height: 100%; max-height: none; object-fit: cover; }
+#write mark { background: var(--mark-bg-color, #ffef9e); color: inherit; }
+#write kbd { font-family: var(--monospace); font-size: 0.85em; padding: 0.1em 0.4em; border: 1px solid var(--kbd-border, #ccc); border-bottom-width: 2px; border-radius: 4px; background: var(--kbd-bg, #f7f7f7); }
+/* 纵向间距必须用 padding：CM6 只测量 widget 自身盒高，margin 不计入，
+   否则块后面的所有行点击命中都会整体偏移。 */
+#write .md-math-block { text-align: center; padding: 0.8em 0; margin: 0; overflow-x: auto; break-inside: avoid; }
+#write .md-diagram { text-align: center; padding: 0.8em 0; margin: 0; break-inside: avoid; }
+#write .md-diagram svg { max-width: 100%; height: auto; }
+#write .md-toc { margin: 0; }
+#write .md-toc-item { display: block; line-height: 1.7; }
+#write .md-toc-h2 { margin-left: 2em; } #write .md-toc-h3 { margin-left: 4em; } #write .md-toc-h4 { margin-left: 6em; } #write .md-toc-h5 { margin-left: 8em; } #write .md-toc-h6 { margin-left: 10em; }
+#write .footnotes { font-size: 0.9em; color: var(--footnote-color, inherit); }
+#write .footnotes-sep { margin-top: 2em; }
+/* Callout 的样式不在这里：base.css 也参与实时编辑器的主题注入（applyTheme），
+   写在这里的 ID 级选择器会压过 editor.css 的类型色。导出/阅读的卡片视觉由
+   exportCss 生成（同一张类型表 + 只作用于导出产物）。 */
+#write .md-meta-block { font-family: var(--monospace); font-size: 0.85em; background: var(--meta-block-bg, #f5f5f5); padding: 8px 1em; }
+@media print {
+  html, body { background: var(--print-bg, #fff) !important; }
+  #write { max-width: none; padding: 0; }
+  #write h1, #write h2, #write h3 { break-after: avoid-page; }
+  #write pre, #write blockquote, #write table, #write img, #write .md-math-block { break-inside: avoid; }
+  #write .md-image-gallery, #write .md-image-gallery-cell { break-inside: avoid; }
+}
+
+
+/* macOS 12 等不支持 color-mix 的 WebKit：固定值兜底。支持 color-mix 时不会命中。 */
+@supports not (color: color-mix(in srgb, red, blue)) {
+  #write .md-image-gallery-cell {
+    background: rgba(0,0,0,0.05);
+  }
+}
+
+#write .md-alert{--md-alert-color:#8a8f98;color:var(--text-color);background:color-mix(in srgb, var(--md-alert-color) var(--md-alert-tint,7%), transparent);border:0;border-radius:var(--md-alert-radius,8px);padding:2px 15px 2px 12px;margin:1.1em 0}
+#write .md-alert>.md-alert-text-container{margin:0 -15px .5em -12px;padding:6px 15px 4px 12px;border-radius:var(--md-alert-radius,8px) var(--md-alert-radius,8px) 0 0;background:color-mix(in srgb, var(--md-alert-color) calc(var(--md-alert-tint,7%) + 6%), transparent)}
+#write .md-alert-text{font-weight:600;color:var(--md-alert-color)}
+#write .md-alert .md-alert-icon{width:1.05em;height:1.05em;vertical-align:-.16em;margin-right:.4em;color:var(--md-alert-color)}
+#write .md-alert-note{--md-alert-color:#448aff;}
+#write .md-alert-abstract{--md-alert-color:#00b0ff;}
+#write .md-alert-info{--md-alert-color:#00b8d4;}
+#write .md-alert-todo{--md-alert-color:#00b8d4;}
+#write .md-alert-tip{--md-alert-color:#00bfa5;}
+#write .md-alert-success{--md-alert-color:#00c853;}
+#write .md-alert-question{--md-alert-color:#64dd17;}
+#write .md-alert-warning{--md-alert-color:#ff9100;}
+#write .md-alert-failure{--md-alert-color:#ff5252;}
+#write .md-alert-danger{--md-alert-color:#ff1744;}
+#write .md-alert-bug{--md-alert-color:#f50057;}
+#write .md-alert-example{--md-alert-color:#7c4dff;}
+#write .md-alert-quote{--md-alert-color:#9e9e9e;}
+#write .md-alert-important{--md-alert-color:#8957e5;}
+#write .md-alert-caution{--md-alert-color:#da3633;}
+#write{--pele-bg:var(--bg-color,#1e1e1e);--pele-fg:var(--text-color,#dadada);--pele-line:var(--text-color,#dadada);--pele-muted:#9a9a9a;--pele-muted:color-mix(in srgb, var(--text-color,#dadada) 58%, var(--bg-color,#1e1e1e));--pele-surface:#2f2f2f;--pele-surface:color-mix(in srgb, var(--text-color,#dadada) 14%, var(--bg-color,#1e1e1e));--pele-surface-alt:#3a3a3a;--pele-surface-alt:color-mix(in srgb, var(--text-color,#dadada) 20%, var(--bg-color,#1e1e1e));--pele-border:#707070;--pele-border:color-mix(in srgb, var(--text-color,#dadada) 42%, var(--bg-color,#1e1e1e));--pele-accent:var(--primary-color,#5b7bd5);--pele-error:#e45756;--pele-critical:#e45756;--pele-font:var(--text-font,var(--write-font,sans-serif));--pele-font-mono:var(--monospace,monospace);--pele-radius:4px;--pele-series-1:#9d8cff;--pele-series-2:#6aa5ff;--pele-series-3:#45d0c0;--pele-series-4:#7fc87f;--pele-series-5:#e8bc55;--pele-series-6:#ef8a79;--pele-series-7:#d98fd1;--pele-series-8:#a3aab6}
+
+:root {
+  --bg-color: var(--background-primary, var(--bt-bg, #ffffff));
+  --text-color: var(--text-normal, var(--bt-text, #333333));
+  --side-bar-bg-color: var(--background-secondary, var(--bt-sidebar, #fafafa));
+  --control-text-color: var(--text-muted, var(--bt-muted, #666666));
+  --item-hover-bg-color: var(--background-modifier-hover, var(--bt-accent-softer, rgba(128, 128, 128, 0.12)));
+  --active-file-bg-color: var(--background-modifier-active-hover, var(--background-secondary-alt, var(--bt-accent-soft, rgba(128, 128, 128, 0.16))));
+  --active-file-border-color: var(--interactive-accent, var(--text-accent, var(--bt-accent, #4183c4)));
+  --primary-color: var(--interactive-accent, var(--text-accent, var(--bt-accent, #4183c4)));
+  --select-text-bg-color: var(--text-selection, var(--bt-selection, rgba(65, 131, 196, 0.22)));
+  --ui-border-color: var(--background-modifier-border, var(--bt-border, rgba(128, 128, 128, 0.22)));
+  --text-font: var(--font-text, var(--font-text-theme, var(--bt-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --write-font: var(--font-text, var(--font-text-theme, var(--bt-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --ui-font: var(--font-interface, var(--font-default, var(--bt-ui-font, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif)));
+  --monospace: var(--font-monospace, var(--font-monospace-theme, var(--bt-mono, ui-monospace, Consolas, monospace)));
+  --write-line-height: var(--line-height-normal, var(--bt-line-height, 1.6));
+  --write-font-size: var(--font-text-size, 16px);
+  --link-color: var(--text-accent, var(--bt-accent-strong, #2d82cc));
+  --tag-color: var(--text-accent, var(--bt-accent, #468eeb));
+  --inline-code-bg: var(--code-background, var(--bt-inline-bg, #f3f4f4));
+  --inline-code-color: var(--code-normal, var(--text-normal, var(--bt-inline-color, #c05621)));
+  --code-block-bg: var(--code-background, var(--bt-code-bg, #f8f8f8));
+  --code-block-color: var(--code-normal, var(--text-normal, var(--bt-code-text, inherit)));
+  --blockquote-border: var(--interactive-accent, var(--bt-accent, #468eeb));
+  --blockquote-color: var(--text-muted, var(--bt-quote-text, #777777));
+  --hr-color: var(--background-modifier-border, var(--bt-border, #e7e7e7));
+  --table-border-color: var(--background-modifier-border, var(--bt-border, #dfe2e5));
+  --table-header-bg: var(--table-header-background, var(--bt-table-head, transparent));
+  --table-stripe-bg: var(--table-row-background-hover, var(--bt-table-stripe, #f8f8f8));
+  --meta-content-color: var(--text-muted, var(--bt-muted, #777777));
+  --meta-block-bg: var(--background-secondary, var(--bt-bg-soft, #f5f5f5));
+  --mark-bg-color: var(--text-highlight-bg, var(--bt-mark, #ffef9e));
+  --caret-color: var(--text-accent, var(--text-color));
+  --task-done-color: var(--text-faint, var(--text-muted, inherit));
+}
+
+
+#write{background-color:var(--bt-page-bg,transparent);background-image:linear-gradient(var(--bt-page-overlay,transparent),var(--bt-page-overlay,transparent)),var(--bt-page-bg-image,none);background-size:cover;background-position:center;}
+/* Morz "Fjord" — 峡湾。
+   冷调浅色：雾蓝灰的底、克制的蓝做强调，无衬线正文，层级只靠字号和留白。
+   换掉了原来三个近似的浅色主题（Github / Whitey / Pixyll），留一套干净的默认外观。 */
+:root {
+  --bg-color: #f7f8fa;
+  --text-color: #1f2933;
+  --side-bar-bg-color: #eef1f5;
+  --control-text-color: #5c6b7a;
+  --item-hover-bg-color: rgba(31, 41, 51, 0.055);
+  --active-file-bg-color: #e3e9f0;
+  --active-file-border-color: #2f6f9f;
+  --primary-color: #2f6f9f;
+  --select-text-bg-color: #cfe1f0;
+  --ui-border-color: #dbe2ea;
+
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --write-font-size: 16px;
+  --write-line-height: 1.72;
+  --write-max-width: 700px;
+  --write-padding-x: 36px;
+  --monospace: "JetBrains Mono", "Cascadia Code", "SF Mono", Consolas, monospace;
+
+  --link-color: #25638f;
+  --tag-color: #2f6f9f;
+  --inline-code-bg: #eaeef3;
+  --code-block-bg: #f0f3f7;
+  --code-block-border: #dbe2ea;
+  --blockquote-border: #b9c8d6;
+  --blockquote-color: #4a5866;
+  --hr-color: #dbe2ea;
+  --table-border-color: #dbe2ea;
+  --table-stripe-bg: #f2f5f9;
+  --md-char-color: #94a3b1;
+  --meta-content-color: #7b8896;
+  --meta-block-bg: #eef1f5;
+  --mark-bg-color: #f6e7a8;
+  --kbd-bg: #eef1f5;
+  --kbd-border: #dbe2ea;
+}
+
+#write h1 { font-size: 1.9em; font-weight: 650; line-height: 1.25; letter-spacing: -0.012em; margin: 1.3em 0 0.45em; color: #141a20; }
+#write h2 { font-size: 1.32em; font-weight: 650; line-height: 1.4; margin: 1.6em 0 0.4em; color: #141a20; }
+#write h3 { font-size: 1.08em; font-weight: 600; margin: 1.3em 0 0.3em; }
+#write h4, #write h5, #write h6 { font-weight: 600; letter-spacing: 0.01em; }
+
+#write p { margin: 0 0 0.95em; }
+#write a { color: var(--link-color); text-decoration: none; }
+#write a:hover { text-decoration: underline; text-underline-offset: 2px; }
+#write blockquote { border-left: 3px solid var(--blockquote-border); color: var(--blockquote-color); padding-left: 14px; }
+#write code { color: #2a3a48; }
+#write pre.md-fences { border-radius: 6px; }
+#write hr { border-top: 1px solid var(--hr-color); }
+#write table th { background: var(--side-bar-bg-color); font-weight: 600; }
+
+/* 界面：标题栏和正文同底色，状态栏收成一行小字，不抢戏 */
+.titlebar { background: var(--bg-color); }
+.statusbar { letter-spacing: 0.02em; color: var(--control-text-color); }
+
+/* Fjord — dark variant. Same blue accent and Inter typography, deep fjord water. */
+:root {
+  --bg-color: #151a20;
+  --text-color: #c9d3dd;
+  --side-bar-bg-color: #11161b;
+  --control-text-color: #94a4b3;
+  --item-hover-bg-color: rgba(255, 255, 255, 0.055);
+  --active-file-bg-color: #222b35;
+  --active-file-border-color: #7fb3dc;
+  --primary-color: #7fb3dc;
+  --select-text-bg-color: #2f4f6b;
+  --ui-border-color: #2a3541;
+
+  --link-color: #8fc3ea;
+  --tag-color: #7fb3dc;
+  --inline-code-bg: #202833;
+  --code-block-bg: #10151a;
+  --code-block-border: #2a3541;
+  --blockquote-border: #3b4a5a;
+  --blockquote-color: #9ba9b7;
+  --hr-color: #2a3541;
+  --table-border-color: #2a3541;
+  --table-stripe-bg: #1b222a;
+  --md-char-color: #6f7f8e;
+  --meta-content-color: #8b9aa9;
+  --meta-block-bg: #1a2129;
+  --mark-bg-color: #5a5128;
+  --kbd-bg: #202833;
+  --kbd-border: #36414d;
+
+  --cm-keyword: #c792ea; --cm-number: #f78c6c; --cm-def: #82aaff; --cm-type: #ffcb6b;
+  --cm-property: #82aaff; --cm-operator: #89ddff; --cm-comment: #7b858f; --cm-string: #c3e88d;
+  --cm-string-2: #89ddff; --cm-meta: #ffcb6b; --cm-builtin: #82aaff; --cm-tag: #f07178;
+  --cm-attribute: #ffcb6b; --cm-header: #f07178;
+  color-scheme: dark;
+}
+#write h1, #write h2 { color: #e7eef6; }
+#write code { color: #cfe3f5; }
+.statusbar { color: #8b9aa9; }
+
+
+
+
+:root { --site-max: 820px; --site-rail-w: 250px; }
+/* 画布必须显式上色：只靠 color-scheme 的话，某些内嵌浏览器切暗后会留下白底 */
+html { background: var(--bg-color, #fff); color-scheme: light; }
+html.site-dark { color-scheme: dark; }
+body { margin: 0; background: var(--bg-color, #fff); font: 16px/1.7 -apple-system, "Segoe UI", system-ui, sans-serif; }
+.site { display: flex; min-height: 100vh; }
+.site-header { position: sticky; top: 0; z-index: 40; display: flex; align-items: center; gap: 12px;
+  height: 56px; box-sizing: border-box; padding: 0 20px; background: var(--bg-color, #fff);
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-brand { display: inline-flex; align-items: center; gap: 8px; flex: none;
+  font-size: 1rem; font-weight: 600; color: inherit; text-decoration: none; white-space: nowrap; }
+.site-brand::before { content: ""; width: 9px; height: 9px; border-radius: 3px;
+  background: var(--primary-color, var(--link-color, #4183c4)); }
+.site-brand.has-logo::before { content: none; }
+.site-brand-logo { display: block; height: 22px; width: auto; }
+.site-brand-logo.is-dark { display: none; }
+.site-brand.has-logo .site-brand-logo.has-dark { display: block; }
+html.site-dark .site-brand.has-logo .site-brand-logo.has-dark { display: none; }
+html.site-dark .site-brand-logo.is-dark { display: block; }
+.site-brand-suffix { font-size: 0.78rem; font-weight: 500; opacity: 0.5; }
+.site-toplinks { display: inline-flex; align-items: center; gap: 2px; margin-left: 6px; flex: none; }
+.site-toplinks a { font-size: 0.85rem; padding: 4px 8px; border-radius: 6px; color: inherit; text-decoration: none; opacity: 0.72; }
+.site-toplinks a:hover { opacity: 1; background: color-mix(in srgb, currentColor 8%, transparent); }
+.site-theme-toggle { display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 32px; height: 32px; border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 8px;
+  background: transparent; color: inherit; cursor: pointer; }
+.site-theme-toggle:hover { background: rgba(127,127,127,0.1); }
+.site-theme-toggle svg { width: 16px; height: 16px; }
+.site-theme-toggle .icon-moon { display: none; }
+html.site-dark .site-theme-toggle .icon-sun { display: none; }
+html.site-dark .site-theme-toggle .icon-moon { display: block; }
+.site-nav {
+  width: 260px; flex: none; border-right: 1px solid var(--table-border-color, #e5e7eb);
+  padding: 14px 14px; overflow-y: auto; position: sticky; top: 56px; height: calc(100vh - 56px);
+  box-sizing: border-box; background: var(--bg-color, #fff);
+}
+.site-nav h1 { font-size: 1rem; margin: 0 0 12px; }
+.site-nav-toggle { display: none; align-items: center; gap: 6px; border: 1px solid var(--table-border-color, #e5e7eb);
+  background: transparent; color: inherit; border-radius: 7px; padding: 5px 9px; font: inherit; font-size: 0.82rem; cursor: pointer; }
+.site-nav-toggle svg { width: 14px; height: 14px; }
+.site-nav-links { display: block; }
+.site-nav-scrim { display: none; }
+.site-nav a { display: block; padding: 4px 8px; border-radius: 6px; color: var(--text-color, #333);
+  text-decoration: none; font-size: 0.9rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.site-nav a:hover { background: rgba(127,127,127,0.12); }
+.site-nav a[aria-current="page"] { background: rgba(127,127,127,0.16); font-weight: 600; }
+.site-nav-group { margin: 14px 8px 4px; font-size: 0.72rem; opacity: 0.55; letter-spacing: 0.04em; }
+.site-nav-group:first-child { margin-top: 4px; }
+.site-nav-external { display: none; }
+/* 正文图片点击放大：整数图放在遮罩上，点遮罩或 Esc 关闭 */
+.site-lightbox { position: fixed; inset: 0; z-index: 120; display: none; align-items: center;
+  justify-content: center; padding: 16px; box-sizing: border-box;
+  background: rgba(10, 12, 16, 0.9); cursor: zoom-out; }
+.site-lightbox.is-open { display: flex; }
+.site-lightbox img { max-width: 100%; max-height: 100%; object-fit: contain;
+  border-radius: 4px; box-shadow: 0 12px 48px rgba(0, 0, 0, 0.5); }
+.site-lightbox-close { position: absolute; top: 12px; right: 12px; width: 40px; height: 40px;
+  border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.14); color: #fff;
+  font: inherit; font-size: 22px; line-height: 1; cursor: pointer; }
+body.lightbox-open { overflow: hidden; }
+@media (max-width: 820px) {
+  .site-nav-external { display: block; margin: 0 0 10px; padding: 0 0 10px;
+    border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+}
+.site-main { flex: 1; min-width: 0; padding: 30px 40px 80px; }
+.site-rail-toggle { display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 32px; height: 32px; border: 1px solid var(--table-border-color, #e5e7eb); background: transparent;
+  color: inherit; border-radius: 8px; padding: 0; cursor: pointer; }
+.site-rail-toggle:hover { background: rgba(127,127,127,0.1); }
+.site-rail-toggle svg { width: 16px; height: 16px; }
+.site-main #write { max-width: var(--site-max); margin: 0 auto; }
+.site-content { position: relative; max-width: var(--site-max); margin: 0 auto; }
+.site-content #write { max-width: none; margin: 0; }
+/* 大纲指示条：页面右侧、纵向居中；右栏打开时落在正文与右栏之间 */
+.site-ticks { position: fixed; right: 254px; top: 50%; transform: translateY(-50%);
+  width: 28px; z-index: 6; }
+html.rail-closed .site-ticks { right: 24px; }
+.site-ticks-inner { display: flex; flex-direction: column; align-items: flex-end;
+  max-height: 70vh; overflow-y: auto; scrollbar-width: none; }
+.site-ticks-inner::-webkit-scrollbar { display: none; }
+.site-tick { position: relative; display: block; width: 26px; height: 12px; }
+.site-tick::before { content: ""; position: absolute; right: 0; top: 5px; width: 20px; height: 2px;
+  border-radius: 999px; background: var(--table-border-color, #d0d7de);
+  transition: width 0.12s ease, background 0.12s ease; }
+.site-tick.lv3::before { width: 15px; height: 1.5px; opacity: 0.75; }
+.site-tick:hover::before, .site-tick:focus-visible::before, .site-tick.is-current::before {
+  width: 26px; opacity: 1; background: var(--link-color, #4183c4); }
+.site-tick-tip { position: fixed; z-index: 70; max-width: 280px; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; padding: 4px 9px; border-radius: 6px; font-size: 0.75rem; line-height: 1.4;
+  color: var(--text-color, #333); background: var(--bg-color, #fff);
+  border: 1px solid var(--table-border-color, #e5e7eb); box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
+  pointer-events: none; }
+.site-tick-tip[hidden] { display: none; }
+@media (max-width: 1100px) { .site-ticks { display: none; } }
+.site-main #write :is(h1, h2, h3, h4, h5, h6) { scroll-margin-top: 76px; }
+.site-main #write img { border-radius: 8px; }
+.site-main #write .md-image-figure img { box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); }
+/* 引用块和表头给一点底色，正文层次不至于全靠字号 */
+.site-main #write blockquote { background: rgba(127, 127, 127, 0.045); border-radius: 0 6px 6px 0;
+  padding: 8px 14px 8px 16px; }
+.site-main #write table th { background: color-mix(in srgb, var(--text-color, #333) 5%, transparent); }
+/* 首列尽量不换行；表格本身放进可横向滚动的容器，窄屏也不撑破正文 */
+.site-main #write table :is(th, td):first-child { white-space: nowrap; }
+/* 表格按内容宽度排版：窄屏横向滚动，而不是把每列压成两三个字。
+   首列 sticky，横向滑动时仍能看清自己在哪一行。 */
+.site-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+/* 用 #write 前缀压过基础样式里的 #write table { width: 100% }（id 权重更高）：
+   表格按内容排，超出容器才横向滚动。首列是否吸附由脚本测量后决定（.pin-first）：
+   窄列（比如分类名）吸附住，宽列跟着整表滚走，不再遮挡正文。 */
+#write .site-table-wrap table { margin-top: 0.8em; margin-bottom: 0.8em;
+  width: max-content; min-width: 100%; }
+#write .site-table-wrap.pin-first :is(th, td):first-child { position: sticky; left: 0; z-index: 1;
+  background: var(--bg-color, #fff);
+  box-shadow: 1px 0 0 var(--table-border-color, #dfe2e5); }
+#write .site-table-wrap.pin-first thead th:first-child { z-index: 2;
+  background: color-mix(in srgb, var(--bg-color, #fff) 93%, var(--text-color, #333) 7%); }
+#write .site-table-wrap.pin-first tbody tr:nth-child(even) td:first-child {
+  background: color-mix(in srgb, var(--bg-color, #fff) 97%, var(--text-color, #333) 3%); }
+.site-main #write a:hover { text-decoration: underline; text-underline-offset: 2px; }
+/* 代码块工具条：语言 + 复制 */
+.site-code { margin: 1em 0; border: 1px solid var(--code-block-border, #e7eaed); border-radius: 8px;
+  overflow: hidden; background: var(--code-block-bg, #f8f8f8); }
+.site-code pre.md-fences { margin: 0; border: 0; border-radius: 0; background: transparent; }
+.site-code-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 5px 12px; font-size: 0.72rem; line-height: 1.4; color: var(--text-color, #333);
+  background: color-mix(in srgb, var(--text-color, #333) 5%, transparent);
+  border-bottom: 1px solid var(--code-block-border, #e7eaed); }
+.site-code-lang { opacity: 0.6; }
+.site-code-copy { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer;
+  padding: 4px 8px; min-height: 24px; border-radius: 5px; opacity: 0.65; }
+.site-code-copy:hover { background: rgba(127, 127, 127, 0.15); opacity: 1; }
+.site-code-copy.is-done { color: var(--link-color, #4183c4); opacity: 1; }
+.site-main .site-pager { max-width: var(--site-max); margin-left: auto; margin-right: auto; }
+#write a.is-unresolved { color: inherit; text-decoration: underline dotted; cursor: default; opacity: .7; }
+/* 搜索：顶栏按钮 + Ctrl/Cmd+K 面板 */
+.site-search-open { display: inline-flex; align-items: center; gap: 7px; margin-left: auto; flex: none;
+  min-width: 190px; height: 32px; padding: 0 10px; border-radius: 7px; cursor: pointer;
+  border: 1px solid var(--table-border-color, #e5e7eb); background: rgba(127,127,127,0.04);
+  color: inherit; font: inherit; font-size: 0.82rem; opacity: 0.75; }
+.site-search-open:hover { opacity: 1; border-color: var(--link-color, #4183c4); }
+.site-search-open svg { width: 14px; height: 14px; flex: none; }
+.site-search-open span { flex: 1; text-align: left; }
+.site-search-open kbd { font-family: inherit; font-size: 0.7rem; padding: 1px 5px; border-radius: 4px;
+  border: 1px solid var(--table-border-color, #e5e7eb); background: transparent; opacity: 0.7; }
+.site-search-modal { position: fixed; inset: 0; z-index: 90; display: flex; justify-content: center;
+  align-items: flex-start; padding: 12vh 12px 24px; background: rgba(15, 18, 24, 0.38);
+  backdrop-filter: blur(2px); }
+.site-search-modal[hidden] { display: none; }
+.site-search-panel { width: min(620px, 100%); max-height: 68vh; display: flex; flex-direction: column;
+  overflow: hidden; border-radius: 12px; border: 1px solid var(--table-border-color, #e5e7eb);
+  background: var(--bg-color, #fff); color: var(--text-color, #333);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22); }
+.site-search-field { display: flex; align-items: center; gap: 9px; padding: 12px 14px;
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-search-field svg { width: 16px; height: 16px; flex: none; opacity: 0.55; }
+.site-search-field input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent;
+  color: inherit; font: inherit; font-size: 0.95rem; }
+.site-search-field kbd { font-family: inherit; font-size: 0.68rem; opacity: 0.55; padding: 1px 5px;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 4px; }
+.site-search-results { overflow-y: auto; padding: 6px; }
+.site-search-hit { display: block; padding: 9px 10px; border-radius: 8px; text-decoration: none;
+  color: inherit; }
+.site-search-hit strong { display: block; font-size: 0.88rem; line-height: 1.45; }
+.site-search-hit span { display: block; margin-top: 2px; font-size: 0.78rem; line-height: 1.5;
+  opacity: 0.62; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.site-search-hit mark { background: color-mix(in srgb, var(--link-color, #4183c4) 22%, transparent);
+  color: inherit; border-radius: 2px; padding: 0 1px; }
+.site-search-hit.is-active { background: color-mix(in srgb, var(--link-color, #4183c4) 9%, transparent); }
+.site-search-empty { padding: 22px 12px; text-align: center; font-size: 0.85rem; opacity: 0.55; }
+.site-search-foot { flex: none; padding: 7px 12px; border-top: 1px solid var(--table-border-color, #e5e7eb);
+  font-size: 0.7rem; opacity: 0.55; text-align: right; }
+body.search-open { overflow: hidden; }
+.site-pager { margin: 40px auto 0; display: flex; justify-content: space-between;
+  gap: 16px; font-size: 0.9rem; }
+.site-pager a { color: var(--link-color, #4183c4); text-decoration: none; }
+.site-footer { max-width: var(--site-max); margin: 56px auto 0; padding: 16px 0 0;
+  border-top: 1px solid var(--table-border-color, #e5e7eb); display: flex; align-items: center;
+  justify-content: space-between; gap: 10px 20px; flex-wrap: wrap; font-size: 0.76rem; opacity: 0.62; }
+.site-footer nav { display: flex; gap: 14px; flex-wrap: wrap; }
+.site-footer a { color: inherit; text-decoration: none; }
+.site-footer a:hover { color: var(--link-color, #4183c4); text-decoration: underline; text-underline-offset: 2px; }
+
+/* 没有首页正文时的文章索引：卡片而不是一条光秃秃的链接列表 */
+.site-home-head { margin: 10px 0 26px; }
+.site-home-meta { margin: 0 0 8px; font-size: 0.82rem; opacity: 0.55; letter-spacing: 0.02em; }
+.site-home-head h1 { margin: 0; font-size: 2.2rem; line-height: 1.2; letter-spacing: -0.01em; }
+.site-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; }
+.site-card { display: flex; flex-direction: column; gap: 7px; padding: 15px 16px 16px;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 10px;
+  color: inherit; text-decoration: none; background: rgba(127,127,127,0.035);
+  transition: background 0.15s, border-color 0.15s; }
+.site-card:hover { background: rgba(127,127,127,0.08); border-color: var(--link-color, #4183c4); }
+.site-card strong { font-size: 0.96rem; line-height: 1.45; }
+.site-card span { font-size: 0.8rem; line-height: 1.55; opacity: 0.62;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+@media (max-width: 700px) {
+  .site-home-head h1 { font-size: 1.7rem; }
+  .site-cards { grid-template-columns: 1fr; }
+}
+
+/* 右侧栏：上方大纲，下方局部图谱 */
+.site-rail { width: var(--site-rail-w); flex: none; box-sizing: border-box;
+  position: sticky; top: 56px; height: calc(100vh - 56px); display: flex; flex-direction: column;
+  border-left: 1px solid var(--table-border-color, #e5e7eb); background: var(--bg-color, #fff); }
+.site-rail h2 { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.05em; opacity: 0.55;
+  margin: 0 0 8px; }
+.site-rail-outline { flex: 1; min-height: 0; overflow-y: auto; padding: 18px 12px 10px; }
+.site-outline a { display: block; padding: 5px 8px; border-radius: 5px; text-decoration: none;
+  color: var(--text-color, #333); font-size: 0.84rem; line-height: 1.45;
+  border-left: 2px solid transparent; overflow: hidden; text-overflow: ellipsis; }
+.site-outline a.lv3 { padding: 4px 8px; font-size: 0.8rem; opacity: 0.82; border-left: none; }
+.site-outline-sub { margin: 1px 0 7px 13px; padding-left: 7px;
+  border-left: 1px solid var(--table-border-color, #e5e7eb); }
+.site-outline a:hover { background: rgba(127,127,127,0.1); }
+.site-outline a.is-current { border-left-color: var(--link-color, #4183c4); font-weight: 600; opacity: 1;
+  background: rgba(127,127,127,0.12); }
+.site-outline a.lv3.is-current { background: rgba(127,127,127,0.14); }
+.site-outline-empty { margin: 0 8px; font-size: 0.8rem; opacity: 0.55; }
+.site-graph { flex: none; height: 240px; box-sizing: border-box; padding: 12px 10px 10px;
+  border-top: 1px solid var(--table-border-color, #e5e7eb); }
+.site-graph-canvas { height: 190px; }
+.site-graph svg { width: 100%; height: 100%; display: block; }
+.site-graph .edge { stroke: rgba(127,127,127,0.35); stroke-width: 1; }
+.site-graph .node circle { fill: var(--bg-color, #fff); stroke: var(--link-color, #4183c4);
+  stroke-width: 1.5; cursor: pointer; }
+.site-graph .node.center circle { fill: var(--link-color, #4183c4); }
+.site-graph .node text { font-size: 9px; fill: var(--text-color, #333); pointer-events: none; }
+.site-graph .node { cursor: pointer; }
+.site-graph .node.dim { opacity: 0.28; }
+.site-graph .node.hot circle { stroke-width: 2.5; }
+.site-graph .empty { font-size: 0.8rem; opacity: 0.55; padding: 6px 8px; }
+html.rail-closed .site-rail { display: none; }
+.site-rail-scrim { display: none; }
+/* 桌面右栏展开时，正文里的 [TOC] 和右栏大纲重复；小屏右栏收起，保留正文目录 */
+@media (min-width: 1200px) {
+  html:not(.rail-closed) .site-main #write > .md-toc { display: none; }
+}
+
+/* Ctrl/Cmd 悬停预览：视觉贴近应用内 .md-link-preview */
+.site-preview { position: fixed; z-index: 100; width: min(420px, calc(100vw - 16px)); max-height: 360px;
+  display: flex; flex-direction: column; overflow: hidden; border-radius: 10px;
+  background: var(--bg-color, #fff); color: var(--text-color, #333);
+  border: 1px solid var(--table-border-color, #e5e7eb); box-shadow: 0 12px 32px rgba(0,0,0,0.18); }
+.site-preview-head { display: flex; align-items: center; gap: 8px; padding: 9px 12px;
+  border-bottom: 1px solid var(--table-border-color, #e5e7eb); }
+.site-preview-head strong { font-size: 0.9rem; }
+.site-preview-head small { margin-left: auto; font-size: 0.72rem; opacity: 0.55; }
+.site-preview-open { flex: none; font-size: 0.78rem; color: var(--link-color, #4183c4); text-decoration: none;
+  border: 1px solid var(--table-border-color, #e5e7eb); border-radius: 6px; padding: 2px 7px; }
+.site-preview-body { padding: 6px 14px 12px; overflow: auto; font-size: 0.88rem; }
+.site-preview-body #write { max-width: none; }
+.site-preview-body img { max-width: 100% !important; height: auto !important; }
+.site-preview-foot { padding: 7px 12px; border-top: 1px solid var(--table-border-color, #e5e7eb);
+  font-size: 0.72rem; opacity: 0.6; }
+
+@media (max-width: 1199px) {
+  .site-rail { position: fixed; right: 0; top: 0; z-index: 60; width: min(320px, 86vw);
+    transform: translateX(100%); transition: transform 0.18s ease; box-shadow: -8px 0 28px rgba(0,0,0,0.18); }
+  html:not(.rail-closed) .site-rail { transform: none; }
+  html:not(.rail-closed) .site-rail-scrim { display: block; position: fixed; inset: 0; z-index: 50;
+    background: rgba(0,0,0,0.32); }
+}
+@media (max-width: 820px) {
+  /* 小屏顶栏：固定在顶部，但往下滚动时整条滑出，往上滚动再滑回 */
+  .site-header { position: sticky; top: 0; height: 56px; flex-wrap: nowrap; padding: 0 12px; gap: 8px;
+    transition: transform 0.2s ease; will-change: transform; }
+  .site-header.is-hidden { transform: translateY(-100%); }
+  .site-header .site-search-open { width: 32px; min-width: 0; margin-left: auto; padding: 0;
+    justify-content: center; }
+  .site-header .site-search-open span, .site-search-open kbd { display: none; }
+  .site-search-modal { padding-top: 6vh; }
+  .site { display: block; }
+  /* 顶栏在手机上放不下 8 个元素：站外链接收进抽屉，目录按钮与其它图标同尺寸 */
+  .site-toplinks { display: none; }
+  .site-nav-toggle { display: inline-flex; width: 32px; height: 32px; padding: 0;
+    align-items: center; justify-content: center; border-radius: 8px; }
+  .site-nav-toggle svg { width: 16px; height: 16px; }
+  .site-nav-toggle span { display: none; }
+  /* 文档目录从左侧滑出：不再插在顶栏下面把正文推走 */
+  .site-nav { position: fixed; left: 0; top: 0; bottom: 0; z-index: 70;
+    width: min(320px, 86vw); padding: 14px 14px; overflow-y: auto;
+    border-right: 1px solid var(--table-border-color, #e5e7eb); border-bottom: 0;
+    background: var(--bg-color, #fff);
+    transform: translateX(-100%); transition: transform 0.2s ease;
+    box-shadow: 8px 0 28px rgba(0, 0, 0, 0.18); }
+  html.nav-open .site-nav { transform: none; }
+  .site-nav-links { display: block; }
+  .site-nav-scrim { display: none; }
+  html.nav-open .site-nav-scrim { display: block; position: fixed; inset: 0; z-index: 60;
+    background: rgba(0, 0, 0, 0.32); }
+  .site-main { padding: 20px 16px 60px; }
+  .site-footer { margin-top: 36px; flex-direction: column; align-items: flex-start; gap: 8px; }
+}
+@media print {
+  .site-header, .site-nav, .site-rail, .site-code-bar, .site-footer, .site-pager { display: none !important; }
+  .site-main { padding: 0; }
+  .site-code { border: 0; }
+}
+
+
+.site-main #write { line-height: 1.78; }
+.site-main #write h1 { font-size: 2.2em; letter-spacing: -0.02em; }
+.site-main #write h2 { font-size: 1.42em; margin-top: 2.1em; }
+.site-main #write h3 { font-size: 1.16em; }
+</style>
+<script>(function(){try{var s=window.matchMedia("(max-width: 1199px)").matches;if(s||localStorage.getItem("morz.site-rail")==="closed")document.documentElement.classList.add("rail-closed");var t=null;try{t=localStorage.getItem("morz.site-theme")}catch(e){}var d=t?t==="dark":window.matchMedia("(prefers-color-scheme: dark)").matches;var l=document.getElementById("site-theme-light"),k=document.getElementById("site-theme-dark");if(d&&k){l.media="not all";k.media="all";document.documentElement.classList.add("site-dark")}}catch(e){}})();</script>
+</head>
+<body>
+<header class="site-header">
+  <a class="site-brand has-logo" href="index.html">
+    <img class="site-brand-logo has-dark" src="assets/brand/morz-lockup.svg" alt="Morz"><img class="site-brand-logo is-dark" src="assets/brand/morz-lockup-dark.svg" alt="Morz"><span class="site-brand-suffix">文档</span>
+  </a>
+  <nav class="site-toplinks"><a href="https://morz.app/" target="_blank" rel="noopener">官网</a><a href="https://app.morz.app/" target="_blank" rel="noopener">网页版</a></nav>
+  <button class="site-search-open" type="button" aria-haspopup="dialog" aria-controls="site-search-modal">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <span>搜索文档</span>
+    <kbd>Ctrl K</kbd>
+  </button>
+  <button class="site-theme-toggle" type="button" aria-label="切换明暗" title="切换明暗">
+    <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+    <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/></svg>
+  </button>
+  <button class="site-rail-toggle" type="button" aria-controls="site-rail" aria-expanded="true" aria-label="页面目录" title="页面目录">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M15 4v16"/></svg>
+  </button>
+  <button class="site-nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav-links">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    <span>文档目录</span>
+  </button>
+</header>
+<div class="site">
+  <div class="site-nav-scrim"></div>
+  <nav class="site-nav">
+    <div class="site-nav-links" id="site-nav-links">
+      <div class="site-nav-external"><div class="site-nav-group">站外</div><a href="https://morz.app/" target="_blank" rel="noopener">官网</a><a href="https://app.morz.app/" target="_blank" rel="noopener">网页版</a></div>
+      <div class="site-nav-group">使用手册</div><a href="start.html">开始使用</a>
+      <a href="write.html">记录与写作</a>
+      <a href="organize.html">整理与查找</a>
+      <a href="look.html">外观与阅读</a>
+      <a href="export.html">导出与备份</a>
+      <a href="devices.html">多端与数据</a>
+      <a href="settings.html">设置详解</a>
+      <a href="faq.html">常见问题</a>
+      <a href="features.html">功能指南</a>
+      <a href="compare.html">竞品对比</a>
+      <a href="releases.html" aria-current="page">更新日志</a>
+      <a href="shouji.html">手记</a>
+      <a href="story.html">故事</a>
+      <div class="site-nav-group">开发文档</div><a href="developers.html">开发文档</a>
+      <a href="plugin-development.html">插件开发</a>
+      <a href="plugin-sdk.html">插件 SDK</a>
+      <a href="theme-development.html">主题开发</a>
+      <a href="llm.html">给 AI 的速查</a>
+      <a href="publishing.html">插件 / 主题发布</a>
+    </div>
+  </nav>
+  <main class="site-main">
+    <div class="site-content">
+      <nav class="site-ticks" aria-label="标题指示条"><div class="site-ticks-inner"><a class="site-tick lv2" href="#032%E5%86%85%E6%B5%8B" aria-label="0.3.2（内测）"></a><a class="site-tick lv3" href="#%E7%BC%96%E8%BE%91" aria-label="编辑"></a><a class="site-tick lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE" aria-label="思维导图"></a><a class="site-tick lv3" href="#%E5%9B%BE%E8%B0%B1" aria-label="图谱"></a><a class="site-tick lv3" href="#%E7%95%8C%E9%9D%A2" aria-label="界面"></a><a class="site-tick lv3" href="#%E5%85%8D%E8%B4%B9%E7%89%88" aria-label="免费版"></a><a class="site-tick lv3" href="#%E6%8F%92%E4%BB%B6" aria-label="插件"></a><a class="site-tick lv3" href="#%E7%BD%91%E9%A1%B5%E7%89%88" aria-label="网页版"></a><a class="site-tick lv3" href="#android" aria-label="Android"></a><a class="site-tick lv2" href="#012%E5%85%8D%E8%B4%B9" aria-label="0.1.2（免费）"></a><a class="site-tick lv2" href="#031%E5%86%85%E6%B5%8B" aria-label="0.3.1（内测）"></a><a class="site-tick lv3" href="#%E6%89%8B%E6%9C%BA%E6%9B%B4%E9%A1%BA" aria-label="手机更顺"></a><a class="site-tick lv3" href="#word" aria-label="Word"></a><a class="site-tick lv2" href="#011%E5%85%8D%E8%B4%B9" aria-label="0.1.1（免费）"></a><a class="site-tick lv2" href="#030" aria-label="0.3.0"></a><a class="site-tick lv3" href="#%E6%80%A7%E8%83%BD" aria-label="性能"></a><a class="site-tick lv3" href="#%E5%88%86%E6%A0%8F%E5%86%99%E4%BD%9C%E6%96%B0%E8%A7%86%E5%9B%BE" aria-label="分栏写作（新视图）"></a><a class="site-tick lv3" href="#%E5%85%A8%E5%B1%80%E5%9B%BE%E8%B0%B1" aria-label="全局图谱"></a><a class="site-tick lv3" href="#%E5%AF%BC%E5%87%BA" aria-label="导出"></a><a class="site-tick lv3" href="#%E7%BC%96%E8%BE%91-1" aria-label="编辑"></a><a class="site-tick lv3" href="#%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8" aria-label="数据安全"></a><a class="site-tick lv3" href="#%E5%85%B6%E4%BB%96" aria-label="其他"></a><a class="site-tick lv2" href="#0213" aria-label="0.2.13"></a><a class="site-tick lv3" href="#%E6%9B%B4%E6%96%B0" aria-label="更新"></a><a class="site-tick lv3" href="#%E5%85%B6%E4%BB%96-1" aria-label="其他"></a><a class="site-tick lv2" href="#0212" aria-label="0.2.12"></a><a class="site-tick lv3" href="#%E6%96%87%E4%BB%B6%E5%8E%86%E5%8F%B2" aria-label="文件历史"></a><a class="site-tick lv3" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E6%B5%8F%E8%A7%88" aria-label="文件夹浏览"></a><a class="site-tick lv3" href="#%E5%AF%BC%E5%9B%BE" aria-label="导图"></a><a class="site-tick lv3" href="#%E6%89%8B%E6%9C%BA" aria-label="手机"></a><a class="site-tick lv3" href="#%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF" aria-label="命令面板"></a><a class="site-tick lv2" href="#0211" aria-label="0.2.11"></a><a class="site-tick lv3" href="#%E5%AF%BC%E5%9B%BE-1" aria-label="导图"></a><a class="site-tick lv3" href="#%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9D%97%E5%BC%95%E7%94%A8" aria-label="链接与块引用"></a><a class="site-tick lv3" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E6%B5%8F%E8%A7%88-1" aria-label="文件夹浏览"></a><a class="site-tick lv3" href="#%E6%96%87%E4%BB%B6%E5%8E%86%E5%8F%B2-1" aria-label="文件历史"></a><a class="site-tick lv3" href="#%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF-1" aria-label="命令面板"></a><a class="site-tick lv3" href="#%E6%89%8B%E6%9C%BA-1" aria-label="手机"></a><a class="site-tick lv3" href="#%E5%85%B6%E4%BB%96-2" aria-label="其他"></a><a class="site-tick lv2" href="#0210" aria-label="0.2.10"></a><a class="site-tick lv3" href="#%E5%8D%A1%E6%AD%BB%E4%B8%8E%E6%80%A7%E8%83%BD%E9%87%8D%E7%82%B9%E4%BF%AE%E5%A4%8D" aria-label="卡死与性能（重点修复）"></a><a class="site-tick lv3" href="#android-1" aria-label="Android"></a><a class="site-tick lv3" href="#%E7%95%8C%E9%9D%A2-1" aria-label="界面"></a><a class="site-tick lv2" href="#029" aria-label="0.2.9"></a><a class="site-tick lv3" href="#android-%E7%A8%B3%E5%AE%9A%E6%80%A7%E9%87%8D%E7%82%B9%E4%BF%AE%E5%A4%8D" aria-label="Android 稳定性（重点修复）"></a><a class="site-tick lv3" href="#android-%E4%BA%A4%E4%BA%92" aria-label="Android 交互"></a><a class="site-tick lv3" href="#%E4%BF%AE%E5%A4%8D" aria-label="修复"></a><a class="site-tick lv3" href="#%E5%85%B6%E4%BB%96-3" aria-label="其他"></a><a class="site-tick lv2" href="#026" aria-label="0.2.6"></a><a class="site-tick lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE-1" aria-label="思维导图"></a><a class="site-tick lv3" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA" aria-label="工作区"></a><a class="site-tick lv3" href="#%E4%BF%AE%E5%A4%8D-1" aria-label="修复"></a><a class="site-tick lv2" href="#025" aria-label="0.2.5"></a><a class="site-tick lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E8%A7%86%E5%9B%BE%E6%96%B0" aria-label="思维导图视图（新）"></a><a class="site-tick lv3" href="#%E5%9B%BE%E7%89%87%E4%B8%8E%E5%9B%BE%E6%B3%A8" aria-label="图片与图注"></a><a class="site-tick lv3" href="#%E6%96%B0%E5%BB%BA%E5%8D%B3%E8%90%BD%E7%9B%98" aria-label="新建即落盘"></a><a class="site-tick lv3" href="#%E9%98%85%E8%AF%BB%E4%B8%8E%E5%86%99%E4%BD%9C" aria-label="阅读与写作"></a><a class="site-tick lv3" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF" aria-label="移动端"></a><a class="site-tick lv3" href="#%E6%8F%92%E4%BB%B6%E4%B8%8E-sdk" aria-label="插件与 SDK"></a><a class="site-tick lv3" href="#%E4%BF%AE%E5%A4%8D-2" aria-label="修复"></a><a class="site-tick lv2" href="#024" aria-label="0.2.4"></a><a class="site-tick lv3" href="#%E9%93%BE%E6%8E%A5%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C" aria-label="链接与知识网络"></a><a class="site-tick lv3" href="#%E9%98%85%E8%AF%BB%E4%B8%8E%E5%86%99%E4%BD%9C-1" aria-label="阅读与写作"></a><a class="site-tick lv3" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF-1" aria-label="移动端"></a><a class="site-tick lv3" href="#%E6%80%A7%E8%83%BD-1" aria-label="性能"></a><a class="site-tick lv3" href="#%E6%8F%92%E4%BB%B6%E4%B8%8E-sdk-1" aria-label="插件与 SDK"></a><a class="site-tick lv3" href="#%E4%BF%AE%E5%A4%8D-3" aria-label="修复"></a><a class="site-tick lv2" href="#023" aria-label="0.2.3"></a><a class="site-tick lv2" href="#022" aria-label="0.2.2"></a></div></nav>
+      <div id="write">
+<h1 id="更新日志">更新日志</h1>
+<blockquote>
+<p>这里记录每个版本的完整更新说明。应用内「帮助 → 检查更新」只显示摘要，详细内容以本页为准。<br>
+当前版本 <strong>0.3.2</strong>（内测） / <strong>0.1.2</strong>（免费）。</p>
+<p>0.2.3 与 0.2.4 未单独分发包，改动都包含在 0.2.5 中。</p>
+</blockquote>
+<h2 id="032内测">0.3.2（内测）</h2>
+<h3 id="编辑">编辑</h3>
+<ul>
+<li>输入三个反引号时保持普通文本；继续输字母才弹语言候选，回车生成成对围栏</li>
+<li>有序列表被切开后自动接续编号；缩进列表退格后光标停在标记之后，继续输入直接进正文</li>
+<li>新建笔记后行内重命名不再卡住；另存为弹窗完整中文化；全选 Callout 时标题不再翻成源码</li>
+<li>空图表 / 公式围栏仍可编辑（不再吞掉正文）</li>
+</ul>
+<h3 id="思维导图">思维导图</h3>
+<ul>
+<li>空格 + 拖动平移、空格 + 滚轮缩放、Shift + 滚轮横向滚动</li>
+<li>右键拖动平移，左键框选；新增概览与聚焦快捷键；列表组可拖到标题下面</li>
+<li>缩放与平移更跟手</li>
+</ul>
+<h3 id="图谱">图谱</h3>
+<ul>
+<li>局部图谱的邻居标签自动避让，密集节点不再重叠；悬停时让位的标签会回来</li>
+</ul>
+<h3 id="界面">界面</h3>
+<ul>
+<li>状态栏默认全宽；编辑工具条默认靠左</li>
+<li>最近列表显示时间标签；右栏宽度异常修复</li>
+<li>设置弹窗不再被广告拦截规则误杀</li>
+</ul>
+<h3 id="免费版">免费版</h3>
+<ul>
+<li><strong>日历 / 每日笔记进入免费版</strong>：月历面板、每日笔记、模板与分享落点直接可用</li>
+<li>免费版里的内测功能灰显项，点击改为跳网页版对应演示并自动加载演示文档</li>
+</ul>
+<h3 id="插件">插件</h3>
+<ul>
+<li>图床改为可安装的插件；文件夹浏览拆成内置插件，可在「内置插件」里开关</li>
+<li>文件夹浏览新增「点击文件夹进入浏览视图」；插件可以给文件树加图标与右键菜单</li>
+<li>分栏写作改名「分节卡片」，子列自动对齐，支持画布平移</li>
+</ul>
+<h3 id="网页版">网页版</h3>
+<ul>
+<li>全部功能开放体验，内测功能标注 Beta；新增按功能直达的演示文档（<code>?demo=</code>）</li>
+</ul>
+<h3 id="android">Android</h3>
+<ul>
+<li>主屏小组件与磁贴可以直接快速记录，不打开应用也能写入笔记</li>
+</ul>
+<h2 id="012免费">0.1.2（免费）</h2>
+<ul>
+<li><strong>日历 / 每日笔记进入免费版</strong>：月历面板、每日笔记、模板与分享落点直接可用</li>
+<li>与内测版同源：编辑、列表、Callout 与插件体验的修复同步到免费版</li>
+</ul>
+<h2 id="031内测">0.3.1（内测）</h2>
+<h3 id="手机更顺">手机更顺</h3>
+<ul>
+<li>大库滚动不再掉帧；切换文件夹不再闪白</li>
+<li>右栏日历不再拖慢整机：真机反馈里一次运算占用主线程 2.5 秒，现在约 0.07 秒</li>
+<li>窄屏下的工具栏、侧栏与设置排版修正</li>
+</ul>
+<h3 id="word">Word</h3>
+<ul>
+<li>Word 文档可以直接打开预览，不用先转换；导入保留标题、表格与图片</li>
+</ul>
+<h2 id="011免费">0.1.1（免费）</h2>
+<ul>
+<li>与内测版同源：手机端性能修复同步到免费版</li>
+<li>Word 文档可直接预览，导出 Word 结构更稳</li>
+</ul>
+<h2 id="030">0.3.0</h2>
+<h3 id="性能">性能</h3>
+<ul>
+<li>右栏日历不再拖慢整机：真机反馈中一次运算占用主线程 2.5 秒，现在单次绘制约 0.07 秒</li>
+<li>大文档输入更跟手：50 万字符文档输入延迟 P95 5.3ms</li>
+<li>表格里打字不再重建整篇排版；长文滚动只更新可见部分</li>
+<li>上万文件的文件夹滚动更顺，切目录不再闪</li>
+<li>搜索面板分批出结果；启动后不再每秒重扫整个库</li>
+</ul>
+<h3 id="分栏写作新视图">分栏写作（新视图）</h3>
+<ul>
+<li>列 = 标题层级，卡 = 文档小节；点卡在右侧展开子级，直接在卡里写正文并写回 Markdown，一步撤销</li>
+<li>支持全屏编辑单张卡；改名、新增子卡/同级卡、上下移动、删除、定位原文</li>
+</ul>
+<h3 id="全局图谱">全局图谱</h3>
+<ul>
+<li>改成沉浸式视图：全屏画布与悬浮工具条</li>
+</ul>
+<h3 id="导出">导出</h3>
+<ul>
+<li>新增长图导出与「分享为图片」</li>
+<li>Word 中图表颜色与表格结构修正；分享卡片排版对齐</li>
+</ul>
+<h3 id="编辑-1">编辑</h3>
+<ul>
+<li>新建列表项插到当前父级下；HTML 块内相对图片可显示；裸链接遇中文标点正确截断</li>
+</ul>
+<h3 id="数据安全">数据安全</h3>
+<ul>
+<li>外部修改不会再被自动保存覆盖；快速捕获草稿重启后保留</li>
+</ul>
+<h3 id="其他">其他</h3>
+<ul>
+<li>新增「Plain」阅读主题；frontmatter 中的链接参与索引与重命名改写；每日笔记支持周期预设；工具条图标与顶部布局菜单</li>
+</ul>
+<h2 id="0213">0.2.13</h2>
+<h3 id="更新">更新</h3>
+<ul>
+<li>手机上检查更新不再报「网络异常」：更新信息改由应用内网络层获取，不再受浏览器跨域限制</li>
+<li>增加备用更新地址：主站不通时自动换镜像，弱网或被拦截时更容易成功</li>
+</ul>
+<h3 id="其他-1">其他</h3>
+<ul>
+<li>应用内反馈、图床、插件市场下载在手机上同样改走应用内网络层，之前会被跨域策略拦掉</li>
+</ul>
+<h2 id="0212">0.2.12</h2>
+<h3 id="文件历史">文件历史</h3>
+<ul>
+<li>新增「保存里程碑」：给重要版本起个名字，它不会过期、也不会被自动快照挤掉，历史列表里置顶显示；大改稿前存一个，改坏了随时回到这一版</li>
+<li>历史时间显示更完整：「2026年11月20日 周五 10:30」，一天内的版本另标「刚刚 / N 分钟前」</li>
+</ul>
+<h3 id="文件夹浏览">文件夹浏览</h3>
+<ul>
+<li>任意目录规模下滚动更稳：切换文件夹不再闪白，滚动不再卡顿</li>
+<li>卡片预览更干净：正文里的链接、标记不再混进预览文字</li>
+<li>文件夹与文件行更紧凑，图标与名称对齐</li>
+</ul>
+<h3 id="导图">导图</h3>
+<ul>
+<li>提升为根节点的一级标题不再被框选或删除误伤</li>
+</ul>
+<h3 id="手机">手机</h3>
+<ul>
+<li>低配机型自动进入轻量模式，启动与滚动更顺</li>
+</ul>
+<h3 id="命令面板">命令面板</h3>
+<ul>
+<li>拼音检索覆盖新增命令</li>
+</ul>
+<h2 id="0211">0.2.11</h2>
+<h3 id="导图-1">导图</h3>
+<ul>
+<li>触屏可以进入框选模式；框选多个节点后，拖任意一个节点即可整组移动，标题节点同样支持成组拖动</li>
+<li>固定后的预览卡可以拖拽调整大小，并按文件记住；节点把手更收敛</li>
+<li>深层节点可以逐层下钻查看</li>
+</ul>
+<h3 id="链接与块引用">链接与块引用</h3>
+<ul>
+<li>块有了真实范围：悬停显示被引用次数，点击直接打开引用列表</li>
+<li>输入 <code>[[笔记^</code> 打开块选择器，候选里能看到块的正文摘要</li>
+<li>链接写到一半时方括号不再消失；光标碰到链接会显示完整写法</li>
+<li>断链会在状态栏提示数量；标题末尾的块 id 不再计入标题文字</li>
+</ul>
+<h3 id="文件夹浏览-1">文件夹浏览</h3>
+<ul>
+<li>文件夹、笔记、图片、PDF / Word 各有自己的卡片样式，笔记卡片直接显示正文预览</li>
+<li>卡片右键复用文件树的完整菜单；点文件夹就地下钻，返回时滚动位置不丢</li>
+<li>每个文件夹记住自己的浏览方式与缩放</li>
+</ul>
+<h3 id="文件历史-1">文件历史</h3>
+<ul>
+<li>时间显示为「2026年11月19日 周四 21:37」，一天内的版本额外标注「刚刚 / N 分钟前」</li>
+<li>已删除笔记的历史不再保留</li>
+</ul>
+<h3 id="命令面板-1">命令面板</h3>
+<ul>
+<li>支持拼音检索：输入 <code>xinjian</code>、<code>xj</code> 都能找到「新建」，多音字（粘贴、重命名等）已校正</li>
+</ul>
+<h3 id="手机-1">手机</h3>
+<ul>
+<li>低配机型自动进入轻量模式，启动与滚动更顺</li>
+<li>从文件管理器用 Morz 打开 <code>.md</code> 更可靠</li>
+<li>应用内检查并下载更新；安装时系统会要求确认一次</li>
+</ul>
+<h3 id="其他-2">其他</h3>
+<ul>
+<li>检查更新失败时给出明确提示，并提供「手动下载」入口</li>
+<li>性能：大库索引停滞时自动降级，不再弹窗打断</li>
+</ul>
+<h2 id="0210">0.2.10</h2>
+<h3 id="卡死与性能重点修复">卡死与性能（重点修复）</h3>
+<ul>
+<li>修复打开或滚动大文档后界面失去响应：块级装饰与编辑器视口互相触发，形成永不收敛的重建循环（实测 3160 次空更新、DOM 节点涨到 36 万）。现在块装饰只由文档状态驱动；2100 篇、600MB 的库连续滚动 120 秒不再挂起</li>
+<li>索引解析移入后台 Worker：大库启动索引时不再与滚动抢主线程，打字更跟手；Worker 不可用时自动回退</li>
+<li>只索引 Markdown；链接图改为异步分片重建，冷启动不再被一次性解析阻塞</li>
+<li>文末反链改为只保留右栏「反向链接 / 出链」（最多 200 条）：文末长列表是先前卡顿与内存上涨的主因之一；「视图 › 反向链接」仍可用</li>
+<li>图片加载失败不再每 2 秒自动重试（每次重试都会重建整篇装饰），改为切换文档或 60 秒后自然重试</li>
+<li>打字时块装饰按变更范围增量更新，不再每次按键重建全文</li>
+</ul>
+<h3 id="android-1">Android</h3>
+<ul>
+<li>划词菜单改由独立入口接收：在 Edge 等应用里选中文字 → 划词工具条 → Morz，工具条立即关闭并直接进入 Morz</li>
+<li>分享 / 划词 / 打开文件改为先落盘再确认：进程被杀也不会丢，重启后自动补投且不重复</li>
+<li>启动页去掉自绘遮罩，只保留系统启动图与页面内 logo，不再出现双 logo 或白屏</li>
+<li>应用内更新：启动时检查新版本（12 小时最多一次），有更新可直接在应用内下载，再按系统提示安装</li>
+<li>外部意图 1.5 秒无响应才重载页面，任务 30 秒没有任何进展才处理，慢写入不再被误判</li>
+</ul>
+<h3 id="界面-1">界面</h3>
+<ul>
+<li>浮动大纲重做：一套卡片 + 自动 / 刻度条 / 悬浮图标三种收起形态，入口在 设置 → 内置插件 → 浮动大纲；卡片可拖动、固定、拖拽重排标题</li>
+<li>状态栏右键可在「跟随正文 / 通栏」之间切换或隐藏</li>
+<li>思维导图：<code>Ctrl+Shift+M</code> 打开；文件树与文件标签页右键可直接打开目标文件的导图</li>
+<li>手机：长按文件 / 文件夹弹出底部操作菜单；搜索面板占满整屏；设置开关放大到更易点的尺寸</li>
+<li>脚注可直接在正文里编辑，表格中的脚注一并覆盖</li>
+<li>快捷键设置每条绑定都有「清除」按钮（等价录键时按 Del）</li>
+<li>编辑器细节：粗体方括号、Callout 内的 HTML、焦点环</li>
+<li>更新说明打开时直接聚焦标签页，底部附官网更新日志地址</li>
+</ul>
+<h2 id="029">0.2.9</h2>
+<h3 id="android-稳定性重点修复">Android 稳定性（重点修复）</h3>
+<ul>
+<li>修复反复「闪退」：内存不足时系统会回收 WebView 的渲染进程，此前应用会被连带关闭；现在接管这一事件，前台被回收时页面自动恢复，后台被回收则回到前台时恢复，全程应用不再退出</li>
+<li>恢复过程保留打开的文档与草稿；渲染进程死亡不再产生任何可感知的退出</li>
+<li>连续异常退出时自动进入安全启动（跳过会话恢复），避免「进不去」；提示条可点「重新尝试恢复会话」</li>
+</ul>
+<h3 id="android-交互">Android 交互</h3>
+<ul>
+<li>系统返回键按层级关闭：侧栏 / 文件夹层级 → 弹窗与命令面板 → 设置详情 → 思维导图等插件视图 → 最后才是「再按一次返回退出」，不再直接最小化到桌面</li>
+<li>浏览器或其他应用「分享」文字到 Morz 不再停在启动画面：分享内容改为等页面就绪后投递，冷启动也可靠落入当日笔记</li>
+<li>内置指南里的「导出备份」「选择文件夹…」按钮文字不再溢出边框</li>
+</ul>
+<h3 id="修复">修复</h3>
+<ul>
+<li>思维导图双指缩放不再误触节点拖拽或弹出内容卡</li>
+<li>正文字号调大后，指南里的动作按钮高度跟随字号，文字不再顶出上下边框</li>
+</ul>
+<h3 id="其他-3">其他</h3>
+<ul>
+<li>帮助菜单新增「更新说明」：新标签打开内置更新日志，手动安装的包也能随时查看</li>
+<li>诊断增强：记录上次会话是否异常结束、连续闪退计数与本机 Java 崩溃日志（只存在本机，导出诊断时附带）</li>
+</ul>
+<h2 id="026">0.2.6</h2>
+<h3 id="思维导图-1">思维导图</h3>
+<ul>
+<li>双击节点原地编辑文字（F2 同义）；右键或触摸长按打开操作菜单，按节点类型显示编辑、新建、升降级、移动、复制、定位原文、删除</li>
+<li>折叠按钮改为常见语义：展开显示「−」、收起显示「+」；菜单里可「展开全部」</li>
+<li>空白处双击不再新建节点；拖节点到另一个节点仍是调整结构</li>
+<li>拖节点到空白处，展开并固定该节点的内容卡；卡片贴近触发节点，可遮挡其他内容</li>
+<li>侧栏切换文件、「下一个 / 上一个文件」都留在导图视图里；每个文件记住自己的缩放位置</li>
+<li>导出整张导图为 PNG（2×）或 SVG，大图带淡淡的水印；小图保持干净</li>
+</ul>
+<h3 id="工作区">工作区</h3>
+<ul>
+<li>工作区菜单每行行尾改为「…」：设为默认 / 在文件管理器中显示 / 复制路径 / 移出列表</li>
+<li>动作菜单不再收起工作区列表；底部「最近文件夹」可快速切换</li>
+</ul>
+<h3 id="修复-1">修复</h3>
+<ul>
+<li>Emoji 短名 <code>:+1:</code> / <code>:-1:</code> 正常显示，不再停留在源码</li>
+<li>Obsidian <code>%%…%%</code> 注释里的双链与标签不再进入反链、图谱和未链接提及</li>
+<li>思维导图里 Obsidian 注释不再变成空白节点</li>
+<li>5,000 节点的大图打开更快（约 2 秒），平移保持流畅</li>
+</ul>
+<h2 id="025">0.2.5</h2>
+<p>自 0.2.2 以来的累计更新。</p>
+<h3 id="思维导图视图新">思维导图视图（新）</h3>
+<ul>
+<li>内置插件「思维导图视图」（<code>Mod-Shift-M</code>）：把文档的标题与列表投影成导图，可浏览也可直接编辑</li>
+<li>双击节点定位原文；Enter 新建同级、Ctrl+Enter 新建子级、Tab/Shift+Tab 升降、Ctrl+↑↓ 移动、F2 改名、Delete 删除</li>
+<li>拖拽重排带落点预览，列表与标题跨类型禁放；一次操作一步撤销</li>
+<li>折叠状态、相机位置、内容开关按文档记忆，刷新后原样回来</li>
+<li>Ctrl 悬停预览卡片，可钉住、可多框并存；滚轮平移，Ctrl+滚轮或触控板捏合缩放，双击空白新建</li>
+<li>「内容」开关控制正文与代码块是否显示；长标签按真实字体宽度截断，不溢出节点框</li>
+</ul>
+<h3 id="图片与图注">图片与图注</h3>
+<ul>
+<li>插入图片自动优化：关闭 / 自动 WebP / WebP / JPEG 四种模式，质量与最长边可调；SVG、GIF、HEIC 原样保存</li>
+<li>插入重命名：保留原名 / 日期前缀 / 内容哈希 / 自定义模板（<code>{date}</code> <code>{time}</code> <code>{name}</code> <code>{hash}</code>）</li>
+<li>图注自动编号：文档级开关、起始号、前缀与分隔符；编号是派生显示，不改正文，导出 HTML/PDF 同步</li>
+<li>删除附件前先扫描其他笔记的引用，提示后再删</li>
+</ul>
+<h3 id="新建即落盘">新建即落盘</h3>
+<ul>
+<li>桌面首次启动在「文档/Morz」建主库，提示条显示真实路径，并提供「更改位置…」</li>
+<li>内置帮助库统一叫「使用指南 / Guides」；内置文档副本落到当前工作区，引用图片一起复制</li>
+<li>收集箱默认指向新库，日历、每日笔记与全局捕获有默认落点</li>
+</ul>
+<h3 id="阅读与写作">阅读与写作</h3>
+<ul>
+<li>章节折叠插件：标题章节与代码块折叠，光标进入自动展开；折叠状态按笔记记忆</li>
+<li>阅读模式新增浮动提示与「隐藏图片」纯文字校对</li>
+<li>只读大表格窗口化：1 万行表格的 DOM 从 5 万节点降到约 260</li>
+</ul>
+<h3 id="移动端">移动端</h3>
+<ul>
+<li>标题栏、状态栏与标签的触控区放大到 40px 以上，状态栏文字对比度提升</li>
+<li>手机设置页头部只留标题：重置移到页底，关闭交给系统返回手势</li>
+<li>大纲在手机上首次使用自动收成悬浮图标，不占正文宽度</li>
+</ul>
+<h3 id="插件与-sdk">插件与 SDK</h3>
+<ul>
+<li>SDK v1.4：插件视图可接管标题栏工具条；新增折叠 API 与 <code>vault.attachments()</code></li>
+<li>新内置插件：章节折叠、摘出为新文档、未引用资源清理、思维导图视图</li>
+<li>插件视图在刷新后恢复上次打开的那一个</li>
+</ul>
+<h3 id="修复-2">修复</h3>
+<ul>
+<li>PDF 导出样式只作用于导出过程，打印结束即移除，不再影响编辑器</li>
+<li>侧栏空文件夹不再显示 <code>0</code></li>
+<li>思维导图：多行段落改名不再吞行、有序列表编号自动重排、点选后方向键立即可用</li>
+<li>空草稿的会话恢复不再报「位置越界」；回收站为空时「清空」按钮置灰</li>
+</ul>
+<h2 id="024">0.2.4</h2>
+<h3 id="链接与知识网络">链接与知识网络</h3>
+<ul>
+<li>跨工作区、跨文件夹的双链直接打开，不再误弹「创建文件？」</li>
+<li>重命名或移动笔记、文件夹时自动更新双链与 Markdown 链接（保留别名和标题/块定位），可一键撤销</li>
+<li>文末反向链接区新增「未链接的提及」，一键成链</li>
+<li>打开已在其他工作区内的文件夹时，提示「用父工作区打开 / 作为独立工作区」</li>
+<li>工作区切换菜单行尾有「设为默认」标签；同名图片与附件按路径引用</li>
+</ul>
+<h3 id="阅读与写作-1">阅读与写作</h3>
+<ul>
+<li>章节折叠内置插件：标题章节与代码块折叠，光标进入自动展开</li>
+<li>阅读模式可隐藏图片，进入纯文字校对</li>
+<li>导出 HTML/PDF 支持标题自动编号（正文不写号）</li>
+<li>图片查看器支持滚轮缩放、拖拽平移、双击复位、+/- 快捷键</li>
+<li>文件树可为每个文件夹显示笔记数</li>
+</ul>
+<h3 id="移动端-1">移动端</h3>
+<ul>
+<li>触控区放大到 40px+，状态栏对比度提升，手机上品牌标让位给文档名</li>
+<li>手机设置页头部只留标题；大纲首次使用自动收成悬浮图标</li>
+</ul>
+<h3 id="性能-1">性能</h3>
+<ul>
+<li>图谱、Dataview、图床改为按需加载，主包体积 1505 KB → 1363 KB</li>
+<li>只读大表格窗口化：1 万行表格的 DOM 从 5 万节点降到约 260</li>
+</ul>
+<h3 id="插件与-sdk-1">插件与 SDK</h3>
+<ul>
+<li>新增折叠 API（<code>foldService</code> / <code>foldEffect</code> 等）与 <code>vault.attachments()</code></li>
+<li>新内置插件：「摘出为新文档」「未引用资源清理」</li>
+</ul>
+<h3 id="修复-3">修复</h3>
+<ul>
+<li>Ctrl+B 后再按 Ctrl+I 不再把粗体改成斜体</li>
+<li>把子目录单独打开为工作区后，点 <code>[[../父笔记]]</code> 不再创建错误文件</li>
+<li>网页版：授权文件夹之外的链接会明确提示，不再静默失败</li>
+<li>删除大纲行最后一个字符不再被卡住；空草稿的会话恢复不再报「位置越界」</li>
+<li>回收站为空时「清空」按钮置灰</li>
+<li>切回缓存的标签页不再丢失插件注册的编辑器扩展</li>
+</ul>
+<h2 id="023">0.2.3</h2>
+<ul>
+<li>网页版：可以打开文件夹，也支持把文件夹直接拖进窗口</li>
+<li>修复粘贴、回调与折叠的若干问题</li>
+<li>增加性能数据的本地收集</li>
+</ul>
+<h2 id="022">0.2.2</h2>
+<p>上一个分发包，作为 0.2.5 更新说明的基线。</p>
+<ul>
+<li>市场与收藏：「最近」侧栏、跨工作区收藏、插件市场首批条目</li>
+<li>任务提醒、应用内反馈（含截图与诊断信息）</li>
+<li>导出：macOS PDF 直出（书签与目录可跳转）、Word / HTML / PDF 写入 Morz 元数据</li>
+<li>体验：首行缩进设为应用偏好、图片画廊固定 3:2、点击中文行不再跳行</li>
+<li>修复：macOS 12 白屏、删除的笔记不再出现在反向链接</li>
+</ul>
+<hr>
+<p>完整更新说明与历史版本：<a href="https://morz.app/docs/releases">morz.app/docs/releases</a></p>
+
+</div>
+    </div>
+    <div class="site-pager">
+    <span><a href="compare.html">← 竞品对比</a></span>
+    <span><a href="shouji.html">手记 →</a></span>
+  </div>
+    <footer class="site-footer"><span>Morz 文档 · 内容随版本更新</span><nav><a href="https://morz.app/" target="_blank" rel="noopener noreferrer">官网 morz.app</a><a href="https://app.morz.app/" target="_blank" rel="noopener noreferrer">网页版</a><a href="https://github.com/cumany/Morz" target="_blank" rel="noopener noreferrer">GitHub</a></nav><span>© 2026 Morz</span></footer>
+  </main>
+  <aside class="site-rail" id="site-rail" aria-label="页面导航">
+    <div class="site-rail-outline">
+      <h2>大纲</h2>
+      <nav class="site-outline"><a class="lv2" href="#032%E5%86%85%E6%B5%8B">0.3.2（内测）</a><div class="site-outline-sub"><a class="lv3" href="#%E7%BC%96%E8%BE%91">编辑</a><a class="lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE">思维导图</a><a class="lv3" href="#%E5%9B%BE%E8%B0%B1">图谱</a><a class="lv3" href="#%E7%95%8C%E9%9D%A2">界面</a><a class="lv3" href="#%E5%85%8D%E8%B4%B9%E7%89%88">免费版</a><a class="lv3" href="#%E6%8F%92%E4%BB%B6">插件</a><a class="lv3" href="#%E7%BD%91%E9%A1%B5%E7%89%88">网页版</a><a class="lv3" href="#android">Android</a></div><a class="lv2" href="#012%E5%85%8D%E8%B4%B9">0.1.2（免费）</a><a class="lv2" href="#031%E5%86%85%E6%B5%8B">0.3.1（内测）</a><div class="site-outline-sub"><a class="lv3" href="#%E6%89%8B%E6%9C%BA%E6%9B%B4%E9%A1%BA">手机更顺</a><a class="lv3" href="#word">Word</a></div><a class="lv2" href="#011%E5%85%8D%E8%B4%B9">0.1.1（免费）</a><a class="lv2" href="#030">0.3.0</a><div class="site-outline-sub"><a class="lv3" href="#%E6%80%A7%E8%83%BD">性能</a><a class="lv3" href="#%E5%88%86%E6%A0%8F%E5%86%99%E4%BD%9C%E6%96%B0%E8%A7%86%E5%9B%BE">分栏写作（新视图）</a><a class="lv3" href="#%E5%85%A8%E5%B1%80%E5%9B%BE%E8%B0%B1">全局图谱</a><a class="lv3" href="#%E5%AF%BC%E5%87%BA">导出</a><a class="lv3" href="#%E7%BC%96%E8%BE%91-1">编辑</a><a class="lv3" href="#%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8">数据安全</a><a class="lv3" href="#%E5%85%B6%E4%BB%96">其他</a></div><a class="lv2" href="#0213">0.2.13</a><div class="site-outline-sub"><a class="lv3" href="#%E6%9B%B4%E6%96%B0">更新</a><a class="lv3" href="#%E5%85%B6%E4%BB%96-1">其他</a></div><a class="lv2" href="#0212">0.2.12</a><div class="site-outline-sub"><a class="lv3" href="#%E6%96%87%E4%BB%B6%E5%8E%86%E5%8F%B2">文件历史</a><a class="lv3" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E6%B5%8F%E8%A7%88">文件夹浏览</a><a class="lv3" href="#%E5%AF%BC%E5%9B%BE">导图</a><a class="lv3" href="#%E6%89%8B%E6%9C%BA">手机</a><a class="lv3" href="#%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF">命令面板</a></div><a class="lv2" href="#0211">0.2.11</a><div class="site-outline-sub"><a class="lv3" href="#%E5%AF%BC%E5%9B%BE-1">导图</a><a class="lv3" href="#%E9%93%BE%E6%8E%A5%E4%B8%8E%E5%9D%97%E5%BC%95%E7%94%A8">链接与块引用</a><a class="lv3" href="#%E6%96%87%E4%BB%B6%E5%A4%B9%E6%B5%8F%E8%A7%88-1">文件夹浏览</a><a class="lv3" href="#%E6%96%87%E4%BB%B6%E5%8E%86%E5%8F%B2-1">文件历史</a><a class="lv3" href="#%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF-1">命令面板</a><a class="lv3" href="#%E6%89%8B%E6%9C%BA-1">手机</a><a class="lv3" href="#%E5%85%B6%E4%BB%96-2">其他</a></div><a class="lv2" href="#0210">0.2.10</a><div class="site-outline-sub"><a class="lv3" href="#%E5%8D%A1%E6%AD%BB%E4%B8%8E%E6%80%A7%E8%83%BD%E9%87%8D%E7%82%B9%E4%BF%AE%E5%A4%8D">卡死与性能（重点修复）</a><a class="lv3" href="#android-1">Android</a><a class="lv3" href="#%E7%95%8C%E9%9D%A2-1">界面</a></div><a class="lv2" href="#029">0.2.9</a><div class="site-outline-sub"><a class="lv3" href="#android-%E7%A8%B3%E5%AE%9A%E6%80%A7%E9%87%8D%E7%82%B9%E4%BF%AE%E5%A4%8D">Android 稳定性（重点修复）</a><a class="lv3" href="#android-%E4%BA%A4%E4%BA%92">Android 交互</a><a class="lv3" href="#%E4%BF%AE%E5%A4%8D">修复</a><a class="lv3" href="#%E5%85%B6%E4%BB%96-3">其他</a></div><a class="lv2" href="#026">0.2.6</a><div class="site-outline-sub"><a class="lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE-1">思维导图</a><a class="lv3" href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA">工作区</a><a class="lv3" href="#%E4%BF%AE%E5%A4%8D-1">修复</a></div><a class="lv2" href="#025">0.2.5</a><div class="site-outline-sub"><a class="lv3" href="#%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE%E8%A7%86%E5%9B%BE%E6%96%B0">思维导图视图（新）</a><a class="lv3" href="#%E5%9B%BE%E7%89%87%E4%B8%8E%E5%9B%BE%E6%B3%A8">图片与图注</a><a class="lv3" href="#%E6%96%B0%E5%BB%BA%E5%8D%B3%E8%90%BD%E7%9B%98">新建即落盘</a><a class="lv3" href="#%E9%98%85%E8%AF%BB%E4%B8%8E%E5%86%99%E4%BD%9C">阅读与写作</a><a class="lv3" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF">移动端</a><a class="lv3" href="#%E6%8F%92%E4%BB%B6%E4%B8%8E-sdk">插件与 SDK</a><a class="lv3" href="#%E4%BF%AE%E5%A4%8D-2">修复</a></div><a class="lv2" href="#024">0.2.4</a><div class="site-outline-sub"><a class="lv3" href="#%E9%93%BE%E6%8E%A5%E4%B8%8E%E7%9F%A5%E8%AF%86%E7%BD%91%E7%BB%9C">链接与知识网络</a><a class="lv3" href="#%E9%98%85%E8%AF%BB%E4%B8%8E%E5%86%99%E4%BD%9C-1">阅读与写作</a><a class="lv3" href="#%E7%A7%BB%E5%8A%A8%E7%AB%AF-1">移动端</a><a class="lv3" href="#%E6%80%A7%E8%83%BD-1">性能</a><a class="lv3" href="#%E6%8F%92%E4%BB%B6%E4%B8%8E-sdk-1">插件与 SDK</a><a class="lv3" href="#%E4%BF%AE%E5%A4%8D-3">修复</a></div><a class="lv2" href="#023">0.2.3</a><a class="lv2" href="#022">0.2.2</a></nav>
+    </div>
+    <div class="site-graph">
+      <h2>局部图谱</h2>
+      <div class="site-graph-canvas"></div>
+    </div>
+  </aside>
+  <div class="site-rail-scrim"></div>
+  <script type="application/json" class="site-graph-data">{"center":"releases.md","nodes":[{"id":"releases.md","title":"更新日志","href":"releases.html"},{"id":"index.md","title":"帮助中心","href":"index.html"}],"edges":[["index.md","releases.md"]]}</script>
+</div>
+<div class="site-search-modal" id="site-search-modal" hidden>
+  <div class="site-search-panel" role="dialog" aria-modal="true" aria-label="搜索文档">
+    <div class="site-search-field">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input class="site-search-input" type="search" placeholder="搜索标题、小节和正文…" aria-label="搜索文档" autocomplete="off" spellcheck="false">
+      <kbd>Esc</kbd>
+    </div>
+    <div class="site-search-results"></div>
+    <div class="site-search-foot">↑↓ 选择 · Enter 打开 · Esc 关闭</div>
+  </div>
+</div>
+<div class="site-tick-tip" hidden></div>
+<script src="assets/minisearch.js"></script>
+<script src="assets/site.js"></script>
+<script src="assets/preview.js"></script>
+<script src="assets/search.js"></script>
+</body>
+</html>

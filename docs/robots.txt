@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://morz.app/docs/sitemap.xml
