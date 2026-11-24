@@ -1,23 +1,11 @@
 {
-  "version": "0.3.1",
-  "notes": "v0.3.1（2026-11-21）\n· 手机端更顺：大库滚动不再掉帧，切换文件夹不再闪白\n· 右栏日历不再拖慢整机：真机反馈里一次运算占用主线程 2.5 秒，现在约 0.07 秒\n· 窄屏下的工具栏、侧栏与设置排版修正\n· Word 文档可以直接打开预览；导入保留标题、表格与图片\n· 分享图片的卡片留白与文字对齐修正\n\nv0.3.0（2026-11-20）\n· 分栏写作：列 = 标题层级、卡 = 小节，卡内直接写并写回 Markdown，一步撤销\n· 全局图谱改成沉浸式全屏画布\n· 性能：50 万字文档输入延迟 P95 5.3ms；表格打字只重排当前行；搜索分批出结果；启动不再每秒重扫全库\n· 导出：新增长图导出与分享为图片；Word 图表颜色与表格结构修正\n· 编辑：新建列表项插到当前父级下；HTML 块内相对图片可显示；裸链接遇中文标点正确截断\n· 数据安全：外部修改不再被自动保存覆盖；快速捕获草稿重启后保留",
-  "pub_date": "2026-11-21T05:22:16Z",
+  "version": "0.3.3",
+  "notes": "0.3.3 已就绪。这一版集中修编辑器的点选与双链体验，图谱补回网络布局，文件夹浏览的图片墙也真正按原图比例排版。\n\n**编辑**\n\n- 新增「引用图片…」：右键图片/插入菜单和命令面板都能打开工作区图片选择器（缩略图、搜索、本地上传），选中后插入 `![[图片]]`\n- 光标进入双链后回到可编辑文字：不再是手形光标，能点击、拖选和复制\n- 独立成行的 `![[图片]]` 在编辑源码时，下方保留静态预览（支持对齐/宽度字段）\n- 图片嵌入点「编辑源码」不再卡顿；切回正文时图片立即恢复，不再停在源码形态\n- 画廊下方、嵌入块下方的文字可以按鼠标位置落光标，不再跳到后面的空行\n- 编辑器内任意位置右键都使用编辑器菜单，不再偶尔弹出「后退 / 行宽 / 阅读模式 / 滚动」的视图菜单\n- 画廊图片支持按原图比例排列，标题/大小/日期在悬停时浮出\n\n**图谱**\n\n- 恢复「网络」形态：按链接自由铺开，收敛后完全静止\n- 3D 星空支持右键拖动平移；进入视图时按内容包围盒居中\n- 社区名严格跟随「文字标签」开关，关闭时不再显示\n- 3D 深空的形态下拉使用深色原生菜单\n- 分享图直接截当前画布，节点/连线/标签与肉眼所见一致；图谱区背景透明，融合进分享卡底色\n- 分享图支持跟随当前缩放、平移和明暗主题\n\n**文件夹与附件**\n\n- 附件文件夹的图片瀑布流按真实比例排版，超长图封顶 600px 完整缩放\n- 浏览视图点图片打开附件后，头部有返回箭头，回到原目录和滚动位置\n- 在浏览视图删除文件不再把视图踢回编辑器，被删卡片立即消失\n- 重启后如果上次停在图片附件，直接显示图片，不再卡在「正在打开」\n- 懒加载工作区里的深层附件，点返回能正常显示所在目录内容\n\n**文档**\n\n- 修复手册/官网目录锚点：`Obsidian / Typora` 等带斜杠的标题现在能正确跳转\n- 修复 Callout 示例代码块吞掉后续标题的问题；目录代码块正常闭合\n\n**插件与设置**\n\n- 插件市场合并为统一入口，支持卡片/列表浏览\n- 主题市场、市场统计与反馈面板同步更新\n\n**验证**\n\n- `npm test`\n- `npm run build`\n- `tsc`\n- 浏览器回归：folder-cards / folder-masonry-images / folder-cards-nav / attachment-restore / attachment-lazy-back / global-graph / graph-share-live / gallery-caret-hit / embed-source-toggle / image-reference / wikilink-active-text 等",
+  "pub_date": "2026-11-24T17:10:12.318Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWh2bHVSMUV2Nm1qZmkvNG5zYUpRWDlEa2w4NjRyYU5IWTAwMkc1VnpaYVRvSUpRQ3dMVGN3Y0ZGcW1uQ2ltbWM1R1FpankyY0ZJT2M0M0dHb3hHUFFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MjM1NTk1CWZpbGU6TW9yel8wLjMuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjEKOVlCRHNwTDZ1TUVNd2psKzF4RVNSOHh4MFRWaHN3UGFmU2paSmllNlpzdCtqMk1KRnJDTkc3M2xHZ2xSZjAvYWVNd0lTcmN4WWltc3lGZ1NFQUQ5QkE9PQo=",
-      "url": "https://dl.morz.app/v0.3.1/Morz_0.3.1_x64-setup.exe"
-    },
-    "darwin-aarch64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXU2U3VXTGNxZHR4bjQzQjczVS9uamJtcEdJM2c4Ymx0eC9KVmxHaXBxbjNqTXRCVDBIU3M4aDMwcWxTSUNSQVE0MFJra1JVbXVYMnRlUG9FQ2cydUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MjM4MzE5CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4zLjEKaHRVUzQrdjZueUszMjI2MVFXZGVBWm5pdS8yNEVkY0VCRWRhQ1RrRVAzWmlzK3ZqL1VjMld0STBrZTdNaU1yaUdsZ1lFd1h1Z2lqR3VQKzFMV1NZRFE9PQo=",
-      "url": "https://dl.morz.app/v0.3.1/Morz_0.3.1_universal.app.tar.gz"
-    },
-    "darwin-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXU2U3VXTGNxZHR4bjQzQjczVS9uamJtcEdJM2c4Ymx0eC9KVmxHaXBxbjNqTXRCVDBIU3M4aDMwcWxTSUNSQVE0MFJra1JVbXVYMnRlUG9FQ2cydUFRPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MjM4MzE5CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4zLjEKaHRVUzQrdjZueUszMjI2MVFXZGVBWm5pdS8yNEVkY0VCRWRhQ1RrRVAzWmlzK3ZqL1VjMld0STBrZTdNaU1yaUdsZ1lFd1h1Z2lqR3VQKzFMV1NZRFE9PQo=",
-      "url": "https://dl.morz.app/v0.3.1/Morz_0.3.1_universal.app.tar.gz"
+      "url": "https://count.morz.app/v0.3.3/Morz_0.3.3_x64-setup.exe?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcWloMkgyUHVpcmRnV25QNFYrSXRMbkVhVE50WFl4aXJNVFFZMVd3YXNLaWNISWp5NXRHRFF1YmJjUnViLyt2UnZEaTRXZm9TWjhDWnhabkJRc1YvUEFnPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NTQwMDgyCWZpbGU6TW9yel8wLjMuM194NjQtc2V0dXAuZXhlCXZlcnNpb246MC4zLjMKd2ZlbmI2d0JKR29TbTJ1MUtzdjJSNmlIRVJxa1FQWGFDVm1mN3dRZVpEQlFncXhIczRtT1Z3NnlCbGJoR2lKNkh3Nmh3N0l1NmtJOFROVjU1NURDQkE9PQo="
     }
-  },
-  "android": {
-    "url": "https://dl.morz.app/v0.3.1/Morz_0.3.1_android.apk",
-    "sha256": "68ede070896c188f1aba5f3a2963b5912c203256fa538d214c0d49424d5f0281"
   }
 }
