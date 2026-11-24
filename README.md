@@ -57,7 +57,7 @@ The stable core: editing and reading, wikilinks and backlinks, graph, search, th
 
 **Morz Insider · supporter seat**
 
-Support the project and take an insider seat: features still in progress appear here first — the AI assistant, card columns, calendar and daily notes, quick capture. Earlier builds, and your reports get looked at first.
+Support the project and take an insider seat: features still in progress appear here first — the AI assistant, card columns, data views, mind maps, tasks and sidenotes. Earlier builds, and your reports get looked at first.
 
 Insider builds promise no schedule, and not every experiment survives. Whatever stabilises moves into the free edition — supporters get early access, not exclusivity.
 
@@ -65,7 +65,7 @@ Insider builds promise no schedule, and not every experiment survives. Whatever 
 
 | | |
 |---|---|
-| Writing | WYSIWYG editing; tables (in-place cells, `=SUM` formulas, sorting, fill-handle series), code blocks (100+ languages), math via MathJax 4 offline, Mermaid diagrams, footnotes, GitHub-style alerts; card columns (headings become columns, write inside a card, full-screen card editing) |
+| Writing | WYSIWYG editing; tables (in-place cells, `=SUM` formulas, sorting, fill-handle series), code blocks (100+ languages), math via MathJax 4 offline, Mermaid diagrams, footnotes, GitHub-style alerts; card columns (Insider; headings become columns, write inside a card, full-screen card editing) |
 | Organising | Wikilinks (incl. block references) and backlinks, tags, property cards, outline, local/global graphs, daily notes & templates, calendar, favorites & recents, pinyin-aware command palette |
 | Export | PDF (page numbers, TOC page references, sidebar bookmarks), Word, HTML, long image (one PNG or a paginated zip); DOCX import with round-trip fidelity (experimental); copy tables or a text selection as images |
 | Extending | Plugin & theme markets (Dataview, Tasks, AI assistant, Blue Topaz, Style Settings); installs verified per file with sha256 |
