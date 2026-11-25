@@ -18,11 +18,11 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="主题开发">
 <meta name="twitter:description" content="Morz 的主题是一个 CSS 文件：用 :root 里的变量定色板， 用 write 下的元素选择器定排版。内置主题、外置主题和导入主题走同一套机制， 现有的大多数平铺 CSS 主题改几行就能用。 0. 本文的范围 第三方主题作者（大多数">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"主题开发","description":"Morz 的主题是一个 CSS 文件：用 :root 里的变量定色板， 用 write 下的元素选择器定排版。内置主题、外置主题和导入主题走同一套机制， 现有的大多数平铺 CSS 主题改几行就能用。 0. 本文的范围 第三方主题作者（大多数","inLanguage":"zh-CN","url":"https://morz.app/docs/theme-development.html","mainEntityOfPage":"https://morz.app/docs/theme-development.html","isPartOf":{"@type":"WebSite","name":"Morz 文档","url":"https://morz.app/docs/"},"publisher":{"@type":"Organization","name":"Morz","url":"https://morz.app/"},"dateModified":"2026-11-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"主题开发","description":"Morz 的主题是一个 CSS 文件：用 :root 里的变量定色板， 用 write 下的元素选择器定排版。内置主题、外置主题和导入主题走同一套机制， 现有的大多数平铺 CSS 主题改几行就能用。 0. 本文的范围 第三方主题作者（大多数","inLanguage":"zh-CN","url":"https://morz.app/docs/theme-development.html","mainEntityOfPage":"https://morz.app/docs/theme-development.html","isPartOf":{"@type":"WebSite","name":"Morz 文档","url":"https://morz.app/docs/"},"publisher":{"@type":"Organization","name":"Morz","url":"https://morz.app/"},"dateModified":"2026-11-25"}</script>
 <style>html{background:#f7f8fa;color-scheme:light}html body{background:#f7f8fa;color:#1f2933}html.site-dark{background:#151a20;color-scheme:dark}html.site-dark body{background:#151a20;color:#c9d3dd}</style>
 <style id="site-theme-light">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
    exported/printed documents, which use real HTML elements inside #write. */
-:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif; }
 #write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
 #write > :first-child { margin-top: 0; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
@@ -186,8 +186,8 @@
   --select-text-bg-color: #cfe1f0;
   --ui-border-color: #dbe2ea;
 
-  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --write-font-size: 16px;
   --write-line-height: 1.72;
   --write-max-width: 700px;
@@ -540,7 +540,7 @@ html.rail-closed .site-rail { display: none; }
 </style>
 <style id="site-theme-dark" media="not all">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
    exported/printed documents, which use real HTML elements inside #write. */
-:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif; }
 #write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
 #write > :first-child { margin-top: 0; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
@@ -704,8 +704,8 @@ html.rail-closed .site-rail { display: none; }
   --select-text-bg-color: #cfe1f0;
   --ui-border-color: #dbe2ea;
 
-  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --write-font-size: 16px;
   --write-line-height: 1.72;
   --write-max-width: 700px;
@@ -1175,7 +1175,7 @@ html.rail-closed .site-rail { display: none; }
   <span class="cm-variable">--primary-color</span>: #a53f2b;
   <span class="cm-variable">--select-text-bg-color</span>: #e8d9c8;
   <span class="cm-variable">--window-border</span>: <span class="cm-number">1</span><span class="cm-keyword">px</span> <span class="cm-atom">solid</span> #e4ddd0;
-  <span class="cm-variable">--text-font</span>: <span class="cm-string">"Source Han Serif SC"</span>, <span class="cm-atom">Georgia</span>, <span class="cm-string">"Songti SC"</span>, <span class="cm-atom">serif</span>;
+  <span class="cm-variable">--text-font</span>: <span class="cm-string">"Songti SC"</span>, <span class="cm-string">"Source Han Serif SC"</span>, <span class="cm-atom">Georgia</span>, <span class="cm-string">"PingFang SC"</span>, <span class="cm-atom">-apple-system</span>, <span class="cm-atom">system-ui</span>, <span class="cm-atom">serif</span>;
   <span class="cm-variable">--monospace</span>: <span class="cm-string">"JetBrains Mono"</span>, <span class="cm-atom">Consolas</span>, <span class="cm-atom">monospace</span>;
 <span class="cm-bracket">}</span>
 
@@ -1193,6 +1193,12 @@ html.rail-closed .site-rail { display: none; }
 <span class="cm-qualifier">#write</span> <span class="cm-tag">a</span> <span class="cm-bracket">{</span> <span class="cm-property">color</span>: <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--primary-color</span><span class="cm-bracket">)</span>; <span class="cm-property">text-decoration</span>: <span class="cm-atom">none</span>; <span class="cm-property">border-bottom</span>: <span class="cm-number">1</span><span class="cm-keyword">px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">color-mix</span><span class="cm-bracket">(</span><span class="cm-atom">in</span> <span class="cm-atom">srgb</span>, <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--primary-color</span><span class="cm-bracket">)</span> <span class="cm-number">35</span><span class="cm-keyword">%</span>, <span class="cm-atom">transparent</span><span class="cm-bracket">)</span>; <span class="cm-bracket">}</span>
 <span class="cm-qualifier">#write</span> <span class="cm-tag">blockquote</span> <span class="cm-bracket">{</span> <span class="cm-property">margin</span>: <span class="cm-number">1</span><span class="cm-keyword">em</span> <span class="cm-number">0</span>; <span class="cm-property">padding</span>: <span class="cm-number">0.2</span><span class="cm-keyword">em</span> <span class="cm-number">0</span> <span class="cm-number">0.2</span><span class="cm-keyword">em</span> <span class="cm-number">1</span><span class="cm-keyword">em</span>; <span class="cm-property">border-left</span>: <span class="cm-number">3</span><span class="cm-keyword">px</span> <span class="cm-atom">solid</span> <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--primary-color</span><span class="cm-bracket">)</span>; <span class="cm-property">color</span>: <span class="cm-keyword">color-mix</span><span class="cm-bracket">(</span><span class="cm-atom">in</span> <span class="cm-atom">srgb</span>, <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--text-color</span><span class="cm-bracket">)</span> <span class="cm-number">78</span><span class="cm-keyword">%</span>, <span class="cm-atom">transparent</span><span class="cm-bracket">)</span>; <span class="cm-bracket">}</span>
 <span class="cm-qualifier">#write</span> <span class="cm-tag">code</span> <span class="cm-bracket">{</span> <span class="cm-property">font-family</span>: <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--monospace</span><span class="cm-bracket">)</span>; <span class="cm-property">font-size</span>: <span class="cm-number">0.9</span><span class="cm-keyword">em</span>; <span class="cm-property">background</span>: <span class="cm-keyword">color-mix</span><span class="cm-bracket">(</span><span class="cm-atom">in</span> <span class="cm-atom">srgb</span>, <span class="cm-keyword">var</span><span class="cm-bracket">(</span><span class="cm-variable">--text-color</span><span class="cm-bracket">)</span> <span class="cm-number">7</span><span class="cm-keyword">%</span>, <span class="cm-atom">transparent</span><span class="cm-bracket">)</span>; <span class="cm-property">border-radius</span>: <span class="cm-number">4</span><span class="cm-keyword">px</span>; <span class="cm-property">padding</span>: <span class="cm-number">0.1</span><span class="cm-keyword">em</span> <span class="cm-number">0.35</span><span class="cm-keyword">em</span>; <span class="cm-bracket">}</span></code></pre>
+<blockquote>
+<p>macOS 15（Sequoia）上中文系统字体可能是“可下载但未安装”状态，WebKit 会跳过<br>
+<code>Songti SC</code> / <code>PingFang SC</code>。字体栈在落到 <code>serif</code> / <code>sans-serif</code> 之前补上<br>
+<code>"PingFang SC", "Hiragino Sans GB", -apple-system, system-ui</code>，否则中文会<br>
+掉到非苹果的兜底字形。</p>
+</blockquote>
 <h2 id="2-放到哪里主题文件夹">2. 放到哪里：主题文件夹</h2>
 <p>桌面版默认使用 <code>&lt;appDataDir&gt;/themes</code>，不需要先选目录；设置 → 外观里可以直接<br>
 "打开""刷新""恢复默认"。网页版没有稳定的 appData 路径，通过 File System Access<br>

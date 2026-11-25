@@ -18,11 +18,11 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="手记">
 <meta name="twitter:description" content="墨与纸 · 一个 Markdown 编辑器的手记 写给：正在找一款&quot;能安心写字&quot;的编辑器的你 配图：assets/ 内是真实界面截图；两张示意图用 Mermaid 写在正文里 另一份：按任务查操作看 帮助中心 ；按菜单逐项查功能看 feat">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"手记","description":"墨与纸 · 一个 Markdown 编辑器的手记 写给：正在找一款\"能安心写字\"的编辑器的你 配图：assets/ 内是真实界面截图；两张示意图用 Mermaid 写在正文里 另一份：按任务查操作看 帮助中心 ；按菜单逐项查功能看 feat","inLanguage":"zh-CN","url":"https://morz.app/docs/shouji.html","mainEntityOfPage":"https://morz.app/docs/shouji.html","isPartOf":{"@type":"WebSite","name":"Morz 文档","url":"https://morz.app/docs/"},"publisher":{"@type":"Organization","name":"Morz","url":"https://morz.app/"},"dateModified":"2026-11-24"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"手记","description":"墨与纸 · 一个 Markdown 编辑器的手记 写给：正在找一款\"能安心写字\"的编辑器的你 配图：assets/ 内是真实界面截图；两张示意图用 Mermaid 写在正文里 另一份：按任务查操作看 帮助中心 ；按菜单逐项查功能看 feat","inLanguage":"zh-CN","url":"https://morz.app/docs/shouji.html","mainEntityOfPage":"https://morz.app/docs/shouji.html","isPartOf":{"@type":"WebSite","name":"Morz 文档","url":"https://morz.app/docs/"},"publisher":{"@type":"Organization","name":"Morz","url":"https://morz.app/"},"dateModified":"2026-11-25"}</script>
 <style>html{background:#f7f8fa;color-scheme:light}html body{background:#f7f8fa;color:#1f2933}html.site-dark{background:#151a20;color-scheme:dark}html.site-dark body{background:#151a20;color:#c9d3dd}</style>
 <style id="site-theme-light">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
    exported/printed documents, which use real HTML elements inside #write. */
-:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif; }
 #write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
 #write > :first-child { margin-top: 0; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
@@ -186,8 +186,8 @@
   --select-text-bg-color: #cfe1f0;
   --ui-border-color: #dbe2ea;
 
-  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --write-font-size: 16px;
   --write-line-height: 1.72;
   --write-max-width: 700px;
@@ -540,7 +540,7 @@ html.rail-closed .site-rail { display: none; }
 </style>
 <style id="site-theme-dark" media="not all">/* Morz base content styles (the equivalent of 参考编辑器's base.css). Applies to
    exported/printed documents, which use real HTML elements inside #write. */
-:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+:root { --monospace: ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace; --text-font: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", system-ui, sans-serif; }
 #write { max-width: var(--write-max-width, 860px); margin: 0 auto; padding: 30px; font-family: var(--text-font); font-size: var(--write-font-size, 16px); line-height: var(--write-line-height, 1.7); color: var(--text-color); word-wrap: break-word; }
 #write > :first-child { margin-top: 0; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; margin-top: 1rem; margin-bottom: 1rem; font-weight: bold; line-height: 1.4; break-after: avoid-page; }
@@ -704,8 +704,8 @@ html.rail-closed .site-rail { display: none; }
   --select-text-bg-color: #cfe1f0;
   --ui-border-color: #dbe2ea;
 
-  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --text-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
+  --write-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", system-ui, sans-serif;
   --write-font-size: 16px;
   --write-line-height: 1.72;
   --write-max-width: 700px;
@@ -1153,7 +1153,7 @@ html.rail-closed .site-rail { display: none; }
       <div id="write">
 <h1 id="墨与纸-一个-markdown-编辑器的手记">墨与纸 · 一个 Markdown 编辑器的手记</h1>
 <blockquote>
-<p><strong>版本</strong>：v0.3.3 · 2026-11-24<br>
+<p><strong>版本</strong>：v0.3.4 · 2026-11-25<br>
 <strong>写给</strong>：正在找一款"能安心写字"的编辑器的你<br>
 <strong>配图</strong>：<code>assets/</code> 内是真实界面截图；两张示意图用 Mermaid 写在正文里<br>
 <strong>另一份</strong>：按任务查操作看 <a class="internal-link" data-href="帮助中心" href="index.html" aria-label="帮助中心">帮助中心</a>；按菜单逐项查功能看 <a class="internal-link" data-href="features" href="features.html" aria-label="features">功能指南</a></p>
@@ -1344,8 +1344,8 @@ html.rail-closed .site-rail { display: none; }
 <hr>
 <h2 id="十你的文件在哪">十、你的文件在哪</h2>
 <p>这是我最不想含糊的一段。</p>
-<p><strong>没有云端，没有账号，没有"同步服务"。</strong> 桌面版打开文件夹，改一次写一次，写的就是你磁盘上那个 <code>.md</code>。</p>
-<p>想要多设备，把文件夹放进你自己的同步盘——OneDrive、iCloud、坚果云、Syncthing、Git 都行。Morz 只是读写的另一方，不介入同步，也不碰你的网盘。</p>
+<p><strong>笔记默认只存在你的磁盘上，不会上传到云端。</strong> 桌面版打开文件夹，改一次写一次，写的就是你磁盘上那个 <code>.md</code>。</p>
+<p>官方云同步还在开发中，敬请期待；暂时可以把文件夹放进第三方同步盘——OneDrive、iCloud、坚果云、Syncthing、Git 都行。Morz 只是读写的另一方，不介入同步，也不碰你的网盘。</p>
 <div class="md-diagram" data-diagram="mermaid"><svg xmlns="http://www.w3.org/2000/svg" class="pele pele-flowchart" viewBox="0 0 785 158" width="785" height="158" style="max-width:100%;height:auto;--_bg:var(--pele-bg,#fff);--_fg:var(--pele-fg,#1f1f1f);--_m:var(--pele-muted,#6e6e6e);--_l:var(--pele-line,#1f1f1f);--_s:var(--pele-surface,#f3f3f3);--_a:var(--pele-surface-alt,#e6e6e6);--_b:var(--pele-border,#8a8a8a);--_c:var(--pele-accent,#5b7bd5);color:var(--_fg);--_r:var(--pele-radius,4px);--_fm:var(--pele-font-mono,monospace);font:16px sans-serif;letter-spacing:normal;word-spacing:normal;text-transform:none;direction:ltr;font-family:var(--pele-font,sans-serif)" fill="var(--_fg)" aria-roledescription="flowchart"><g class="pele-edges" fill="none" stroke="var(--_l)" stroke-linecap="round"><g class="pele-edge" data-id="L_A_B_0"><path d="M143.56,49.5L154.06,49.5C160.81,49.5 160.81,24 167.56,24L344.12,24"></path><path class="pele-marker" d="M351.12,24L343.12,27.36L343.12,20.64Z" fill="var(--_l)" stroke="none"></path></g><g class="pele-edge" data-id="L_B_A_0"><path d="M351.12,40L338.12,40C314.84,40 314.84,65.5 291.56,65.5L150.56,65.5"></path><path class="pele-marker" d="M143.56,65.5L151.56,62.14L151.56,68.86Z" fill="var(--_l)" stroke="none"></path></g><g class="pele-edge" data-id="L_A_C_0"><path d="M143.56,81.5L154.06,81.5C160.81,81.5 160.81,125.5 167.56,125.5L308.56,125.5" stroke-dasharray="3 4"></path><path class="pele-marker" d="M315.56,125.5L307.56,128.86L307.56,122.14Z" fill="var(--_l)" stroke="none"></path></g><g class="pele-edge" data-id="L_B_D_0"><path d="M475.12,32L591.68,32"></path><path class="pele-marker" d="M598.68,32L590.68,35.36L590.68,28.64Z" fill="var(--_l)" stroke="none"></path></g></g><g class="pele-edge-labels" font-size="14"><g class="pele-edge-label" data-id="L_A_B_0"><rect x="190.56" y="13.5" width="78" height="21" rx="3" fill="var(--_bg)"></rect><text x="229.56" y="28.9" text-anchor="middle">打开文件夹</text></g><g class="pele-edge-label" data-id="L_B_A_0"><rect x="169.56" y="55" width="120" height="21" rx="3" fill="var(--_bg)"></rect><text x="229.56" y="70.4" text-anchor="middle">每次改动即时写回</text></g><g class="pele-edge-label" data-id="L_A_C_0"><rect x="211.56" y="115" width="36" height="21" rx="3" fill="var(--_bg)"></rect><text x="229.56" y="130.4" text-anchor="middle">可选</text></g><g class="pele-edge-label" data-id="L_B_D_0"><rect x="533.18" y="21.5" width="36" height="21" rx="3" fill="var(--_bg)"></rect><text x="551.18" y="36.9" text-anchor="middle">导出</text></g></g><g class="pele-nodes"><g class="pele-node pele-shape-rect" data-id="A" transform="translate(75.78,65.5)"><rect x="-67.78" y="-33" width="135.56" height="66" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"></rect><text class="pele-label" text-anchor="middle" xml:space="preserve"><tspan x="0" y="-4.9">你的文件夹</tspan><tspan x="0" y="16.1">普通 .md 文件</tspan></text></g><g class="pele-node pele-shape-rect" data-id="B" transform="translate(413.12,32)"><rect x="-62" y="-24" width="124" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"></rect><text class="pele-label" x="0" y="5.6" text-anchor="middle">Morz 工作区</text></g><g class="pele-node pele-shape-rect" data-id="C" transform="translate(413.12,125.5)"><rect x="-97.56" y="-24" width="195.12" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"></rect><text class="pele-label" x="0" y="5.6" text-anchor="middle">同步盘 / Git / 移动硬盘</text></g><g class="pele-node pele-shape-rect" data-id="D" transform="translate(687.64,32)"><rect x="-88.96" y="-24" width="177.93" height="48" fill="var(--_s)" stroke="var(--_b)" style="rx:var(--_r)"></rect><text class="pele-label" x="0" y="5.6" text-anchor="middle">PDF · Word · HTML</text></g></g></svg></div>
 <p><strong>图 14 · 文件模型</strong></p>
 <p>几条配套的安全网：</p>
@@ -1663,7 +1663,7 @@ html.rail-closed .site-rail { display: none; }
 <hr>
 <h2 id="附录-b-常被问到的问题">附录 B · 常被问到的问题</h2>
 <p><strong>会偷偷上传我的笔记吗？</strong><br>
-不会。没有账号系统，也没有云端。唯一联网的是更新检查和插件市场，和你的笔记内容无关。</p>
+不会。联网只用于检查更新和加载插件市场，和你的笔记内容无关。</p>
 <p><strong>换电脑怎么办？</strong><br>
 把文件夹拷过去，或者用同步盘；在新电脑上打开同一个文件夹。主题、快捷键这些偏好要重新配，或者从旧设备的备份里恢复。</p>
 <p><strong>能同时开两个文件夹吗？</strong><br>
