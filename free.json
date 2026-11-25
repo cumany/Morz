@@ -1,11 +1,23 @@
 {
-  "version": "0.1.1",
-  "notes": "v0.1.1（2026-11-21）\n· 手机端性能修复同步：大库滚动更顺，右栏日历不再卡顿\n· Word 文档可直接预览；导出 Word 结构更稳\n\nv0.1.0（2026-11-21）\n· 免费版首发：编辑与阅读、双链与反链、图谱、搜索、主题与插件社区\n· 导出全部可用：PDF / HTML / Word / 长图 / 分享图\n· 没有账号、没有登录，打开就写",
-  "pub_date": "2026-11-21T04:48:04Z",
+  "version": "0.1.4",
+  "notes": "0.1.4 已就绪。这一版主要修 macOS 桌面体验和插件/主题兼容性，免费版功能范围不变。\n\n**编辑**\n\n- 正文列两侧空白右键恢复视图菜单（行宽 / 阅读模式 / 滚动）；满宽时正文右键也能调行宽；正文和嵌入块仍出编辑器菜单\n\n**桌面与启动**\n\n- macOS 主窗口启动明显加快\n- 只给当前工作区启动文件监听，减少启动时反复弹文件授权\n- 外部修改更可靠：支持 Typora 式原子保存、后台 tab 切回刷新、窗口被遮住时更新，并有 10 秒兜底检查\n- 崩溃恢复与安全模式更稳；文档打开失败会提示原因并允许重试\n\n**插件、主题与外观**\n\n- 修复免费版把主题/插件误判为「需要更新 Morz」的问题：兼容性按核心版本判断，不再拿 0.1.x 去比\n- 插件设置与卸载改为图标按钮，窄卡片不再被文字撑开\n- macOS 15 中文字体缺失时补上苹方、冬青和系统字体兜底\n- macOS 图标按系统网格留白，Finder / Dock 中不再偏大\n\n**验证**\n\n- `npm run check:versions`\n- `npm run build:lite`\n- `node scripts/e2e.mjs free-edition`\n- `npm run verify:public`",
+  "pub_date": "2026-11-25T15:54:55.775Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXFkV1pQUFUvUk1tVE9VL25Cc0Y0MmFPaHVOMk9reHpzWC9EWUthOWJoc3ZzSDlzS2p5V2ZmTEpLTFhOY0p5eTN5RDQwSUMyZmw5TEVCYjcvYjE3Qmc4PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1MzE4NDgzCWZpbGU6TW9yel8wLjEuMV94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjEKYkhjYm5TeDNqcVpDTzBpaG00ZUVHbjd1M2liSHpzUWhobGFQSng3RXhxMmdQK2U1SWtEMXpwTGhRZ09tQldCN3pyc3VFY0k1eTdtVGtUaUlGdk1qQnc9PQo=",
-      "url": "https://dl.morz.app/v0.1.1/Morz_0.1.1_x64-setup.exe"
+      "url": "https://count.morz.app/v0.1.4/Morz_0.1.4_x64-setup.exe?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcW5scG9EMCtGa3hnK3FqdGRaK3RHWVpRVnE4SU11bmx1ZUN1T05CZWt5ckFyQmxCTGRQc1V2U1BTeXEzRTVTQmpaeVpYVTBycnJqMXlLelE0TWR4TXdjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjE1MzYyCWZpbGU6TW9yel8wLjEuNF94NjQtc2V0dXAuZXhlCXZlcnNpb246MC4xLjQKZXlhdzk0NjRrakVrcWxrdnpKTVM0L05aZGI5eFUybG9nRHFpZTBzR1VuU21vTVRDZ0JMeFd2K1VzOTJvUy9tL25BSzlLakYrR0dwZXVTN2FmM25EQXc9PQo="
+    },
+    "linux-x86_64": {
+      "url": "https://count.morz.app/v0.1.4/Morz_0.1.4_amd64.AppImage?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXNhemlVYjJ3Tm5EZG9kU1BsOFFPR1FFYjBadGhqL0dBaXJvUzhpUU1DMUw2Z2w4bkVxTWpvL29hZ28xaUtBQXMvdmtULzdJQlpicGxpUklIRHowMGdzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjE5NzgyCWZpbGU6TW9yel8wLjEuNF9hbWQ2NC5BcHBJbWFnZQl2ZXJzaW9uOjAuMS40CjVIaUMvOWNUanRKamtwMkxHRWRkTXNGS3dpT0taVHpNa2dZNXplUHQ1NHV5bnhzOFg2Y3JqbGN0M2tzbDM4NFFKYXArN2ZaV0pNb1AzNDFvc25zNEF3PT0K"
+    },
+    "darwin-aarch64": {
+      "url": "https://count.morz.app/v0.1.4/Morz_0.1.4_universal.app.tar.gz?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXVWUjIwbTAzSi9jZjBzeEpHNElLZFlkZXVucmhWZHpaRkJvQitzWnl0K05may8vbEpZb1o5UzVWZ053NmZhdmRGMncvcGF1N3RIN0tFTWdqQnFubkFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjE5NDU3CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQKVVgwaTMxak5IaWE3eDl6OW1uNWRJQjBoWVF5MURsMFBQVU5ueThieFZwd042bHg5aGRVYzNwbmlEUEJxSVdWSDIvZmxBVmJ6KzBOaHZ6UENTUmtKQ1E9PQo="
+    },
+    "darwin-x86_64": {
+      "url": "https://count.morz.app/v0.1.4/Morz_0.1.4_universal.app.tar.gz?via=updater",
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVSQWVreEY4dzNwcXVWUjIwbTAzSi9jZjBzeEpHNElLZFlkZXVucmhWZHpaRkJvQitzWnl0K05may8vbEpZb1o5UzVWZ053NmZhdmRGMncvcGF1N3RIN0tFTWdqQnFubkFVPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzk1NjE5NDU3CWZpbGU6TW9yei5hcHAudGFyLmd6CXZlcnNpb246MC4xLjQKVVgwaTMxak5IaWE3eDl6OW1uNWRJQjBoWVF5MURsMFBQVU5ueThieFZwd042bHg5aGRVYzNwbmlEUEJxSVdWSDIvZmxBVmJ6KzBOaHZ6UENTUmtKQ1E9PQo="
     }
   }
 }
