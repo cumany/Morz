@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "Morz 官方索引",
-  "updatedAt": "2026-11-23",
+  "updatedAt": "2026-11-27",
   "plugins": [
     {
       "id": "morz.extract-note",
@@ -123,6 +123,30 @@
       "sha256": {
         "manifest": "250db14cc2aaba9a1b90e5cec488fdf6a101e4aa2ff065be455b55fb04c9144d",
         "main": "507bdd09a589db28aa687b995c9b4f9e70ebd1bbe5b28cc4226d8b4484372719"
+      }
+    },
+    {
+      "id": "morz-calendar-tasks",
+      "name": "日历与任务",
+      "description": "放大日历：农历与节日、彩色任务块与重叠分栏、拖拽改时间与时长、Day Planner 日视图、Tasks 语法读写。",
+      "author": "PKMer",
+      "repo": "juestchaos/morz-calendar-task",
+      "version": "0.3.0",
+      "tag": "v0.3.0",
+      "trust": "community",
+      "permissions": [
+        "vault:read",
+        "vault:write",
+        "workspace",
+        "views",
+        "settings",
+        "editor:insert"
+      ],
+      "changelog": "首个版本：七种视图、农历与节日、彩色任务块与重叠分栏、拖拽改时间与时长、Day Planner 面板。",
+      "homepage": "https://github.com/juestchaos/morz-calendar-task",
+      "sha256": {
+        "manifest": "36f52b1b3726519032d48411ebd36fba71c63a3936a7b0171aa9946dc433657f",
+        "main": "83a3472db2d3bb60cbb124a996634da7b24d06499f5deff6017f44ed87ae1fda"
       }
     }
   ],
