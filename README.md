@@ -103,6 +103,11 @@ Morz is in **closed beta** — installers are not published here yet. Ask for a 
   **Settings → Appearance → Theme market** for themes.
 - The index and checksums live in this repository under `registry/`; the client verifies every
   file's sha256 on install.
+- **Agent Skills** — let Claude, Cursor, Codex and other agents write Morz Markdown, open
+  `morz://` links, query a vault through MCP and build native plugins:
+  [cumany/morz-skills](https://github.com/cumany/morz-skills).
+- **MCP server** — a local stdio bridge for external AI clients:
+  [cumany/morz-mcp](https://github.com/cumany/morz-mcp).
 
 ## About this repository
 

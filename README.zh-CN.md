@@ -96,6 +96,9 @@ Morz 想把这两件事放回同一张纸上——手感与连接都要，不以
 - 插件市场：**设置 → 第三方插件**
 - 主题市场：**设置 → 外观 → 主题市场**
 - 索引与校验值在本仓库的 `registry/`，客户端安装时逐文件校验 sha256
+- **Agent Skills**：让 Claude、Cursor、Codex 等 agent 写 Morz Markdown、打开 `morz://`
+  链接、通过 MCP 查询 vault、开发原生插件：[cumany/morz-skills](https://github.com/cumany/morz-skills)
+- **MCP server**：给外部 AI 客户端的本地 stdio 桥：[cumany/morz-mcp](https://github.com/cumany/morz-mcp)
 
 ## 关于这个仓库
 
